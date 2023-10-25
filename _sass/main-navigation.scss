@@ -1,0 +1,11 @@
+#main-navigation {
+  ul {
+    li {
+      a {
+        &.current {
+          background-color: white;
+        }
+      }
+    }
+  }    
+}

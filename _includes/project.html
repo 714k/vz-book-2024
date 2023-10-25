@@ -1,0 +1,37 @@
+{% assign project_name=page.title | split: " " | join: "-" | replace: "&", "and" | downcase %}
+{% assign project=site.data[project_name] %}
+
+{% if project.galleries.size == 1 %}
+  {% assign toc=site.data.project.toc | slice: 0, 2 %}
+{% endif %}
+{% unless project.galleries.size == 1 %}
+  {% assign toc=site.data.project.toc %}
+{% endunless %}
+
+<header>
+  <h1>
+    {{page.title}}
+  </h1>
+</header>
+{% include toc.html 
+  data=toc 
+  galleries=project.galleries
+%}
+
+{% include projects-navigation.html
+  projects-navigation=project.projectsNavigation
+%}
+
+{% include project-brief.html 
+  data=project.brief %}
+
+{% include project-gallery.html 
+  galleries=project.galleries
+  galleries-images=site.data.project.galleries
+  projects-navigation=project.projectsNavigation
+%}
+
+{% include projects-navigation.html 
+  projects-navigation=project.projectsNavigation
+  is-bottom=true
+%}

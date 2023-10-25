@@ -1,0 +1,32 @@
+@import "variables";
+@import "typography";
+@import "main-navigation";
+
+body {
+  color: #adb6c5;
+  background-color: #0f1012;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3rem;
+  font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
+  padding: 16px;
+  margin: 0;
+
+  a:not(.vz-logo) {
+    text-decoration: none;
+    padding: 0 4px;
+    background-color: $HOME_SECUNDARY;
+    color: $HOME_PRIMARY;
+
+    &:hover {
+      background-color: $HOME_PRIMARY;
+      color: $HOME_SECUNDARY;
+    }
+    &.current {
+      background-color: $HOME_CURRENT_BACKGROUND_COLOR;
+      color: $HOME_CURRENT_COLOR;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}

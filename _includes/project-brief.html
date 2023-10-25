@@ -1,0 +1,85 @@
+<section id="brief">
+  <h2>Brief</h2>
+  <div>
+    <p>
+      <strong>Project</strong><br />
+      <em class="title">{{ include.data.title }}</em>
+    </p>
+    
+    <p>
+      <strong>Year</strong><br />
+      <em>{{ include.data.year }}</em>
+    </p>
+
+    <p>
+      <strong>Company</strong><br />
+      <em>{{ include.data.company }}</em>
+    </p>
+
+    <p>
+      <strong>Industry</strong><br />
+      <em>{{ include.data.industry }}</em>
+    </p>
+
+    <p>
+      <strong>Work</strong><br />
+      <em>{{ include.data.work }}</em>
+    </p>
+
+    <p>
+      <strong>Technologies</strong><br />
+      <em>{{ include.data.technologies }}</em>
+    </p>
+
+    {% if include.data.status %}
+    <p>
+      <strong>Status</strong><br />  
+      <em class="status">{{ include.data.status }}</em>
+    </p>
+    {% endif %}
+
+    {% if include.data.links %}
+    <p>
+      <strong><abbr title="Uniform Resource Locator">URL</abbr>s</strong><br />
+      <em class="url"><span>Visit </span>
+        {% for link in include.data.links %}
+        <a
+          href="{{link.href}}"
+          target="_blank"
+          title="{{link.title}} (It will be displayed in another window or tab)"
+          >{{link.text}}</a>
+          {% if forloop.index == include.data.links.size %}
+            .
+          {% endif %}  
+          {% unless forloop.index == include.data.links.size %}
+            ,
+          {% endunless %}
+        {% endfor %}
+      </em><br class="block"> 
+    </p>
+    {% endif %}
+
+    {% if include.data.apps %}
+    <p>
+      <strong><abbr title="Applications">Apps</abbr></strong><br />
+      <em class="url last">Download 
+        {% for app in include.data.apps %}
+        <a
+          href="{{app.href}}"
+          target="_blank"
+          title="{{app.title}} (It will be displayed in another window or tab)"
+          >{{app.text}}</a>
+          {% if forloop.index == include.data.apps.size %}
+            .
+          {% endif %}  
+          {% unless forloop.index == include.data.apps.size %}
+            ,
+          {% endunless %}
+        {% endfor %}
+      </em>
+    </p> 
+    {% endif %}
+  </div>
+</section>
+
+{% include back-to-top.html %}

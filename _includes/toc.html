@@ -1,0 +1,23 @@
+<nav id="tableOfContent" role="navigation" class="vz-toc">
+  <p>In this section:</p>
+  <ul>
+    {% for item in include.data %}
+      <li role="list">
+      <a 
+        href="#{{item.href}}"
+        class="{{item.classes}}" 
+        title="{{item.title}}">
+        {% if item.prefix %}
+          <span class="prefix-text">{{ item.prefixText }} </span> 
+        {% endif %}
+        
+        <span class="text">{{item.text}}</span>
+        
+        {% if item.sufix %}
+          <span class="sufix-text">{{ item.sufixText }} </span> 
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+   </ul>
+</nav> 

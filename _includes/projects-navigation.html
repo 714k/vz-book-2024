@@ -1,0 +1,65 @@
+
+{% assign previous=include.projects-navigation.previous %}
+{% assign previous-kebab=previous | split: ' ' | join: '-' | downcase %}
+{% assign next=include.projects-navigation.next %}
+{% assign next-kebab=next | split: ' ' | join: '-' | downcase %}
+{% assign is-bottom=include.is-bottom %}
+
+{% if is-bottom %}
+  {% assign classTopOrBottom="bottom" %}
+{% endif %}
+{% unless !is-bottom %}
+  {% assign classTopOrBottom="top" %}
+{% endunless %}
+
+<div id="projects-navigation-{{classTopOrBottom}}">
+  {% if previous != "" %}
+  <span
+    class="left-angle-qoute">
+    &laquo;
+  </span>&nbsp;
+  
+  <span>
+    <em>Previous project: </em>
+    <a 
+      class="previous {{previous-kebab}}"
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{previous-kebab}}"
+      title="Presentation of {{previous}} project">
+      <span class="icon-wrap"></span>
+      <span class="info-wrap">
+        
+        <strong>
+          {{previous}}
+        </strong>
+      </span>
+    </a>
+  </span>
+  
+  {% endif %}
+  
+  {% if previous != "" and next != "" %}
+  <span>&nbsp;|&nbsp;</span>
+  {% endif %}
+
+  {% if next != "" %}
+  <span>
+    <em>Next project: </em>
+    <a 
+      class="next {{next-kebab}}"
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{next-kebab}}"
+      title="Presentation of {{next}} project">
+      <span class="icon-wrap"></span>
+      <span class="info-wrap">
+        
+        <strong>
+          {{next}}
+        </strong>
+      </span>
+    </a>&nbsp;
+    <span 
+      class="left-angle-qoute">
+      &raquo;
+    </span>
+  </span>
+  {% endif %}
+</div>

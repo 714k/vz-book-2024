@@ -1,0 +1,60 @@
+{
+  "brief": {
+    "title": "HBO Max",
+    "year": 2020,
+    "company": "HBO Max",
+    "industry": "Entertainment",
+    "work": "Design System for Website",
+    "technologies": [
+      "Agile",
+      " Leadership, Mentoring",
+      " Design System",
+      " ReactJS",
+      " React MUI",
+      " React Hook Forms",
+      " Redux",
+      " Storybook",
+      " Styled Components",
+      " Drupal",
+      " NextJS",
+      " Django",
+      " Microservices, NodeJS",
+      " Docker, Kubernetes",
+      " Postman",
+      " Design Patterns",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Unit Testing, Integration Testing",
+      " Jest, Enzyme",
+      " Web Standards",
+      " Mobile First",
+      " Augmented Reality",
+      " Accessibility",
+      " Browserstack",
+      " FlowJS",
+      " Webstorm, IntelliJ IDEA, VS Code",
+      " Git, NPM, Yarn, Lerna"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.hbomax.com/",
+        "title": "Visit Website",
+        "text": "HBO Max"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "HBO Max",
+    "next": "Plastiq",
+    "previous": "HBO"
+  }
+}

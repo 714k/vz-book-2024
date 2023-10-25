@@ -1,0 +1,16 @@
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteBase /
+
+# Redirection
+RewriteRule ^/(.*)$ /at-the-beginning [R=301,L]
+
+# Error Pages
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ ./errors/404.html [L]
+
+RewriteCond %{REQUEST_URI} ^/500/$
+RewriteRule ^(.*)$ ./errors/500.html [L]
+</IfModule>

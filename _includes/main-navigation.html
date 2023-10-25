@@ -1,0 +1,31 @@
+<nav id="main-navigation">
+  <p>Main navigation</p>
+  
+  <ul class="nav">
+    {% for anchor in site.data.main-navigation %}
+    <li class="nav-item">
+      <a 
+        href="{{ anchor.href }}"
+        title="Navigate to section '{{ anchor.title }}'"
+        {% if page.url == anchor.href %}
+          class="current"
+        {% endif %}
+      >{{ anchor.text }}</a>
+      <ul>
+        {% for subanchor in anchor.subsections %}
+        <li class="subnav-item">
+          <a 
+            href="{{ subanchor.href }}"
+            title="Navigate to subsection '{{ subanchor.title }}'"
+            {% if page.url == subanchor.href %}
+              class="current"
+            {% endif %}
+          >{{ subanchor.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+  
+</nav>

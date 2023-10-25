@@ -1,0 +1,16 @@
+{% assign navigator=site.data.the-navigator%}
+
+<header>
+  <h1>
+    {{page.title}}
+  </h1>
+</header>
+{% include toc.html 
+  data=navigator.toc  
+%}
+<div id="adventures">
+{% include adventure.html 
+  adventures=navigator.adventures
+  toc=navigator.toc
+%}
+</div>
