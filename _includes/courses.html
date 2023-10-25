@@ -1,0 +1,26 @@
+{% if include.courses %}
+<section id="courses" class="courses">
+  <h2>Courses</h2>
+  <p>These are some of the most significant courses I've taken  :</p>
+
+  {% for course in include.courses %}
+  <div class="course">
+    <h3>{{course.title}}</h3>
+    <p>
+      <strong class="who">
+        Who:
+      </strong>
+      <span class="text">{{ course.who }}</span><br>
+      <strong class="when">
+        When:
+      </strong>
+      <span class="text">{{ course.when }}</span><br>
+      <strong class="where">
+        Where:
+      </strong>
+      <span class="text">{{ course.where }}</span><br>
+    </p>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

@@ -1,0 +1,38 @@
+<div id="ammos">
+  {% for ammo in include.ammos %}
+  <section id="{{ ammo.id }}" class="ammo">
+    <h2>{{ammo.caption}}</h2>
+    
+    <table class="sprite" >
+      <thead>
+        <tr>
+          {% for item in ammo.data %}
+           <th scope="col">
+            {{item[0]}}
+           </th>
+          {% endfor %} 
+        </tr>
+       </thead>
+  
+       <tbody>
+        {% for data in ammo.data %}
+        <tr>
+          {% for item in data %}
+          <td class="tdClass">{{item[1]}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+       </tbody>
+    </table>
+
+    {% include navigation-links.html 
+      classes="sprite ammo-links"
+      links=include.toc
+      id=ammo
+      type="ammo"
+    %}
+    
+    {% include back-to-top.html %}
+  </section>
+  {% endfor %}
+</div>

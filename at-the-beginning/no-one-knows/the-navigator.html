@@ -5,4 +5,19 @@ secondary_color: '#2cb0d830'
 title: The Navigator
 permalink: /at-the-beginning/no-one-knows/the-navigator/
 ---
-{% include navigator.html %}
+{% assign navigator=site.data.the-navigator%}
+<header>
+  <h1>
+    {{page.title}}
+  </h1>
+</header>
+
+{% include toc.html 
+  data=navigator.toc  
+%}
+
+{% include adventures.html 
+  adventures=navigator.adventures
+  toc=navigator.toc
+%}
+

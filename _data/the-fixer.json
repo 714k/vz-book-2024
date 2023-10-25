@@ -1,0 +1,1097 @@
+{
+  "toc": [
+      {
+        "title":"The Knowledge I have",
+        "href":"knowledge",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"Ammo of Knowledge"
+      },
+      {
+        "title":"The languages I type",
+        "href":"languages",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"Ammo of Languages"
+      },
+      {
+        "title":"The programs I use",
+        "href":"programs",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"Ammo of Programs"
+      },
+      {
+        "title":"The Libraries & Frameworks I implement",
+        "href":"frameworks",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"Ammo of Frameworks"
+      },
+      {
+        "title":"The CMS I manage",
+        "href":"cms",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"Ammo of CMS"
+      }
+  ],
+  "ammos": [
+    {
+      "id": "knowledge",
+      "title": "The Knowledge I have",
+      "caption": "knowledge",
+      "data": [
+        {
+          "name": "Accessibility",
+          "type": "Software Development",
+          "years": "15",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Leadership",
+          "type": "Software Development",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "100%"
+        },
+        {
+          "name": "Agile",
+          "type": "Software Development",
+          "years": "7",
+          "use": "Very Frecuent",
+          "level": "Intermediate",
+          "percentage": "80%"
+        },
+        {
+          "name": "Accessibility",
+          "type": "Software Development",
+          "years": "13",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Mobile first",
+          "type": "Web Design",
+          "years": "5",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "95%"
+        },
+        {
+          "name": "Responsive Web Design",
+          "type": "Web Design",
+          "years": "12",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Web Standards",
+          "type": "Web Development",
+          "years": "15",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Usability",
+          "type": "Software Development",
+          "years": "12",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Design Patterns",
+          "type": "Software Development",
+          "years": "7",
+          "use": "Very Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Code Conventions & Best Practices",
+          "type": "Software Development",
+          "years": "8",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Mentoring",
+          "type": "Soft Skills",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "100%"
+        },
+        {
+          "name": "Architectural Design",
+          "type": "Software Development",
+          "years": "5",
+          "use": "Frecuent",
+          "level":"Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Web Components",
+          "type": "Software Development",
+          "years": "2",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "70%"
+        },
+        {
+          "name": "Agile Development",
+          "type": "Methodology",
+          "years": "8",
+          "use": "Frecuent",
+          "level":"Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Software testing",
+          "type": "Software Development",
+          "years": "8",
+          "use": "Frecuent",
+          "level":"Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "<abbr title='User Experience'>UX</abbr>",
+          "type": "Design",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Web Performance Optimization",
+          "type": "Software Development",
+          "years": "10",
+          "use": "Frecuent",
+          "level":"Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "<abbr title='Search Engineering Optimization'>SEO</abbr>",
+          "type": "Search Engine",
+          "years": "9",
+          "use": "Frecuent",
+          "level":"Intermediate",
+          "percentage": "100%"
+        },
+        {
+          "name": "<abbr title='Search Engineering Marketing'>SEM</abbr>",
+          "type": "Search Engine",
+          "years": "8",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Design Systems",
+          "tipe": "Software Development",
+          "years": "3",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Information Architecture",
+          "type": "User Experience",
+          "years": "12",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "FullStack",
+          "type": "Web Development",
+          "years": "5",
+          "use": "Frecuent",
+          "level":"Intermediate Advanced",
+          "percentage": "70%"
+        },
+        {
+          "name": "Microformats",
+          "type": "Semanticity",
+          "years": "10",
+          "use": "Occasionally",
+          "level":"Intermediate Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "Open Graph",
+          "type": "Semanticity",
+          "years": "10",
+          "use": "Occasionally",
+          "level":"Intermediate Advanced",
+          "percentage": "80%"
+        },
+        {
+          "name": "Editorial Design",
+          "type": "Design",
+          "years": "17",
+          "use": "Frecuent",
+          "level": "Intermediate Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "Terminal",
+          "type": "Programming tools",
+          "years": "8",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "100%"
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "The languages I type",
+      "caption": "Languages",
+      "data": [
+        {
+          "name": "<abbr title='HyperText Markup Language'>HTML</abbr>",
+          "type": "Web Markup",
+          "years": "17",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "<abbr title='Cascading Style Sheets'>CSS</abbr>",
+          "type": "Web Presentation",
+          "years": "17",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        },
+        {
+          "name": "JavaScript",
+          "type": "Prototype-Based, Multi-Paradigm",
+          "years": "17",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "C++",
+          "type": "Object-Oriented",
+          "years": "3",
+          "use": "Very Frecuent",
+          "level": "Beginner",
+          "percentage": "30%"
+        },
+        {
+          "name": "TypeScript",
+          "type": "Superset of JavaScript",
+          "years": "3",
+          "use": "Frecuent",
+          "level": "Beginner",
+          "percentage": "45%"
+        },
+        {
+          "name": "SasS",
+          "type": "Stylesheet",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "85%"
+        },
+        {
+          "name": "Less",
+          "type": "Stylesheet",
+          "years": "5",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Python",
+          "type": "Object-Oriented",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Java",
+          "type": "Object-Oriented",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "50%"
+        },
+        {
+          "name": "Kotlin",
+          "type": "Object-Oriented",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "50%"
+        },
+        {
+          "name": "<abbr title='Structured Query Language'>SQL</abbr>",
+          "type": "Standardized Programming",
+          "years": "10",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "GraphQL",
+          "type": "Schema and Query Language",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Apollo client",
+          "type": "Schema and Query Language",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Apollo Server",
+          "type": "Schema and Query Language",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "C#",
+          "type": "Object-Oriented, Component-Oriented",
+          "years": "10",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Objective-C",
+          "type": " High-Level General-Purpose, Object-Oriented",
+          "years": "9",
+          "use": "Very Frecuent",
+          "level": "Intermediate",
+          "percentage": "50%"
+        },
+        {
+          "name": "Ruby",
+          "type": "Dynamically Typed, Object-Oriented",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "35%"
+        },
+        {
+          "name": "Dart",
+          "type": "Object-Oriented, Class-Based",
+          "years": "1",
+          "use": "Very Frecuent",
+          "level": "Beginner",
+          "percentage": "20%"
+        },
+        {
+          "name": "Rust",
+          "type": "Multi-Paradigm, High-Level, General-Purpose",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "10%"
+        },
+        {
+          "name": "Go",
+          "type": "Post-OOP",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "15%"
+        }
+      ]
+    },
+    {
+      "id": "programs",
+      "title": "The programs I use",
+      "caption": "Programs",
+      "data": [
+        {
+          "name": "Webstorm",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "7",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "VS Code",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "IntelliJ IDEA",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "10",
+          "use": "Very Frecuent",
+          "level": "Occasionally",
+          "percentage": "60%"
+        },
+        {
+          "name": "Visual Studio",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "10",
+          "use": "Very Frecuent",
+          "level": "Occasionally",
+          "percentage": "60%"
+        },
+        {
+          "name": "Eclipse",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "15",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "XCode",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Apache NetBeans",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "7",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Sublime Text",
+          "type": "<abbr title='Graphical User Interface'>IDE</abbr>",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Atom",
+          "type": "<abbr title='Graphical User Interface'>IDE</abbr>",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Android Studio",
+          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "55%"
+        },
+        {
+          "name": "Postman",
+          "type": "API Platform",
+          "years": "15",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Browserstack",
+          "type": "Testing Platform",
+          "years": "15",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "GitHub Desktop",
+          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
+          "years": "2",
+          "use": "Frecuent",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Docker Desktop",
+          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Kubernetes Dashboard",
+          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Gimp",
+          "type": "Pixelar",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "35%"
+        },
+        {
+          "name": "Inkscape",
+          "type": "Vectorial",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Scribus",
+          "type": "Layout Design",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Figma",
+          "type": "UX/UI",
+          "years": "2",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "50%"
+        },
+        {
+          "name": "Photoshop",
+          "type": "Pixelar",
+          "years": "18",
+          "use": "Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "Illustrator",
+          "type": "Vectorial",
+          "years": "18",
+          "use": "Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "InDesign",
+          "type": "Layots",
+          "years": "17",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "50%"
+        },
+        {
+          "name": "LucidChart",
+          "type": "Chart",
+          "years": "3",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "50%"
+        },
+        {
+          "name": "MySQL Workbench",
+          "type": "Database Client",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "MongoDB Compass",
+          "type": "Database Client",
+          "years": "3",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "Robo 3T",
+          "type": "Database Client",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "SQuirreL SQL",
+          "type": "Database Client",
+          "years": "3",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "SequelPro",
+          "type": "Database Client",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "DBeaver",
+          "type": "Database Client",
+          "years": "3",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "55%"
+        },
+        {
+          "name": "Libre Office",
+          "type": "Office Automation",
+          "years": "8",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "55%"
+        },
+        {
+          "name": "Office 365",
+          "type": "Office Automation",
+          "years": "12",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Teams",
+          "type": "Chat and Videoconferencing",
+          "years": "3",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Slack",
+          "type": "Chat and Videoconferencing",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Zoom",
+          "type": "Chat and Videoconferencing",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "60%"
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "The Libraries & Frameworks I implement",
+      "caption": "Libraries & Frameworks",
+      "data": [
+        {
+          "name": "ReactJS",
+          "type": "Frontend",
+          "years": "8",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "Angular",
+          "type": "Frontend",
+          "years": "3",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Vue",
+          "type": "Frontend",
+          "years": "2",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Hugo",
+          "type": "Frontend",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "30%"
+        },
+        {
+          "name": "Jekyll",
+          "type": "Frontend",
+          "years": "3",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "25%"
+        },
+        {
+          "name": "Nuxt",
+          "type": "Frontend",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "30%"
+        },
+        {
+          "name": "Gatsby",
+          "type": "Frontend",
+          "years": "2",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "NextJS",
+          "type": "Frontend",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Django",
+          "type": "Backend",
+          "years": "5",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "40%"
+        },
+        {
+          "name": "Ruby on Rails",
+          "type": "Backend",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "35%"
+        },
+        {
+          "name": "Spring Boot",
+          "type": "Frontend",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "50%"
+        },
+        {
+          "name": ".Net",
+          "type": "Backend",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "NodeJS",
+          "type": "Backend",
+          "years": "5",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "Express",
+          "type": "Backend",
+          "years": "5",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Symfony",
+          "type": "Backend",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "MySQL",
+          "type": "Relational Database Management",
+          "years": "10",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "80%"
+        },
+        {
+          "name": "Git",
+          "type": "Version Control System",
+          "years": "8",
+          "use": "Very Frecuent",
+          "level": "Intermediate",
+          "percentage": "80%"
+        },
+        {
+          "name": "NPM",
+          "type": "Package Manager",
+          "years": "8",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "95%"
+        },
+        {
+          "name": "Yarn",
+          "type": "Package Manager",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Rush",
+          "type": "Package Manager",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "45%"
+        },
+        {
+          "name": "Lerna",
+          "type": "Build System",
+          "years": "3",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "50%"
+        },
+        {
+          "name": "Nx",
+          "type": "Architect, Test, and Build System",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "30%"
+        },
+        {
+          "name": "Webpack",
+          "type": "Module Bundler",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Yeoman",
+          "type": "Scaffolding tool",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "80%"
+        },
+        {
+          "name": "Grunt",
+          "type": "Task Manager",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Bower",
+          "type": "Package Manager",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "<abbr title='React Testing Library'>RTL</abbr>",
+          "type": "Testing Platform",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Jest",
+          "type": "Testing Platform",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Cypress",
+          "type": "Testing Platform",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "20%"
+        },
+        {
+          "name": "Jasmine",
+          "type": "Testing Platform",
+          "years": "7",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Mocha",
+          "type": "Testing Platform",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "Chai",
+          "type": "Testing Platform",
+          "years": "6",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "Redux",
+          "type": "Frontend",
+          "years": "8",
+          "use": "Very Frecuent",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "React Logic",
+          "type": "Frontend",
+          "years": "6",
+          "use": "Frecuent",
+          "level": "Advanced",
+          "percentage": "85%"
+        },
+        {
+          "name": "React Hook Form",
+          "type": "Frontend",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Intermediate",
+          "percentage": "70%"
+        },
+        {
+          "name": "React Bootstrap",
+          "type": "Frontend",
+          "years": "4",
+          "use": "Occasionally",
+          "level": "Advanced",
+          "percentage": "90%"
+        },
+        {
+          "name": "Styled Components",
+          "type": "Frontend",
+          "years": "4",
+          "use": "Frecuent",
+          "level": "Advanced",
+          "percentage": "100%"
+        }
+      ]
+    },
+    {
+      "id": "cms",
+      "title": "The CMS I manage",
+      "caption": "<abbr title='Content Management System'>CMS</abbr>",
+      "data": [
+        {
+          "name": "Joomla",
+          "type": "<abbr title='Content Management System'>CMS</abbr>",
+          "years": "11",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "65%"
+        },
+        {
+          "name": "WordPress",
+          "type": "CMS",
+          "years": "12",
+          "use": "Occasionally",
+          "level": "Advanced",
+          "percentage": "85%"
+        },
+        {
+          "name": "WordPress",
+          "type": "CMS",
+          "years": "1",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "25%"
+        },
+        {
+          "name": "Orchard",
+          "type": "<abbr title='Content Management System'>CMS</abbr>",
+          "years": "10",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "60%"
+        },
+        {
+          "name": "Magento",
+          "type": "CMS",
+          "years": "9",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "55%"
+        },
+        {
+          "name": "Drupal",
+          "type": "CMS",
+          "years": "10",
+          "use": "Occasionally",
+          "level": "Advanced",
+          "percentage": "85%"
+        },
+        {
+          "name": "OS Commerce",
+          "type": "CMS",
+          "years": "8",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "35%"
+        },
+        {
+          "name": "OpenCart",
+          "type": "CMS",
+          "years": "10",
+          "use": "Occasionally",
+          "level": "Beginner",
+          "percentage": "30%"
+        },
+        {
+          "name": "Web Builder",
+          "type": "CMS",
+          "years": "12",
+          "use": "Occasionally",
+          "level": "Intermediate",
+          "percentage": "75%"
+        },
+        {
+          "name": "Backbase",
+          "type": "CMS",
+          "years": "7",
+          "use": "Occasionally",
+          "level": "Advanced",
+          "percentage": "90%"
+        }
+      ]
+    }
+  ]
+}

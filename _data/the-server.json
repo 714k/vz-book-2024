@@ -1,0 +1,296 @@
+{
+  "toc":[
+     {
+        "title":"The profile of Victor Zamudio",
+        "href":"profile",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"has a pitch"
+     },
+     {
+        "title":"The professional interests of Victor Zamudio",
+        "href":"professional-interest",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"has passion"
+     },
+     {
+        "title":"My academic formation",
+        "href":"academic-formation",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"has credentials"
+     },
+     {
+        "title":"My hard training",
+        "href":"courses",
+        "classes":"anchor-class",
+        "prefixText":"",
+        "sufixText":"",
+        "text":"has training"
+     }
+  ],
+  "courses":[
+     {
+        "title":"Mastering the Eight Paradoxes of Effective Leaders",
+        "who":"LinkedIn Learning",
+        "when":"Feb 2023",
+        "where":"Online"
+     },
+     {
+        "title":"UX Foundations: Information Architecture",
+        "who":"LinkedIn Learning",
+        "when":"Jan 2023",
+        "where":"Online"
+     },
+     {
+        "title":"Learning Web Components",
+        "who":"LinkedIn Learning",
+        "when":"Dec 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Building Angular and Node Apps with Authentication",
+        "who":"LinkedIn Learning",
+        "when":"Nov 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Accessibility for Web Design",
+        "who":"LinkedIn Learning",
+        "when":"Oct 2022",
+        "where":"Online"
+     },
+     {
+        "title":"UX Foundations: Accessibility",
+        "who":"LinkedIn Learning",
+        "when":"Oct 2022",
+        "where":"Online"
+     },
+     {
+        "title":"User Experience for Web Design",
+        "who":"LinkedIn Learning",
+        "when":"Sep 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Design Thinking: Customer Experience",
+        "who":"LinkedIn Learning",
+        "when":"Sep 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Angular Esential",
+        "who":"LinkedIn Learning",
+        "when":"Aug 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Complete Angular Developer in 2022: Zero to Mastery",
+        "who":"Udemy",
+        "when":"Jun 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Leadership. Practical leadership skills",
+        "who":"Udemy",
+        "when":"Apr 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Tactics for tackle difficult people in life and work",
+        "who":"Udemy",
+        "when":"Feb 2022",
+        "where":"Online"
+     },
+     {
+        "title":"PNL for Leaderships and Management",
+        "who":"Udemy",
+        "when":"Jan 2022",
+        "where":"Online"
+     },
+     {
+        "title":"Think like a Leader with Brian Tracy",
+        "who":"Udemy",
+        "when":"Nov 2021",
+        "where":"Online"
+     },
+     {
+        "title":"NodeJS: Advanced concepts",
+        "who":"Udemy",
+        "when":"May 2021",
+        "where":"Online"
+     },
+     {
+        "title":"All about NodeJS",
+        "who":"Udemy",
+        "when":"Feb 2021",
+        "where":"Online"
+     },
+     {
+        "title":"Node.js: The complete guide to build restful APIs",
+        "who":"Udemy",
+        "when":"Nov 2020",
+        "where":"Online"
+     },
+     {
+        "title":"Learn and understand NodeJS",
+        "who":"Udemy",
+        "when":"Aug 2020",
+        "where":"Online"
+     },
+     {
+        "title":"The modern GraphQL Bootcamp (with NodeJs and Apollo)",
+        "who":"Udemy",
+        "when":"Apr 2020",
+        "where":"Online"
+     },
+     {
+        "title":"Modern React with Redux",
+        "who":"Udemy",
+        "when":"Mar 2019",
+        "where":"Online"
+     },
+     {
+        "title":"Testing Library with React & React Hooks",
+        "who":"Udemy",
+        "when":"Mar 2019",
+        "where":"Online"
+     },
+     {
+        "title":"Python Advanced",
+        "who":"Globant University",
+        "when":"Jul 2018",
+        "where":"Online"
+     },
+     {
+        "title":"Functional Programming",
+        "who":"Globant University",
+        "when":"Feb 2018",
+        "where":"Online"
+     },
+     {
+        "title":"Docker",
+        "who":"Globant University",
+        "when":"May 2017",
+        "where":"Online"
+     },
+     {
+        "title":"Kuberbetes",
+        "who":"Globant University",
+        "when":"Sep 2016",
+        "where":"Online"
+     },
+     {
+        "title":"Mongo DB",
+        "who":"Acamica",
+        "when":"Jun 2016",
+        "where":"Online"
+     },
+     {
+        "title":"Advanced debugging",
+        "who":"Acamica",
+        "when":"Apr 2016",
+        "where":"Online"
+     },
+     {
+        "title":"ES6 Fundamentals",
+        "who":"Acamica",
+        "when":"Jan 2016",
+        "where":"Online"
+     },
+     {
+        "title":"Code Quality and Refactoring",
+        "who":"Acamica",
+        "when":"Oct 2015",
+        "where":"Online"
+     },
+     {
+        "title":"AngularJS",
+        "who":"Acamica",
+        "when":"Jul 2015",
+        "where":"Online"
+     },
+     {
+        "title":"Git Essentials",
+        "who":"Acamica",
+        "when":"May 2015",
+        "where":"Online"
+     },
+     {
+        "title":"Introduction to Systems Engineering",
+        "who":"The university of new south wales (UNSW Australia)",
+        "when":"Mar 2015",
+        "where":"Online"
+     },
+     {
+        "title":"Tools of The Modern Web Developer",
+        "who":"Tutsplus",
+        "when":"Oct 2014",
+        "where":"Online"
+     },
+     {
+        "title":"Mobile Web development",
+        "who":"Udacity",
+        "when":"Jun 2014",
+        "where":"Online"
+     },
+     {
+        "title":"Browser Rendering Optimization",
+        "who":"Udacity",
+        "when":"Apr 2014",
+        "where":"Online"
+     },
+     {
+        "title":"Developing in .Net with Visual Studio",
+        "who":"Microsoft Virtual Academy",
+        "when":"Jul 2013",
+        "where":"Online"
+     },
+     {
+        "title":"Development of Videogames for Windows 8",
+        "who":"Microsoft Mexico",
+        "when":"May 2013",
+        "where":"Microsoft Mexico Headquarters"
+     },
+     {
+        "title":"Development of Applications for Windows Phone 8",
+        "who":"Microsoft Mexico",
+        "when":"Feb 2013",
+        "where":"Online"
+     },
+     {
+        "title":"Development of Applications for Windows 8",
+        "who":"Microsoft Mexico",
+        "when":"Nov 2012",
+        "where":"Online"
+     },
+     {
+        "title":"Programming in C# Jump Start",
+        "who":"Microsoft Virtual Academy",
+        "when":"Sep 2012",
+        "where":"Online"
+     },
+     {
+        "title":"Google Analytics",
+        "who":"Codice",
+        "when":"Aug 2012",
+        "where":"Codice Headquarters"
+     },
+     {
+        "title":"Google AdWords",
+        "who":"Codice",
+        "when":"Jun 2012",
+        "where":"Codice Headquarters"
+     },
+     {
+        "title":"Accessibility in the Web",
+        "who":"CTIC Fundation W3C",
+        "when":"Jun 2009",
+        "where":"Infotec Headquarters"
+     }
+  ]
+}
