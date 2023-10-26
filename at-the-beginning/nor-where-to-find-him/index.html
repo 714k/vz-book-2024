@@ -1,0 +1,382 @@
+---
+layout: default
+primary_color: '#2bb0d8'
+secondary_color: '#2cb0d830'
+title: Nor where to find him.
+permalink: /at-the-beginning/nor-where-to-find-him/
+---
+{% assign contact=site.data.nor-where-to-find-him %}
+
+<header>
+  <h1>
+    {{page.title}}
+  </h1>
+</header>
+{% include toc.html 
+  data=contact.toc
+%}
+
+<section id="contact-information" class="subseccion vcard">
+  <h2 class="sprite">Contact Information</h2>
+
+  <p class="name sprite">
+    <img 
+      class="photo" 
+      src="../assets/img/contacto/agente-zamudio.jpg" 
+      width="88" 
+      height="112" 
+      alt="Víctor Zamudio" /><br />
+    <strong class="fn">V&iacute;ctor Zamudio </strong><br />
+    <em class="title">
+      <abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Developer
+    </em><br />
+    <span class="adr"><span class="locality">Coyoac&aacute;n</span>, <span class="region">M&eacute;xico City</span></span>
+  </p>
+  
+  <p class="phone sprite"><strong>Mobile <span class="type">phone</span></strong><br />
+    <a href="tel:+5280100958" title="Ping me on my mobile">+52 55 85 100 958</a>
+  </p>
+  
+  <p class="email sprite">
+    <strong>Email</strong><br>
+    <a href="mailto:alo@victorzamudio.dev" class="email">alo[&#64;]victorzamudio.dev</a><br />
+  </p>
+  
+  <p class="cards sprite"><strong>Download my contact info</strong><br /> 
+    <span class="v_card"><img src="/assets/images/contact/qr-vcard.png" width="180" height="180" alt="My vCard Quick Response Code" /><br />
+    <a href="/assets/docs/victorzamudio.vcd" target="_blank" title="Download my vCard">vCard</a></span><br />
+    <span class="me_card"><img src="../assets/img/contact/qr-mecard.png" width="180" height="180" alt="My meCard Quick Response Code" /><br />
+    <a href="../../docs/victorzamudio.mcd" target="_blank" title="Download my meCard">meCard</a></span>   
+  </p>
+  
+  <vz-fragment-link 
+    classes="sprite section-links" 
+    [anchors]="anchorsSectionNavigation" 
+    [active]="1"
+    [hideTitle]="true"
+  />
+
+  <span class="decorative">
+    <span class="sonda spacecraft">&nbsp;</span>
+    <span class="ship-position">&nbsp;</span>
+    <span class="screen-top">&nbsp;</span>
+    <span class="grid">&nbsp;</span>
+    <span class="date"><span class="horas">&nbsp;</span>
+    <span class="minutes">&nbsp;</span>
+    <span class="hour">&nbsp;</span>
+    <span class="day-number">&nbsp;</span>
+    <span class="day">&nbsp;</span><span class="month">&nbsp;</span>
+    <span class="year">&nbsp;</span></span>
+    <span class="comunicaciones comms">
+    <span class="onda1 spacecraft-1">&nbsp;</span>
+    <span class="spacecraft-2">&nbsp;</span>
+    <span class="spacecraft-3">&nbsp;</span></span>
+    <span class="environment"><span class="water">&nbsp;</span><span class="oxygen">&nbsp;</span>
+    <span class="temperature">&nbsp;</span><span class="gravity">&nbsp;</span></span>
+    <span class="energy-cells">&nbsp;</span>
+    <span class="screen-left">&nbsp;</span>
+    <span class="screen-center">&nbsp;</span>
+    <span class="screen-bottom">&nbsp;</span>
+    <span class="screen-out">&nbsp;</span>
+    <span class="earth"><span class="datos1 data-1">&nbsp;</span><span class="data-2">&nbsp;</span></span>
+    <span class="moon"><span class="data-1">&nbsp;</span></span>
+  </span>
+</section>
+
+{% include back-to-top.html %}
+
+<section id="message" class="subsection">
+  <h2>Message</h2>
+
+  <form name="form-message" id="formMessage" action="#message" method="post">
+    <p>
+      <label for="firstName">First Name:</label><br>
+      <input 
+        type="text" 
+        name="firstName" 
+        id="firstName" 
+        class="text" 
+        placeholder="Jane"/>
+      <span class="error"></span>
+    </p>
+    
+    <p>
+      <label for="lastName">Last Name:</label><br>
+      <input 
+        type="text" 
+        name="lastName" 
+        id="lastName" 
+        class="text" 
+        placeholder="Doe"/>
+      <span class="error"></span>
+    </p>
+    
+    <p>
+      <label for="email">Email:</label><br>
+      <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        class="text" 
+        placeholder="jane.doe@somewhere.com"/>
+      <span class="error"></span>
+    </p>
+    
+    <p>
+      <span class="phone">
+        <label for="phone">Phone Number:</label><br>
+        <input 
+          type="tel" 
+          name="phone" 
+          id="phone" 
+          class="number" 
+          placeholder="(52+) 55 80 100 325"/><br>
+      </span>
+      
+      <span class="extension">
+        <label>Ext:</label><br>
+        <input 
+          type="tel" 
+          name="extension" 
+          id="extension" 
+          class="number" 
+          placeholder="2548"/>
+      </span>
+    </p>
+    
+    <p>
+      <label for="mobile">Mobile:</label><br>
+      <input 
+        type="tel" 
+        name="mobile" 
+        id="mobile"  
+        class="number" 
+        placeholder="55 80 100 958"/><br>
+    </p>
+    
+    <p>
+      <label for="reason">Reason:</label><br>
+      <select name="reason" id="reason"><br />
+        <option value='say-hi'>Just passing to say Hi!</option><br />
+        <option value='project-quote'>Project quote</option><br />
+        <option value='web-consulting'>Web Consulting</option><br />
+        <option value='job-offer'>Job offer</option><br />
+        <option value='feedback'>Feedback on the Site</option>   
+      </select>
+    </p>
+  
+    <p class="col1">
+      <label for="messageField">Message:</label><br>
+      <textarea 
+        name="messageField" 
+        id="messageField" 
+        cols="44" 
+        rows="10" 
+        maxlength="4000"
+        placeholder="Type your ideas here"></textarea>
+      <span class="error"></span>
+    </p>
+    
+    <p class="col1">
+      <input type="checkbox" name="policy" id="policy"  value="1"/>
+      <label for="policy">I have read and accept the <a href="/contact/policy.html" target="_blank">privacy</a> policies.</label>
+      <span class="error"></span>
+    </p>
+    
+    <p class="col1">
+      <button type="reset" name="clear" id="clear">Clear</button>
+      <button type="submit" name="submit" id="submit">Submit</button>
+    </p>
+  </form>
+  
+  
+  <vz-fragment-link 
+    classes="sprite section-links" 
+    [anchors]="anchorsSectionNavigation" 
+    [active]="2"
+    [hideTitle]="true"
+  />
+
+ <span class="decorative">
+   <span class="ship-position">&nbsp;</span>
+   <span class="screen-top">&nbsp;</span>
+   <span class="grid">&nbsp;</span>
+   <span class="date">
+    <span class="hours">&nbsp;</span>
+    <span class="minutes">&nbsp;</span>
+    <span class="hour">&nbsp;</span>
+    <span class="day-number">&nbsp;</span>
+    <span class="day">&nbsp;</span>
+    <span class="month">&nbsp;</span>
+    <span class="year">&nbsp;</span></span>
+   <span class="comms">
+    <span class="onda1 wave-1">&nbsp;</span>
+    <span class="wave-2">&nbsp;</span>
+    <span class="wave-3">&nbsp;</span></span>
+   <span class="environment"><span class="water">&nbsp;</span><span class="oxygen">&nbsp;</span><span class="temperatura">&nbsp;</span><span class="gravedad">&nbsp;</span></span>
+   <span class="energy-cells">&nbsp;</span>
+   <span class="screen-left">&nbsp;</span>
+   <span class="screen-center">&nbsp;</span>
+   <span class="screen-bottom">&nbsp;</span>
+   <span class="screen-out">&nbsp;</span>
+   <span class="jupiter"><span class="data1">&nbsp;</span></span>
+   <span class="space-station"><span class="data2">&nbsp;</span></span>
+ </span>
+</section>
+
+{% include back-to-top.html %}
+
+<section id="social-media" class="subsection">
+  <h2>Social Media</h2>
+  
+  <!--fB-->
+  <div id="facebook" class="social-network sprite">
+    <h3 class="sprite">
+    <span class="title">Facebook</span>
+    <span class="sprite icon facebook">&nbsp;</span>
+    <span class="data1">&nbsp;</span>
+  </h3>
+ 
+  <p class="profile sprite">
+    <a href="https://www.facebook.com/VictorZamudioMX" target="_blank" title="Víctor Zamudio on Facebook">&#47;VictorZamudioMX</a><br/>
+    <em><abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Developer at Thomson Reuters</em>
+  </p>
+ 
+  <p class="groups sprite">
+    <strong>Gruops</strong><br />
+    <em>Windows 8 Videogames - 748 members</em><br />
+    <em>News - 25 377 members</em>
+  </p>
+ 
+  <p class="activity sprite">
+    <strong>Recent activity</strong><br>
+    <em>October 13, 2014</em><br>
+    <span>Víctor Zamudio published something via Vimeo:</span><br>
+    <span>For my Windows 8 Video Games friends, I found a brief design history of Title Screens, it's here. brilliant!</span><br>
+    <a href="https://www.facebook.com/VictorZamudioMX/posts/10204126268548872?pnref=story" target="_blank"><img src="/assets/images/contact/facebook-screen-titles.png" width="290" height="140" alt="Imagenes de " /></a>
+  </p>
+ 
+  <p class="ver sprite">
+    <a href="https://www.facebook.com/VictorZamudioMX" target="_blank" title="Víctor Zamudio on Facebook">See on Facebook</a>
+  </p>
+ 
+ </div>
+ <!--fB-->
+
+ <!--tW-->
+  <div id="twitter" class="social-network sprite">
+    <h4 class="sprite">
+      <span class="title">Twitter</span>
+      <span class="sprite icon twitter">&nbsp;</span>
+      <span class="data2">&nbsp;</span>
+    </h4>
+
+    <p class="profile sprite">
+      <a href="https://twitter.com/victorZamudioMX" target="_blank" title="Víctor Zamudio on Twitter">&#64;VictorZamudioMX</a><br/>
+      <em><abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Developer at Thomson Reuters</em>
+    </p>
+
+    <p class="activity sprite">
+      <strong>Recent activity</strong>
+
+      <em>November 12, 2014</em><br>
+      <span>&#64;Mashable</span>
+      <span>So *this* is what it looks like when you're barreling into a comet<br/>
+      <a href="http://mashable.com/2014/11/11/rosetta-philae-comet-landing/?cometpic" target="_blank" title="http://on.mash.to/1v4k6e8ic">http://on.mash.to/1v4k6e8</a></span><br>
+
+      <em>November 12, 2014</em><br>
+      <span>&#64;Techcrunch</span>
+      <span>Google's Search App For Android Gets Material Design Update And New Smarts<br/>
+      <a href="http://techcrunch.com/2014/11/12/googles-search-app-for-android-gets-material-design-update-and-new-smarts/" target="_blank" title="http://tcrn.ch/1xxSEF3">http://tcrn.ch/1xxSEF3</a></span>
+    </p>
+  
+    <p class="ver sprite"><a href="https://twitter.com/victorZamudioMX" target="_blank" title="V&iacute;ctor Zamudio on Twitter">See on Twitter</a></p>
+  </div>
+ <!--tW-->
+ 
+ <!--+G-->
+ <div id="googlePlus" class="social-network sprite">
+ <h4 class="sprite"><span class="title">+Google</span><span class="sprite icon googlePlus">&nbsp;</span><span class="data2">&nbsp;</span></h4>
+ <p class="profile sprite">
+  <a href="https://plus.google.com/+VictorzamudioMxWeb" target="_blank" title="Víctor Zamudio en +Google">+VictorzamudioMxWeb</a><br/>
+  <em><abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Developer at Thomson Reuters</em><br>
+  <em>Studied in <abbr title="Universidad Autónoma Metropolitana, Unidad Xochimilco">UAM-X</abbr></em>
+ </p>
+ <p class="activity sprite">
+ <strong>Publications</strong><br>
+ <em>November 11, 2014</em><br>
+ <span>Originally shared: <a href="https://plus.google.com/112943946047332492941" target="_blank" title="WIRED in +Google">WIRED</a></span><br>
+ <span>Once completed, Aerial Bold will be the first typeface created from shapes and patterns from the planet's topology.</span><br>
+ <a href="https://plus.google.com/112943946047332492941/posts/jExTQFhzNxV" title="the first typeface created from shapes and patterns" target="_blank"><img src="/assets/images/contact/aerial-font.jpg" width="280" height="140" alt="Imagen de la primer tipografía creada de formas de la topología del planeta" /></a>
+ </p>
+ <p class="ver sprite"><a href="https://plus.google.com/+VictorzamudioMxWeb" target="_blank" title="V&iacute;ctor Zamudio on +Google">See on +Google</a></p>
+ </div>
+ <!--+G-->
+ 
+ <!--Li-->
+ <div id="linkedin" class="social-network sprite">
+ <h4 class="sprite"><span class="title">Linkedin</span><span class="sprite icon linkedin">&nbsp;</span><span class="data1">&nbsp;</span></h4>
+ <p class="profile sprite">
+  <a href="http://mx.linkedin.com/in/victorzamudio/" target="_blank" title="Víctor Zamudio en Linkedin">&#47;VictorZamudio</a><br/>
+  <em><abbr title="User Experience">UX</abbr>/<abbr title="User Interface">UI</abbr> Developer at Thomson Reuters</em>
+ </p>
+ <p class="jobs sprite">
+ <strong>Previous jobs</strong><br>
+ <em>Globant, Seccion Amarilla, EC Global Network</em><br>
+ </p>
+ <p class="educacion sprite">
+ <strong>Education</strong><br>
+ <em>Universidad Aut&oacute;noma Metopolitana, Unidad Xochimilco</em><br>
+ </p>
+ <p class="groups sprite">
+  <strong>Groups</strong><br />
+  <em>Top Web Designers - 23,248 members</em><br>
+  <em>PHP Developers - 99,999 members</em>
+ </p>
+ 
+ <p class="see sprite"><a href="http://mx.linkedin.com/in/victorzamudio/" target="_blank" title="Víctor Zamudio on Linkedin">See on Linkedin</a></p>
+ </div>
+ <!--Li-->
+ 
+ <!--Pi-->
+ <div id="pinterest" class="social-network sprite">
+ <h4 class="sprite"><span class="title">Pinterest</span><span class="sprite icon pinterest">&nbsp;</span><span class="datos1">&nbsp;</span></h4>
+ <p class="profile sprite">
+  <a href="https://www.pinterest.com/victorzamudio/" target="_blank" title="Víctor Zamudio en Pinterest">&#47;VictorZamudio</a><br/>
+  <em>Web Designer, Dreamer & Maker</em>
+ </p>
+ <p class="activity sprite">
+ <strong>Boards</strong><br>
+ <em>Artists that inspire</em><br>
+ <span>15 pins</span>
+ <a href="https://www.pinterest.com/victorzamudio/artists-that-inspire/" title="Board Artist that inspire on Pinterest" target="_blank"><img src="/assets/images/contact/artist-that-inspire.jpg" width="284" height="209" alt="Imagen del tablero de pinterest Artists that inspire" /></a>
+ </p> 
+ <p class="see sprite"><a href="https://www.pinterest.com/victorzamudio/" target="_blank" title="Víctor Zamudio on Pinterest">See on Pinterest</a></p>   
+ 
+ </div>
+ 
+  <vz-fragment-link 
+    classes="sprite section-links" 
+    [anchors]="anchorsSectionNavigation" 
+    [active]="3"
+    [hideTitle]="true"
+  />
+
+  <span class="decorative">
+    <span class="position-ship">&nbsp;</span>
+    <span class="screen-top">&nbsp;</span>
+    <span class="grid">&nbsp;</span>
+    <span class="date"><span class="hours">&nbsp;</span>
+    <span class="minutes">&nbsp;</span><span class="hora">&nbsp;</span><span class="dia_numero">&nbsp;</span><span class="day">&nbsp;</span><span class="mes">&nbsp;</span><span class="year">&nbsp;</span></span>
+    <span class="comms"><span class="wave1">&nbsp;</span><span class="wave2">&nbsp;</span><span class="wave3">&nbsp;</span></span>
+    <span class="environment"><span class="water">&nbsp;</span><span class="oxygen">&nbsp;</span><span class="temperature">&nbsp;</span><span class="gravity">&nbsp;</span></span>
+    <span class="energy-cells">&nbsp;</span>
+    <span class="screen-left">&nbsp;</span>
+    <span class="screen-center">&nbsp;</span>
+    <span class="screen-bottom">&nbsp;</span>
+    <span class="screen-out">&nbsp;</span>
+    <span class="constelation">&nbsp;</span>
+  </span>
+</section>
+
+{% include back-to-top.html %} 

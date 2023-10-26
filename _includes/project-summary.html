@@ -1,0 +1,33 @@
+{% for summary in include.summaries%}
+<section
+  id="{{summary.id}}"
+  class="{{summary.classes}}">
+  <figure class="figure">
+      <img 
+        id="{{summary.id}}-image" 
+        src="/assets/images/projects/{{summary.id}}-thumb-b.jpg" 
+        alt="Image of {{summary.title}}"/><br />
+      <figcaption class="figcaption">
+          <h3>{{summary.title}}</h3>
+          <span 
+            class="icon desktop tablet smartphone" 
+            title="Project for Desktop, Tablet and Smartphone devices">&nbsp;</span>
+          <p>
+            <strong class="year">Year: </strong>
+              <em class="year">{{summary.year}}</em><br />
+            <strong class="industry">Industry: </strong>
+              <em class="industry">{{summary.industry}}</em><br />
+            <strong class="technologies">Technologies: </strong>
+              <em class="technologies">{{summary.technologies}}</em>
+          </p>
+          <a 
+            href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}" 
+            [title]="summary.link.title">
+              See project
+          </a>
+        </figcaption>
+    </figure>
+
+  {% include back-to-top.html %}
+</section>
+{% endfor %}
