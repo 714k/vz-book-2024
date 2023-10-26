@@ -6,6 +6,12 @@
   <title>{{page.title}} | {{site.title}}</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
   {% seo %}
+  <style>
+    :root {
+      --color-primary: {{ page.primary_color }};
+      --color-secondary: {{ page.secondary_color }}
+    }
+  </style>
 </head>
 <body class="{{page.title | replace: "...", "" | replace: ".", "" | replace: "&", "and" | split: " " | join: "-" | downcase}}">
   {% include header.html %}
