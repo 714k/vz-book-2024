@@ -5,7 +5,9 @@ RewriteEngine On
 RewriteBase /
 
 # Redirection
-RewriteRule ^/(.*)$ /at-the-beginning [R=301,L]
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+RewriteRule ^/at-the-beginning/(pattern)$ %{ENV:BASE}$1 [R=301,L]
 
 # Error Pages
 RewriteCond %{REQUEST_URI} ^/404/$
