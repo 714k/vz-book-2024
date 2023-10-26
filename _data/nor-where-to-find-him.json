@@ -1,0 +1,22 @@
+{
+  "toc": [
+    {
+      "title": "Contact information",
+      "href": "contact-information",
+      "classes": "anchor-class",
+      "separator": "|",
+      "text": "Contact information"
+    },
+    {
+      "title": "Leave a message",
+      "href": "message",
+      "separator": "|",
+      "text": "Message"
+    },
+    {
+      "title": "Follow in Social Media",
+      "href": "social-media",
+      "text": "Social Media"
+    }
+  ]
+}
