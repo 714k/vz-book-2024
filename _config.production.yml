@@ -1,0 +1,15 @@
+include: ['.htaccess']
+
+title: Victor Zamudio
+url: "https://book2024.victorzamudio.dev/"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
