@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   {% seo %}
 </head>
-<body class="{{page.section_class}}">
+<body class="{{page.title | replace: "...", "" | replace: ".", "" | replace: "&", "and" | split: " " | join: "-" | downcase}}">
   {% include header.html %}
   <main>
     <article id="main">
