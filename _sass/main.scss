@@ -10,7 +10,22 @@ body {
   font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
   padding: 16px;
   margin: 0;
-
+  .vz-logo {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 200;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
   a:not(.vz-logo) {
     text-decoration: none;
     padding: 0 4px;
@@ -47,4 +62,19 @@ body {
       }
     }
   }
+  #main-header {
+    &::before {
+      content: "";
+      height: 80px;
+      width: 100%;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(3px);
+    }
+  }
+  #main {
+    padding-top: 120px;
+  } 
 }
