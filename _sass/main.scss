@@ -1,6 +1,8 @@
 @import "typography";
 @import "main-navigation";
 @import "toc";
+@import "covers";
+@import "navigator";
 
 :root {
   --spacing-0: 0;
@@ -90,9 +92,9 @@ body {
     }
   }
   #main {
-    padding-top: 120px;
+    padding-top: calc(var(--spacing-9) * 2);
   }
   section {
-    padding-top: 80px;
+    padding-top: calc(var(--spacing-9) * 2);
   }
 }

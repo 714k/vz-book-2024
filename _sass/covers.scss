@@ -1,0 +1,31 @@
+.cover {
+  h1 {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin: var(--spacing-0) auto var(--spacing-0) auto;
+    height: 50vh;
+  }
+  &::after {
+    position: relative;
+    padding-top: calc(var(--spacing-10) * 3);
+    padding-bottom: calc(var(--spacing-10) * 4);
+    content: '';
+    display: block;
+    width: calc(var(--spacing-10) * 3);
+    height: var(--spacing-2);
+    margin: var(--spacing-0) auto;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    background-image: url(/assets/svg/scroll-down.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
