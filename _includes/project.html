@@ -8,9 +8,9 @@
   {% assign toc=site.data.project.toc %}
 {% endunless %}
 
-<header>
+<header class="cover">
   <h1>
-    {{page.title}}
+    {{include.title}}
   </h1>
 </header>
 {% include toc.html 
