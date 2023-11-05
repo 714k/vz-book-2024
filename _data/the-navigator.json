@@ -94,7 +94,7 @@
                   ]
                },
                {
-                  "title": "Practicing Agile Methodlogy (Kanban & Scrum)",
+                  "title": "Practicing Agile Methodlogy -Kanban & Scrum-",
                   "links": [
                      {
                         "title": "See my knowledge about Agile Methodlogy",
@@ -167,7 +167,7 @@
             "accounts": [
                {
                   "title": "Design",
-                  "text": "All of the above",
+                  "text": "",
                   "links": [
                      {
                         "title": "See Project of Saffron",
@@ -178,13 +178,13 @@
                },
                {
                   "title": "Redesign",
-                  "text": "All of the above",
+                  "text": "",
                   "links": [
                      {
                         "title": "See Project of NextGen",
                         "text": "NextGen",
                         "href": "/at-the-beginning/nobody-knows-he-worked-on/next-gen"
-                     }                     
+                     }                  
                   ]
                },
                {
@@ -192,9 +192,13 @@
                   "text": "All of the above",
                   "links": [
                      {
-                        "title": "See Project of Maverick",
-                        "text": "Maverick",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/maverick"
+                        "title": "See Project of One Source",
+                        "text": "One Source",
+                        "href": "/at-the-beginning/nobody-knows-he-worked-on/one-source"
+                     },
+                     {
+                        "title": "See Project of Audit",
+                        "text": "Audit"
                      },
                      {
                         "title": "See Project of Open Banking",
@@ -334,7 +338,7 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See Project of HBO Max",
@@ -350,7 +354,7 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See Project of Plastiq",
@@ -478,7 +482,7 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See the project of Sección Amarilla Blog",
@@ -492,7 +496,7 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See Project of Sección Amarilla Portal",
@@ -589,7 +593,7 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See Project Aventuras Enmascaradas",
@@ -614,7 +618,7 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See Projects from Hospital Español",
@@ -645,7 +649,10 @@
             },
             {
                "title": "Administration & Maintenance",
-               "text": "All of the above"
+               "text": "All of the above.",
+               "links": [
+
+               ]
             }
          ]
         }
@@ -713,12 +720,12 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
-                     "title": "See the project of Routes of Mexico",
-                     "text": "Routes of Mexico",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/routes-of-mexico"
+                     "title": "See the project of Rutas de Mexico",
+                     "text": "Rutas de Mexico",
+                     "href": "/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico"
                   },
                   {
                      "text": "El Máscara"
@@ -747,13 +754,13 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "text": "Employment Portal"
                   },
                   {
-                     "text": "Infotec"
+                     "text": "<abbr lang='es-mx' title='Centro de Investigación e Innovación en Tecnologías de la Información y Comunicación'>Infotec</abbr>"
                   },
                   {
                      "text": "Labor Observatory"
@@ -762,7 +769,8 @@
             },
             {
                "title": "Administration & Maintenance",
-               "text": "All of the above"
+               "text": "All of the above.",
+               "links": []
             }
          ]
         }
@@ -810,7 +818,7 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See the project of Query Technologies",
@@ -821,7 +829,7 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "title": "See the project of Nissan Latinoamérica y El Caribe",
@@ -835,7 +843,8 @@
             },
             {
                "title": "Administration & Maintenance",
-               "text": "All of the above"
+               "text": "All of the above.",
+               "links": []
             }
          ]
         }        
@@ -903,7 +912,7 @@
            "accounts": [
             {
                "title": "Design",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "text": "Honda Miramontes"
@@ -927,7 +936,7 @@
             },
             {
                "title": "Redesign",
-               "text": "All of the above",
+               "text": "",
                "links": [
                   {
                      "text": "Toyota Universidad"
@@ -966,7 +975,8 @@
             },
             {
                "title": "Administration & Maintenance",
-               "text": "All of the above"
+               "text": "All of the above.",
+               "links": []
             }
          ]            
         }
