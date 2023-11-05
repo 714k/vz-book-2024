@@ -8,22 +8,22 @@
     <span class="decorative pirate-head"></span>
   
     <p class="period">
-     <span class="title"><strong>Period</strong></span><br />
+     <strong>Period</strong><br />
      <span>{{ adventure.period }}</span>				
     </p>
   
     <p class="company">
-     <span class="title"><strong>Company</strong></span><br />
+     <strong>Company</strong><br />
      <span>{{ adventure.company }}</span>				
     </p>
   
     <p class="industry">
-     <span class="title"><strong>Industry</strong></span><br />
+     <strong>Industry</strong><br />
      <span>{{ adventure.industry }}</span>
     </p>
         
     <p class="role">
-      <span class="title"><strong>Role</strong></span><br />
+      <strong>Role</strong><br />
       <span>{{ adventure.role }}</span><br />
     </p>
   
@@ -31,51 +31,51 @@
       <div class="activities">
         <h3>Activities</h3>
         {% for activity in adventure.summary.activities %}
-        <span>
-          <span>{{activity.title}}</span>
-            (See 
-            {% for link in activity.links %}
-            <a 
-              href="link.href"
-              title="link.title"
-              >{{link.text}}</a>).&nbsp;
-            {% endfor %}  
-        </span>
+          {{activity.title}}
+          (See 
+          {% for link in activity.links %}
+            {% if forloop.index == activity.links.size %}
+              {% assign dot_or_comma = '.' %}
+            {% endif %}  
+            {% unless forloop.index == activity.links.size %}
+              {% assign dot_or_comma = ',' %}
+            {% endunless %}
+          <a 
+            href="{{link.href}}"
+            title="{{link.title}}"
+            >{{link.text}}</a>){{dot_or_comma}}
+          {% endfor %}  
         {% endfor %}
       </div>
   
       <div class="accounts">
         <h3>Accounts</h3>
         {% for account in adventure.summary.accounts %}
-        <span>
-          <strong class="account.title | downcase">{{ account.title }}: </strong>
-          {% if !account.links %}  
-          <span>{{account.text}}</span>
+        <span class="{{account.title | downcase | replace: ' & ', ' ' }}">
+          <strong>{{ account.title }}: </strong>
+          {% if !account.links %}
+            {% if account.title == 'Administration & Maintenance' %}
+              {{account.text}}
+            {% endif %}
+            
             {% for link in account.links %}
-            <span>
+              {% if forloop.index == account.links.size %}
+                {% assign dot_or_comma = '.' %}
+              {% endif %}  
+              {% unless forloop.index == account.links.size %}
+                {% assign dot_or_comma = ',' %}
+              {% endunless %}
+
               {% if link.href %}
               <a
                 href="{{link.href}}"
                 title="{{link.title}}"
-              >{{ link.text }}</a>
-                {% if forloop.index == account.links.size %}
-                  .
-                {% endif %}  
-                {% unless forloop.index == account.links.size %}
-                  ,
-                {% endunless %}
+              >{{link.text}}</a>{{-dot_or_comma | strip -}}
               {% endif %}
-  
+
               {% unless link.href %}
-              <span>{{ link.text }}</span>
-                {% if forloop.index == account.links.size %}
-                  .
-                {% endif %}  
-                {% unless forloop.index == account.links.size %}
-                  ,
-                {% endunless %}
-              {% endunless %}  
-            </span>
+              <span>{{link.text}}</span>{{dot_or_comma}}
+              {% endunless %}
             {% endfor %}
           </span>
           {% endif %}

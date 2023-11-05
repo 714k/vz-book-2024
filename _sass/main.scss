@@ -16,6 +16,21 @@
   --spacing-8: 32px;
   --spacing-9: 36px;
   --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-13: 52px;
+  --spacing-14: 56px;
+  --spacing-15: 60px;
+  --spacing-16: 64px;
+  --spacing-17: 68px;
+  --spacing-18: 72px;
+  --spacing-19: 76px;
+  --spacing-20: 80px;
+  --spacing-21: 84px;
+  --spacing-22: 88px;
+  --spacing-23: 92px;
+  --spacing-24: 96px;
+  --spacing-25: 100px;
 }
 
 body {
@@ -95,7 +110,7 @@ body {
     padding-top: calc(var(--spacing-9) * 2);
   }
   section {
-    padding-top: calc(var(--spacing-9) * 2);
+    padding-top: var(--spacing-20);
   }
   .back-to-top {
     text-align: right;
