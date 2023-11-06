@@ -2,6 +2,7 @@
 @import "main-navigation";
 @import "toc";
 @import "covers";
+@import "info";
 @import "navigator";
 
 :root {
@@ -115,5 +116,15 @@ body {
   .back-to-top {
     text-align: right;
     margin: 48px 0 0 0;
+  }
+  #footer {
+    text-align: center;
+    margin-bottom: 60px;
+    span {
+      display: block;
+      &.hide {
+        display: none;
+      }
+    }
   }
 }

@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Palette Mosaic';
+  src: url('/assets/fonts/palette-mosaic.eot');
+  src: url('/assets/fonts/palette-mosaic.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/palette-mosaic.woff2') format('woff2'),
+       url('/assets/fonts/palette-mosaic.woff') format('woff'),
+       url('/assets/fonts/palette-mosaic.svg#palette_mosaicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.no-one-knows {
+  padding-left: 0;
+  padding-right: 0;
+  main {
+    &::before {
+      content: '';
+      position: absolute;
+      opacity: 0.5;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 100vh;
+      left: 0;
+      background-image: url(/assets/images/info/comic-bg.png);
+      // background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  }
+  #main {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 70px;
+      z-index: 2;
+      width: 48px;
+      height: 109px;
+      background-image: url(/assets/images/info/publisher-logo.png);
+      background-repeat: no-repeat;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2;
+      width: 191px;
+      height: 97px;
+      background-image: url(/assets/images/info/barcode-comic.png);
+      background-size: 75%;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+  }
+  .cover {
+    background-color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(/assets/images/info/cover-bg.jpg);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  h1 {
+    justify-content: start;
+    font-family:'Palette Mosaic', Arial, sans-serif;
+    font-size: 76px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffb80070;
+    z-index: 3;
+    position: relative;
+    span {
+      display: block;
+      &.elipsis {
+        line-height: 0;
+        justify-self: center;
+      }
+    }
+  }
+  h2 {
+    font-family:'Palette Mosaic', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 0;
+    span {
+      display: block;
+    }
+  }
+  .sprite,
+  .decorative {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  section {
+    position: relative;
+    padding-top: 0;
+    height: 30vh;
+    h2 {
+      position: absolute;
+      z-index: 3;
+    }
+    .balloon {
+      display: none;
+    }
+  }
+  #profile {
+    height: 21vh;
+    h2 {
+      left: 34vw;
+      bottom: 0;
+    }
+    .elliot {
+      z-index: 0;
+      left: 50%;
+      transform: translateX(-25vw);
+      width: 50vw;
+      height: 30vh;
+      background-image: url(/assets/images/info/elliot.png);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  #laboral-experience {
+    background-image: url(/assets/svg/frame-navigator.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 74vw;
+    h2 {
+      right: 20px;
+      top: 7vh;
+    }
+    .sparrow {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-image: url(/assets/images/info/sparrow.png);
+      background-size: 68%;
+      background-repeat: no-repeat;
+      background-position: -12vw 4vh;
+    }
+  }
+  #skills {
+    background-image: url(/assets/svg/frame-hitman.svg);
+    background-position: center 16px;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    height: 50vw;
+    h2 {
+      left: 20px;
+      bottom: 30px;
+    }
+    .hitman-a {
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      filter: grayscale(1);
+      background-image: url(/assets/images/info/hitman.png);
+      background-position: 45vw top;
+      background-repeat: no-repeat;
+      background-size: 75%;
+    }
+  }
+  #tableOfContent,
+  .back-to-top {
+    display: none;
+  }
+}
