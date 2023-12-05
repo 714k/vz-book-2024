@@ -1,38 +1,39 @@
 {
   "brief": {
-    "title": "NextGen",
-    "year": "2022 -",
+    "title": "One Source",
+    "year": 2023,
     "company": "Thomson Reuters",
     "industry": "Legal; Tax and Accounting; and News & Media",
-    "work": "Redesign of Confirmation Cloud Application",
+    "work": "Design System to normalize the brand of the Company",
     "technologies": [
       "Agile,",
       " Leadership, Mentoring,",
+      " Data Visualization",
+      " Angular,",
+      " Custom Components,",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5,",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3,",
+      " Typescript, D3,",
+      " Unit, Integration, and e2e Testing",
+      " Playwright,",
       " Accessibility,",
       " <abbr title='User Experience'>UX</abbr>,",
       " Design Patterns,",
-      " Unit, Integration, and e2e Testing,",
-      " Playwright,",
       " Web Standards,",
       " Mobile First,",
-      " Angular, ReactJS,",
-      " Typescript,",
-      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5,",
-      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3,",
       " Azure DevOps,",
-      " Sass,",
-      " .Net,",
+      " Less,",
       " Figma,",
-      " Browserstack, LucidChart,",
-      " Webstorm, Visual Studio, VS Code,",
+      " Browserstack, LucidChart",
+      " Webstorm, VS Code",
       " Git, NPM, Rush, Yarn, Rollup."
     ],
     "status": "Active",
     "links": [
       {
-        "href": "https://www.confirmation.com",
+        "href": "https://www.onesourcetax.com/",
         "title": "Visit Website",
-        "text": "NextGen Confirmation"
+        "text": "One Source"
       }
     ]
   },
@@ -45,8 +46,8 @@
     }
   ],
   "projectsNavigation": {
-    "current": "NextGen",
-    "next": "Saffron",
-    "previous": "Plastiq"
+    "current": "One Source",
+    "next": "",
+    "previous": "Saffron"
   }
 }

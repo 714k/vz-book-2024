@@ -1,12 +1,12 @@
 {
   "toc": [
     {
-      "title": "See the Saffrolote project",
-      "href": "saffrolote",
+      "title": "See the Saffron project",
+      "href": "Saffron",
       "classes": "anchor-class",
       "prefixText": "",
       "sufixText": "",
-      "text": "Saffrolote"
+      "text": "Saffron"
     },
     {
       "title": "See the NextGen project",
@@ -171,8 +171,8 @@
   ],
   "summaries": [
     {
-      "id": "saffrolote",
-      "title": "Saffrolote",
+      "id": "Saffron",
+      "title": "Saffron",
       "year": 2023,
       "industry": "Legal; Tax and Accounting; and News & Media",
       "technologies": [
@@ -180,13 +180,13 @@
       ],
       "classes": "mobile",
       "link": {
-        "href": "saffrolote",
-        "title": "See project of Saffrolote",
+        "href": "Saffron",
+        "title": "See project of Saffron",
         "text": "See project"
       },
       "image": {
-        "id": "saffrolote",
-        "src": "saffrolote",
+        "id": "Saffron",
+        "src": "Saffron",
         "alt": "Image alt text"
       }
     },
