@@ -1,6 +1,42 @@
 <footer id="footer">
+  {% include logo.html %}
   <span>Designed & Developed by Victor Zamudio,</span> 
   <span>Senior Lead Engineer</span><span class="hide"> • </span>
   <span>Mexico City</span><span class="hide"> • </span>
   <span> 2006 - 2023</span>
+  <nav role="navigation" class="sitemap">
+    <strong>Sitemap</strong>
+    <ul class="nav">
+      {% for anchor in site.data.main-navigation %}
+      <li class="nav-item">
+        <a
+          {% if page.url == anchor.href %}
+            class="current"
+          {% endif %}
+          data-before={{anchor.prefixText}}
+          href="{{anchor.href}}"
+          title="{{anchor.title}}">
+          {{ anchor.text }}
+        </a>
+        {% if anchor.subsections %}
+        <ul>
+          {% for anchorSubsection in anchor.subsections %}
+          <li class="nav-item sub-navigation">
+            <a
+              {% if page.url == anchorSubsection.href %}
+                class="current"
+              {% endif %}
+              title="{{anchorSubsection.title}}" 
+              href="{{anchorSubsection.href}}">{{ anchorSubsection.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <p class="site-navigation">
+    <a href="#">previous page</a> | <a href="#">next page</a>
+  </p>
 </footer>
