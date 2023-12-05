@@ -1,20 +1,22 @@
 {% assign links=include.galleries-images[0].links %}
 
 <section id="gallery">
-  <h2>Gallery</h2>
   {% for gallery in include.galleries %}
   <div
     id="gallery-{{gallery.title | downcase}}" class="gallery">
-    <h3>{{gallery.title}}</h3>
+    <h2>{{gallery.title}} Gallery</h2>
     {% for link in links %}
     <figure 
       id="image-{{gallery.title | downcase}}-{{ link.text }}">
-      <img
+      <span class="decorative device">
+        <img
         src="/assets/images/projects/{{include.projects-navigation.current | split: " "
         | join: "-" | downcase}}-{{gallery.title | downcase}}-{{link.text}}.jpg"
         alt="Gallery {{gallery.title}} image #{{ link.text }}"
         width="100%"
-        height="auto"><br />
+        height="auto">
+      </span>
+      <br />
 
         {% include navigation-links.html
           classes="images-links"

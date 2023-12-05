@@ -1,8 +1,8 @@
 <nav id="tableOfContent" role="navigation" class="vz-toc">
   <p>In this section:</p>
-  <ul>
+  <ul role="list">
     {% for item in include.data %}
-      <li role="list">
+      <li role="listitem">
       <a 
         href="#{{item.href}}"
         class="{{item.classes}}" 

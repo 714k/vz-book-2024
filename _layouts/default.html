@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{page.title}} | {{site.title}}</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
@@ -9,11 +10,13 @@
   <style>
     :root {
       --color-primary: {{ page.primary_color }};
-      --color-secondary: {{ page.secondary_color }}
+      --color-secondary: {{ page.secondary_color }};
+      --cover-bg: url({{page.cover_bg}});
+      --project-bg: url({{page.project_bg}});
     }
   </style>
 </head>
-<body class="{{page.title | replace: "...", "" | replace: ".", "" | replace: "&", "and" | split: " " | join: "-" | downcase}}">
+<body class="{{page.class_names}}{{page.title | replace: "...", "" | replace: ".", "" | replace: "&", "and" | split: " " | join: "-" | downcase}}">
   {% include header.html %}
   <main>
     <article id="main">

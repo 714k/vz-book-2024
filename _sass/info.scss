@@ -74,21 +74,7 @@
     }
   }
   .cover {
-    background-color: transparent;
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url(/assets/images/info/cover-bg.jpg);
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-    }
+    @include cover;
   }
   h1 {
     justify-content: start;
@@ -97,8 +83,8 @@
     line-height: 1.2;
     text-transform: uppercase;
     color: #ffb80070;
-    z-index: 3;
-    position: relative;
+    // z-index: 3;
+    // position: relative;
     span {
       display: block;
       &.elipsis {

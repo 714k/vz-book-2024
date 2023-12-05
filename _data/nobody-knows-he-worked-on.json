@@ -176,14 +176,9 @@
       "year": 2023,
       "industry": "Legal; Tax and Accounting; and News & Media",
       "technologies": [
-        "Agile Development",
-        " Design System",
-        " Angular",
-        " React",
-        " Web Components",
-        " Rush ..."
+        " Design System..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "saffrolote",
         "title": "See project of Saffrolote",
@@ -201,14 +196,10 @@
       "year": 2022,
       "industry": "Legal; Tax and Accounting; and News & Media",
       "technologies": [
-        "Agile Development",
         " Leadership",
-        " TypeScript",
-        " Angular",
-        " Accessibility",
-        " <abbr title='User Experience'>UX</abbr> ..."
+        ", Accessibility..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "next-gen",
         "title": "See project of Next Gen",
@@ -227,13 +218,12 @@
       "industry": "Digital Payments",
       "technologies": [
         "Agile Development",
-        " Leadership",
-        " Mentoring",
-        " ReactJS",
-        " NodeJS",
-        " Design System ..."
+        ", Leadership",
+        ", Mentoring",
+        ", ReactJS",
+        ", NodeJS..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "plastiq",
         "title": "See project of Plastiq",
@@ -251,14 +241,12 @@
       "year": 2020,
       "industry": "Entertainment",
       "technologies": [
-        "Agile Development",
         " ReacjJS",
-        " NextJS",
-        " Microservices",
-        " Design System",
-        " Docker ..."
+        ", NextJS",
+        ", Microservices",
+        ", Design System..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "hbo-max",
         "title": "See project of HBO Max",
@@ -277,13 +265,13 @@
       "industry": "Entertainment",
       "technologies": [
         "Agile Development",
-        " Leadership",
-        " TypeScript",
-        " React",
-        " Drupal",
-        " <abbr title='User Experience'>UX</abbr> ..."
+        ", Leadership",
+        ", TypeScript",
+        ", React",
+        ", Drupal",
+        ", <abbr title='User Experience'>UX</abbr> ..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "hbo",
         "title": "See project of HBO",
@@ -302,13 +290,13 @@
       "industry": "<abbr title='Internet of Things'>IoT</abbr>",
       "technologies": [
         "Agile Development",
-        " ReactJS",
-        " Redux",
-        " Java",
-        " Kotlin",
-        " MySQL ..."
+        ", ReactJS",
+        ", Redux",
+        ", Java",
+        ", Kotlin",
+        ", MySQL ..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "aeris",
         "title": "See project of Aeris",
@@ -327,13 +315,11 @@
       "industry": "Financial Services",
       "technologies": [
         "Agile Development",
-        " AngularJS",
-        " Backbase",
-        " Java",
-        " Jasmine",
-        " Mocha ..."
+        ", AngularJS",
+        ", Java",
+        ", Jasmine..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "citi-banamex",
         "title": "See project of Citi Banamex",
@@ -351,13 +337,12 @@
       "year": 2017,
       "industry": "Healthcare Products",
       "technologies": [
-        "Agile Development",
         " AngularJS",
-        " Accessibility",
-        " Symfony",
-        " Unit Testing ..."
+        ", Accessibility",
+        ", Symfony",
+        ", Unit Testing ..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "johnson-and-johnson",
         "title": "See project of Johnson & Johnson",
@@ -376,10 +361,10 @@
       "industry": "Aviation",
       "technologies": [
         "Agile Development",
-        " AngularJS",
-        " Ruby",
-        " Ruby on Rails",
-        " MongoDB ..."
+        ", AngularJS",
+        ", Ruby",
+        ", Ruby on Rails",
+        ", MongoDB ..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -400,13 +385,12 @@
       "industry": "Automotive",
       "technologies": [
         "Agile Development",
-        " AngularJS",
-        " <abbr title='Search Engine Optimization'>SEO</abbr>",
-        " Microformats",
-        " Accessibility",
-        " Open Graph ..."
+        ", AngularJS",
+        ", <abbr title='Search Engine Optimization'>SEO</abbr>",
+        ", Microformats",
+        ", Accessibility..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "cars",
         "title": "See project of Cars",
@@ -427,9 +411,10 @@
         "Microformats",
         " C# 5.0",
         " <abbr title='Xtensible Application Markup Language'>XAML</abbr> 1.0",
-        " <abbr title='Hypertext Pre-procesor'>PHP</abbr>..."
+        " <abbr title='Hypertext Pre-procesor'>PHP</abbr>...",
+        " Responsive Web Design..."
       ],
-      "classes": "class 1 class 2 class 3",
+      "classes": "mobile",
       "link": {
         "href": "seccion-amarilla",
         "title": "See project of Seccion Amarilla",
@@ -451,7 +436,7 @@
         " <abbr title='Xtensible Application Markup Language'>XAML</abbr> 1.0",
         " Visual Studio 2012",
         " XCode 4",
-        " Eclipse..."
+        " Eclipse, XCode..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -472,11 +457,10 @@
       "industry": "Entertainment",
       "technologies": [
         "<abbr title='HyperText Markup Languaje'>HTML</abbr> 5",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
-        " JQuery 1.9",
-        " C# 5.0",
-        " <abbr title='Xtensible Application Markup Language'>XAML</abbr> 1.0",
-        " Apache Cord..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+        ", JQuery 1.9",
+        ", C# 5.0",
+        ", <abbr title='Xtensible Application Markup Language'>XAML</abbr>, Unity..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -498,6 +482,7 @@
       "technologies": [
         "<abbr title='HyperText Markup Languaje'>HTML</abbr> 5",
         " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+        " Usability",
         " JQuery 1.8",
         " Joomla 2.5",
         " Web standards..."
@@ -521,9 +506,10 @@
       "industry": "Underwear",
       "technologies": [
         "<abbr title='HyperText Markup Languaje'>HTML</abbr> 5",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
-        " JQuery 1.8",
-        " Web standards..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+        ", <abbr title='Search Engine Optimization'>SEO</abbr>",
+        ", JQuery 1.8",
+        ", SQL Server, Web standards..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -544,8 +530,9 @@
       "industry": "Manufacturing General",
       "technologies": [
         "<abbr title='eXtensible HyperText Markup Language'>XHTML</abbr> 1.0",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
-        " Java..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+        ", Illustrator",
+        ", Accessibilitry, Java..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -566,8 +553,8 @@
       "industry": "Lingerie",
       "technologies": [
         "<abbr title='eXtensible HyperText Markup Language'>XHTML</abbr> 1.0",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
-        " Java..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+        ", Web Standards, Accessibility, Dreamweavere, Java..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -588,8 +575,11 @@
       "industry": "Tourism",
       "technologies": [
         "<abbr title='HyperText Markup Languaje'>HTML</abbr> 4.0",
-        " <abbr title='eXtensible Markup Language'>XML</abbr> 1.0",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1 ..."
+        ", <abbr title='eXtensible Markup Language'>XML</abbr> 1.0",
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+        ", <abbr title='Content Management System'>CMS</abbr>",
+        ", <abbr title='Semantic Web Builder'>SWB</abbr>",
+        ", Usability, Dreamweaver ..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -610,10 +600,10 @@
       "industry": "Government",
       "technologies": [
         "<abbr title='eXtensible Hypertext Markup Languaje'>XHTML</abbr>",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
-        " Accessibility",
-        " Usability",
-        " Web standards..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+        ", Accessibility",
+        ", Usability",
+        ", Web standards..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -634,9 +624,10 @@
       "industry": "Automotive",
       "technologies": [
         "<abbr title='eXtensible HyperText Markup Languaje'>XHTML</abbr> 1.0",
-        " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
-        " ActionScript 3.0",
-        " <abbr title='Content Management System'>CMS</abbr>..."
+        ", <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+        ", ActionScript 3.0",
+        ", Dojo, Photoshop",
+        ", <abbr title='Content Management System'>CMS</abbr>..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {
@@ -657,10 +648,9 @@
       "industry": "Telecommunications",
       "technologies": [
         "Information Architecture",
-        " <abbr title='User Experience'>UX</abbr>",
-        " Actionscript 2.0",
-        " Flash CS2",
-        " Web standards..."
+        ", <abbr title='User Experience'>UX</abbr>",
+        ", Actionscript 2.0",
+        ", Flash..."
       ],
       "classes": "class 1 class 2 class 3",
       "link": {

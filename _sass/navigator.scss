@@ -4,7 +4,7 @@
   src: url('/assets/fonts/hooverville.eot?#iefix') format('embedded-opentype'),
        url('/assets/fonts/hooverville.woff2') format('woff2'),
        url('/assets/fonts/hooverville.woff') format('woff'),
-       url('/assets/fonts/hooverville.svg#albertsonregular') format('svg');
+       url('/assets/fonts/hooverville.svg#hooverville') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,6 +33,41 @@
     }
   }
 
+  #tableOfContent {
+    background-color: #e0e0ce50;
+    backdrop-filter: blur(8px);
+    padding-bottom: 50px;
+    box-shadow: 0px -4px 20px 0px grey;
+    &:hover {
+      height: 80vh;
+      transition: all 0.5s;
+      &::after {
+        transition: all 0.5s;
+        bottom: auto;
+        top: -25px;
+        transform: rotate(45deg);
+      }
+    }
+    ul {
+      bottom: auto;
+      top: 0px;
+      background-color: transparent;
+      overflow: hidden;
+      padding-bottom: 150px;
+      
+      li {
+        padding-bottom: 32px;
+        background-image: url(/assets/svg/toc-navigator-separator.svg);
+        background-repeat: no-repeat;
+        background-position: center 42px;
+      }
+    }
+    &::after {
+      background-color: transparent;
+      background-image: url(/assets/svg/toc-icon-navigator.svg);
+    }
+  }
+
   h1 {
     font-family: "Hooverville", "Times New Roman", serif;
     font-size: 56px;
@@ -51,6 +86,12 @@
     line-height: 1.2;
     margin: 48px 0 0 0;
     color: #1a1a1a;
+  }
+
+  section {
+    hr {
+      display: none;
+    }
   }
 
   .period,
@@ -111,40 +152,5 @@
         color: var(--color-primary);
       }
     }
-  }
-}
-
-#tableOfContent {
-  // background-color: #e0e0ce;
-  backdrop-filter: blur(6px);
-  padding-bottom: 50px;
-  box-shadow: 0px -4px 20px 0px grey;
-  &:hover {
-    height: 80vh;
-    transition: all 0.5s;
-    &::after {
-      transition: all 0.5s;
-      bottom: auto;
-      top: -25px;
-      transform: rotate(45deg);
-    }
-  }
-  ul {
-    bottom: auto;
-    top: 0px;
-    background-color: transparent;
-    overflow: hidden;
-    padding-bottom: 150px;
-    
-    li {
-      padding-bottom: 32px;
-      background-image: url(/assets/svg/toc-navigator-separator.svg);
-      background-repeat: no-repeat;
-      background-position: center 42px;
-    }
-  }
-  &::after {
-    background-color: transparent;
-    background-image: url(/assets/svg/toc-icon-navigator.svg);
   }
 }

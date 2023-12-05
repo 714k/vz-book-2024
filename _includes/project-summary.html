@@ -3,15 +3,19 @@
   id="{{summary.id}}"
   class="{{summary.classes}}">
   <figure class="figure">
+    <span 
+      class="icon desktop" 
+      title="Project for Desktop">
+    &nbsp;
+    </span>
       <img 
         id="{{summary.id}}-image" 
         src="/assets/images/projects/{{summary.id}}-thumb-b.jpg" 
-        alt="Image of {{summary.title}}"/><br />
+        alt="Image of {{summary.title}}"
+        width="380"
+        height="380"/><br />
       <figcaption class="figcaption">
           <h2>{{summary.title}}</h2>
-          <span 
-            class="icon desktop tablet smartphone" 
-            title="Project for Desktop, Tablet and Smartphone devices">&nbsp;</span>
           <p>
             <strong class="year">Year: </strong>
               <em class="year">{{summary.year}}</em><br />
@@ -20,13 +24,26 @@
             <strong class="technologies">Technologies: </strong>
               <em class="technologies">{{summary.technologies}}</em>
           </p>
-          <a 
-            href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}" 
-            [title]="summary.link.title">
-              See project
-          </a>
         </figcaption>
     </figure>
+    <a 
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}" 
+      title="{{summary.link.title}}">
+        See project
+    </a>
+    <span 
+      class="icon desktop" 
+      title="Project for Desktop">
+    &nbsp;
+    </span>
+
+    {% if summary.classes contains "mobile" %}
+    <span 
+      class="icon mobile" 
+      title="Project for Mobile">
+      &nbsp;
+    </span>
+    {% endif %}
 
   {% include back-to-top.html %}
 </section>
