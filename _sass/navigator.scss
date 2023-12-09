@@ -20,64 +20,86 @@
   font-style: normal;
 }
 
+$bgColor: #e0e0ce;
+$bodyColor: #181812;
+$greylight: #727272;
+$greymedium: #4d4d4d;
+$greydark: #333333;
+
+
 .the-navigator {
   font-family: "Ardagh", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
-  background-color: #e0e0ce;
-  color: #181812;
-
+  background-color: $bgColor;
+  color: $bodyColor;
+  mix-blend-mode: darken;
+  background-image: url(/assets/images/info/navigator/el-navegador-bg.jpg);
+  background-position: center 40vh;
+  background-attachment: fixed;
   .cover {
     &:after {
-      background-color: #181812;
+      background-color: $bodyColor;
     }
   }
-
   #tableOfContent {
-    background-color: #e0e0ce50;
-    backdrop-filter: blur(8px);
     padding-bottom: 50px;
-    box-shadow: 0px -4px 20px 0px grey;
     &:hover {
-      height: 80vh;
+      background-color: $bgColor;
+      height: 75vh;
       transition: all 0.5s;
+      ul {
+        transform: scale(1);
+      }
+      &::before {
+      }
       &::after {
         transition: all 0.5s;
-        bottom: auto;
-        top: -25px;
-        transform: rotate(45deg);
+        transform: rotate(45deg) translate(5px, 4px);
       }
     }
     ul {
-      bottom: auto;
-      top: 0px;
-      background-color: transparent;
+      transform: scale(0.001);
+      background-color: $bgColor;
       overflow: hidden;
-      padding-bottom: 150px;
-      
+      padding-bottom: 132px;
+      padding-top: 12px;
+      bottom: 80px;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      border: double 6px var(--color-primary);
       li {
-        padding-bottom: 32px;
+        padding-bottom: 24px;
         background-image: url(/assets/svg/toc-navigator-separator.svg);
         background-repeat: no-repeat;
         background-position: center 42px;
       }
     }
+    &::before {
+      // content: none;
+      background-color: $bgColor;
+    }
     &::after {
+      -webkit-mask-image: none;
+      mask-image: none;
+      width: 46px;
+      height: 46px;
       background-color: transparent;
-      background-image: url(/assets/svg/toc-icon-navigator.svg);
+      background-image: url(/assets/svg/rudder-icon.svg);
+      transform: rotate(0deg) translateY(7px);
+      transition: all 0.5s;
     }
   }
-
   h1 {
     font-family: "Hooverville", "Times New Roman", serif;
     font-size: 56px;
     font-weight: 500;
   }
-
   h2, .navigation-links {
     display: none;
   }
-
   h3 {
     font-family: "Ardagh", Arial, sans-serif;
     font-size: 32px;
@@ -87,13 +109,44 @@
     margin: 48px 0 0 0;
     color: #1a1a1a;
   }
-
   section {
     hr {
       display: none;
     }
+    .pirate-head {
+      display: block;
+      float: left;
+      width: 90px;
+      height: 130px;
+      border-radius: 50%;
+    }
+    .pirate-head,
+    .sp {
+      background-image: url(/assets/images/info/navigator/navegador.png);
+      background-repeat: no-repeat;
+    }
+    &[id*="adventure-7"] .pirate-head {
+      background-position: -1700px -460px;
+    }
+    &[id*="adventure-6"] .pirate-head {
+      background-position: -1034px -345px;
+    }
+    &[id*="adventure-5"] .pirate-head {
+      background-position: -1325px -345px;
+    }
+    &[id*="adventure-4"] .pirate-head {
+      background-position: -5px -5px;
+    }
+    &[id*="adventure-3"] .pirate-head {
+      background-position: -20px -725px;
+    }
+    &[id*="adventure-2"] .pirate-head {
+      background-position: -20px -725px;
+    }
+    &[id*="adventure-1"] .pirate-head {
+      background-position: -20px -725px;
+    }
   }
-
   .period,
   .company,
   .industry,
@@ -107,33 +160,26 @@
       display: none;
     }
   }
-
   .period {
     font-size: 36px;
-    color: #727272;
+    color: $greylight;
   }
-
   .company {
     font-size: 30px;
-    color: #333333;
+    color: $greydark;
   }
-
   .industry {
     font-size: 24px;
-    color: #727272;
+    color: $greylight;
   }
-
   .role {
     font-size: 20px;
-    color: #333333;
+    color: $greydark;
   }
-
   .summary {
-    // margin-top: 60px;
     line-height: 1.25;
-    color: #4d4d4d;
+    color: $greymedium;
   }
-
   a:not(.vz-logo) {
     font-family: "Ardagh", Arial, sans-serif;
     padding: var(--spacing-0);
@@ -145,7 +191,6 @@
       text-decoration: underline;
     }
   }
-
   .vz-toc {
     a {
       &:hover {
