@@ -1,14 +1,15 @@
+
 @mixin inputForm {
   font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
   font-size: 24px;
   width: calc(100% - 16px);
-  width: 327px;
+  // width: 100%;
   padding: 0 8px;
-  height: 40px;
+  height: 48px;
   background-color: transparent;
-  background-image: url(/assets/svg/message-input-bg.svg);
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="%23FFF" fill-opacity="0.1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M376.375 40H0V0h384v30z"/></svg>');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 56px;
   color: white;
   border: none;
   // border-left: solid 3px rgba(255, 255, 255, .6);
@@ -17,7 +18,7 @@
   }
   &:focus {
     // background-color: white;
-    background-image: url(/assets/svg/message-input-bg-hover.svg);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="%23FFF" fill-opacity="1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
     color: var(--color-secondary);
     outline: none;    
   }
@@ -30,6 +31,11 @@
   }
   label {
     font-size: 24px;
+    text-shadow: 0 0 10px white, 0 0 10px white;
+    a {
+      background-color: transparent;
+      text-shadow: 0 0 10px var(--color-primary), 0 0 10px var(--color-primary);
+    }
   }
   input {
     font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
@@ -54,11 +60,6 @@
       transition: .25s all ease;
       pointer-events: none;
     }
-    &:hover {
-      &::after {
-        color: #ffffff;
-      }
-    }
     select {
       @include inputForm();
       appearance: none;
@@ -66,7 +67,7 @@
       -webkit-appearance: none;
       outline: none;
       flex: 1;
-      background-image: none;
+      // background-image: none;
       cursor: pointer;
       width: 100%;
       color: var(--border-color-input);
@@ -74,15 +75,15 @@
       &::-ms-expand {
         display: none;
       }
+      &:focus {
+        background-color: var(--color-primary);
+      }
       option {
         background-color: var(--color-secondary);
         color: white;
-        &:checked,
-        &:focus,
-        &:hover {
-          background-color: #002134;
+        &:focus {
+          background-color: var(--color-primary);
           box-shadow: 0 0 10px 100px #1882A8 inset;
-          color: white;
         }
       }
     }
@@ -92,6 +93,11 @@
     color: white;
     height: 80px;
     padding-top: 8px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="80" xml:space="preserve"><path fill="%23FFF" fill-opacity="0.1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M351.539 79H1V1h382v48.75z"/></svg>');
+    background-size: 100% 80px;
+    &:focus {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="80" xml:space="preserve"><path fill="%23FFF" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M351.539 79H1V1h382v48.75z"/></svg>');
+    }
   }
   .form-input {
     margin-bottom: 36px;
@@ -153,11 +159,14 @@
       margin-right: 12px;
       border-radius: 0;
       border: none;
-      background-color: #27a7ef60;
+      background-color: transparent;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" fill="%2327a7ef" fill-opacity="0.3" d="M1 1h98v29.909l-8.064 8.114H1V1z"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 100% 45px;
       color: white;
       cursor: pointer;
       &:hover {
-        background-color: #27a7ef;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" fill="%2327a7ef" d="M1 1h98v29.909l-8.064 8.114H1V1z"/></svg>');
         color: var(--color-secondary);
       }
     }
