@@ -59,7 +59,7 @@
 .navigation-wrapper {
   position: fixed;
   overflow-y: auto;
-  z-index: 10;
+  z-index: 100;
   top: -400%;
   left: 0;
   width: 100%;
@@ -74,27 +74,22 @@
     top: 0%;
     left: 0;
     width: 100%;
-
     ul {
       list-style: none;
       text-align: left;
       width: 100%;
       padding: 0;
       margin: 10rem 0 5rem 0;
-  
       li {
         margin: 2.5rem 0;
         padding: .25rem 2rem;
-
         ul {
           position: static;
           margin: 0;
           width: 100%;
-  
           li {
             padding: 0;
             margin: 0;
-  
             a {
               font-family: 'Share Tech Mono', Courier, monospace;
               padding: 0 1rem 0 0;
@@ -103,12 +98,10 @@
               color: var(--color-primary);
               text-shadow: 0 0 8px var(--color-primary);
               background-color: black;
-  
               &.current-subnavigation {
                 background-color: white;
                 color: black;
                 text-shadow: 0 0 8px black;
-  
                 &::before {
                   content: '> ';
                   font-size: 1.5rem;
@@ -117,22 +110,18 @@
                   color: black;
                   cursor: pointer;
                 }
-  
                 &:hover {
                   cursor: default;
-                  
                   &::before {
                     cursor: default;
                   }
                 }
               }
-  
               &:hover {
                 color: white;
                 text-shadow: 0 0 8px white;
                 padding-right: .5rem;
                 cursor: pointer;
-                
                 &::before {
                   content: '> ';
                   font-size: 1.5rem;
@@ -142,14 +131,12 @@
                   cursor: pointer;
                 }
               }
-  
               &::before {
                 content: none;
               }
             }
           }
         }
-  
         a {
           text-decoration: none;
           background-color: rgba(255 255 255 / .5);
@@ -161,7 +148,6 @@
           line-height: 3.5rem;
           text-shadow: 0 0 10px black;  
           transition: all 0.3s ease;
-          
           &.current {
             background-color: black;
             color: white;
@@ -174,7 +160,6 @@
               color: var(--color-primary);
             }
           }
-  
           &::before {
             position: relative;
             margin-left: .5rem;
@@ -187,13 +172,11 @@
             text-shadow: none;
             text-transform: uppercase;
           }
-  
           &:hover {
             background-color: black;
             color: white;
             text-shadow: 0 0 10px white;
             transition: all 0.3s ease;
-    
             &::before {
               line-height: 0;
               color: var(--color-primary);

@@ -8,6 +8,7 @@
 @import "fixer";
 @import "projects";
 @import "project-n";
+@import "contact";
 
 :root {
   --spacing-0: 0;
@@ -125,6 +126,17 @@ body {
   #footer {
     text-align: center;
     margin-bottom: 60px;
+    .hide {
+      display: none;
+    }
+    .site-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        padding: 8px 16px;
+      }
+    }
     .vz-logo {
       position: static;
     }
@@ -149,5 +161,8 @@ body {
         display: none;
       }
     }
+  }
+  .hide-mobile {
+    display: none;
   }
 }

@@ -1,0 +1,165 @@
+@mixin inputForm {
+  font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  width: calc(100% - 16px);
+  width: 327px;
+  padding: 0 8px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url(/assets/svg/message-input-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  border: none;
+  // border-left: solid 3px rgba(255, 255, 255, .6);
+  &::placeholder {
+    color: #FFFFFF50;
+  }
+  &:focus {
+    // background-color: white;
+    background-image: url(/assets/svg/message-input-bg-hover.svg);
+    color: var(--color-secondary);
+    outline: none;    
+  }
+}
+
+#message {
+  background-image: url(/assets/images/contact/message-bg.jpg);
+  #formMessage {
+    margin: 0 16px;
+  }
+  label {
+    font-size: 24px;
+  }
+  input {
+    font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
+    &[type=text],
+    &[type=email],
+    &[type=tel] {
+      @include inputForm();
+    }
+  }
+  .select {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 11px;
+      color: #ffffff50;
+      // background-color: #34495e;
+      transition: .25s all ease;
+      pointer-events: none;
+    }
+    &:hover {
+      &::after {
+        color: #ffffff;
+      }
+    }
+    select {
+      @include inputForm();
+      appearance: none;
+      /* safari */
+      -webkit-appearance: none;
+      outline: none;
+      flex: 1;
+      background-image: none;
+      cursor: pointer;
+      width: 100%;
+      color: var(--border-color-input);
+      outline: none;
+      &::-ms-expand {
+        display: none;
+      }
+      option {
+        background-color: var(--color-secondary);
+        color: white;
+        &:checked,
+        &:focus,
+        &:hover {
+          background-color: #002134;
+          box-shadow: 0 0 10px 100px #1882A8 inset;
+          color: white;
+        }
+      }
+    }
+  }
+  textarea {
+    @include inputForm();
+    color: white;
+    height: 80px;
+    padding-top: 8px;
+  }
+  .form-input {
+    margin-bottom: 36px;
+  }
+  .privacy {
+    label {
+      // display: grid;
+      // grid-template-columns: 1em auto;
+      // gap: 0.5em;
+      // display: flex;
+      font-size: 18px;
+      input[type="checkbox"] {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        /* Remove most all native input styles */
+        appearance: none;
+        /* For iOS < 15 */
+        background-color: var(--form-background);
+        /* Not removed via appearance */
+        margin: 0;
+        color: currentColor;
+        width: 22px;
+        height: 22px;
+        border: 1px solid var(--border-color-input);
+        border-radius: 2px;
+        transform: translateY(-0.075em);
+        display: grid;
+        place-content: center;
+        float: left;
+        margin-right: 12px;
+        &::before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+          transform: scale(0);
+          transform-origin: bottom left;
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em var(--color-primary);
+          /* Windows High Contrast Mode */
+          background-color: CanvasText;
+        }
+        &:checked::before {
+          transform: scale(1);
+        }
+        &:focus {
+          // outline: max(2px, 1px) solid var(--color-primary);
+          // outline-offset: max(2px, 1px);
+        }
+      }
+    }
+  }
+  .buttons {
+    margin-top: 24px;
+    button {
+      font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      padding: 12px 20px;
+      margin-right: 12px;
+      border-radius: 0;
+      border: none;
+      background-color: #27a7ef60;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: #27a7ef;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}

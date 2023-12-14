@@ -1,0 +1,128 @@
+@import 'contact-data';
+@import 'contact-message';
+@import 'contact-social-media';
+
+@font-face {
+  font-family: 'Vermin Vibes';
+  src: url('/assets/fonts/vermin-vibes.eot');
+  src: url('/assets/fonts/vermin-vibes.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/vermin-vibes.woff2') format('woff2'),
+       url('/assets/fonts/vermin-vibes.woff') format('woff'),
+       url('/assets/fonts/vermin-vibes.svg#vermin-vibes') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Spy Agency Laser';
+  src: url('/assets/fonts/spy-agency-laser.eot');
+  src: url('/assets/fonts/spy-agency-laser.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/spy-agency-laser.woff2') format('woff2'),
+       url('/assets/fonts/spy-agency-laser.woff') format('woff'),
+       url('/assets/fonts/spy-agency-laser.svg#spy-agency-laser') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Auchanted X Space';
+  src: url('/assets/fonts/auchantedxspace.eot');
+  src: url('/assets/fonts/auchantedxspace.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/auchantedxspace.woff2') format('woff2'),
+       url('/assets/fonts/auchantedxspace.woff') format('woff'),
+       url('/assets/fonts/auchantedxspace.svg#auchantedxspace') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --border-color-input: #FFFFFF90;
+}
+
+.nor-where-to-find-him {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
+  color: white;
+  background-image: url(/assets/images/contact/contact-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  #main {
+     overflow: hidden; 
+  }
+  .cover {
+    @include cover;
+  }
+  #tableOfContent {
+    &::after {
+      background-color: white;
+      transform: rotate(0deg);
+      transition: all 0.5s;
+    }
+    ul {
+        max-height: none;  
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #000000b0;
+        backdrop-filter: blur(5px);
+        overflow: hidden;
+      a {
+        background-color: transparent;
+        font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+        text-shadow: 0 0 20px #00aeff;
+        transition: all .5s;
+        &::before {
+          content: '{ ';
+        }
+        &::after {
+          content: ' }';
+        }
+        &:hover {
+          transform: scale(1.5);
+          color: white;
+          text-shadow: 0 0 20px white;
+          transition: all .5s;
+        }
+      }
+    }
+    &:hover {
+      transition: all 0.5s;
+      &::before {
+        background-color: var(--color-primary);
+      }
+      &::after {
+        transform: rotate(45deg);
+        transition: all 0.5s;
+      }
+      ul {
+        
+      }
+    }
+  } 
+  section {
+    padding: var(--spacing-20) 0 16px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  h1 {
+    font-family: 'Vermin Vibes', 'Times New Roman', Times, serif;
+    text-shadow: 0 0 15px white;
+  }
+  h2 {
+    font-size: 24px;
+    padding: 18px 16px 37px 16px;
+    background-image: url(/assets/images/contact/contact-data-title-bg.png);
+    background-repeat: no-repeat;
+    margin: 0 0 24px 0;
+    font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .back-to-top {
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+}
