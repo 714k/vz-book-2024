@@ -257,12 +257,19 @@
           border-radius: 50%;
         }
         a {
-          background-color: var(--color-primary);
-          color: var(--color-secondary);
-        }
-        .current {
           background-color: black;
           color: white;
+          transition: all .5s;
+          &:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 14px 7px rgba(0, 0, 0, 0.5);
+          }
+        }
+        .current {
+          background-color: white;
+          color: black;
+          box-shadow: 0 0 14px 7px rgba(0, 0, 0, 0.5);
         }
         p {
           display: none;
