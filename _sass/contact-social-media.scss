@@ -52,19 +52,24 @@
     }
     .fragment {
       display: none;
-      box-shadow: inset 0 0 20px 20px #ffffff1a;
+      background-repeat: no-repeat;
+      background-size: contain;
       padding: 8px;
       margin: 0;
       strong {
         display: block;
+      }
+      em {
+        display: block;
+        font-style: normal;
       }
       a {
         padding: 0;
         background-color: transparent;
         text-transform: uppercase;
         &:hover {
-          color: var(--color-primary);
-          background-color: var(--color-secondary);
+          color: white;
+          background-color: transparent;
           //text-decoration: underline;
         }
       }
@@ -95,7 +100,7 @@
     }
   }
   #linkedin {
-    top: 20%;
+    top: 22%;
     left: 5%;
     &::before {
       @include makeStar(#1daeec96, #1daeec96);
@@ -108,25 +113,34 @@
     .profile {
       width: 280px;
       top: 0;
-      left: 17%;
-      em {
-        display: block;
-      }
+      left: 15%;
+      background-image: url(/assets/images/contact/linkedln-profile-bg.png);
+      background-size: 295px 75px;
     }
     .jobs {
-      width: 320px;
-      top: 18%;
-      left: 5%;
+      width: 290px;
+      top: 16%;
+      left: 8%;
+      padding-left: 12px;
+      background-image: url(/assets/images/contact/linkedln-jobs-bg.png);
     }
     .education {
       width: 260px;
-      top: 41%;
-      left: 14%;
+      top: 37%;
+      left: 15%;
+      background-image: url(/assets/images/contact/linkedln-education-bg.png);
+      background-size: 270px;
     }
     .groups {
       width: 320px;
-      top: 64%;
-      left: 5%;
+      top: 59%;
+      left: 3%;
+      background-image: url(/assets/images/contact/linkedln-groups-bg.png);
+      background-size: 330px;
+    }
+    .see {
+      top: 82%;
+      left: 10%;
     }
   }
   #behance {
@@ -137,8 +151,8 @@
       right: 0;
       top: 18%;
       &::before {
-        right: 10%;
-        top: 20.5%;
+        right: 36px;
+        top: 91px;
       }
       h3 {
         top: calc(20% + 16px);
@@ -153,16 +167,16 @@
     }
     .profile {
       width: 280px;
-      top: 0;
-      right: 10%;
-      em {
-        display: block;
-      }
+      top: 1%;
+      right: 1%;
+      background-image: url(/assets/images/contact/linkedln-profile-bg.png);
+      background-size: 295px 75px;
     }
     .work {
       width: 230px;
       right: 30%;
       top: 17%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
       img {
         display: block;
         background-color: lightgrey;
@@ -174,6 +188,7 @@
       width: 200px;
       right: 9%;
       top: 62%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
       img {
         display: block;
         background-color: lightgrey;
@@ -215,17 +230,26 @@
       left: 10%;
     }
     .profile {
-      bottom: 18%;
+      bottom: 15%;
+      left: 35%;
       width: 175px;
-      left: 32%;
+      padding-bottom: 30px;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
       em {
-        display: block;
+        padding-top: 12px;
       }
     }
-    .activity {
-      bottom: 41%;
-      width: 320px;
+    .work {
+      bottom: 43%;
       left: 2%;
+      width: 230px;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+      img {
+        display: block;
+        background-color: lightgrey;
+        width: 200px;
+        height: 100px;
+      }
     }
     .see {
       left: 10%;
@@ -255,17 +279,17 @@
       right: 7%;
     }
     .profile {
-      bottom: 15%;
+      bottom: 17%;
       right: 27%;
       width: 230px;
-      em {
-        display: block;
-      }
+      background-image: url(/assets/images/contact/linkedln-groups-bg.png);
+      background-size: 330px;
     }
-    .activity {
+    .boards {
       bottom: 38%;
       width: 280px;
       right: 7%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
     }
     .see {
       left: auto;
