@@ -37,6 +37,15 @@
   --border-color-input: #FFFFFF90;
 }
 
+@mixin subTitle {
+  font-size: 24px;
+  padding: 18px 16px 37px 16px;
+  background-image: url(/assets/images/contact/contact-data-title-bg.png);
+  background-repeat: no-repeat;
+  margin: 0 0 24px 0;
+  font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .nor-where-to-find-him {
   padding-left: 0;
   padding-right: 0;
@@ -113,16 +122,57 @@
     text-shadow: 0 0 15px white;
   }
   h2 {
-    font-size: 24px;
-    padding: 18px 16px 37px 16px;
-    background-image: url(/assets/images/contact/contact-data-title-bg.png);
-    background-repeat: no-repeat;
-    margin: 0 0 24px 0;
-    font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    @include subTitle();
   }
   .back-to-top {
     position: absolute;
     right: 0;
     margin: 0;
+  }
+}
+
+.form-contact-thanks {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-image: url(/assets/images/contact/message-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  main {
+    margin: 0;
+    padding: 0;
+    #main {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      section {
+        padding: 80px 0;
+        &#message {
+          background-image: none;
+        }
+        h2 {
+          @include subTitle();
+        }
+        .thanks {
+          padding: 16px;
+          margin-top: 90px;
+          text-align: center;
+          font-size: 28px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+  .back-link {
+    text-align: center;
+    a:not(.vz-logo) {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 0 auto;
+    }
   }
 }
