@@ -34,8 +34,9 @@ $greydark: #333333;
   background-color: $bgColor;
   color: $bodyColor;
   mix-blend-mode: darken;
-  background-image: url(/assets/images/info/navigator/el-navegador-bg.jpg);
-  background-position: center 40vh;
+  background-image: url(/assets/images/info/navigator/sea.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
   background-attachment: fixed;
   .cover {
     &:after {
@@ -45,8 +46,8 @@ $greydark: #333333;
   #tableOfContent {
     padding-bottom: 50px;
     &:hover {
-      background-color: $bgColor;
-      height: 75vh;
+      // background-color: $bgColor;
+      height: 100vh;
       transition: all 0.5s;
       ul {
         transform: scale(1);
@@ -56,6 +57,13 @@ $greydark: #333333;
       &::after {
         transition: all 0.5s;
         transform: rotate(45deg) translate(5px, 4px);
+      }
+      + .close-toc {
+        z-index: 5;
+        &::before {
+          transform: rotate(45deg) translate(5px, 4px);
+          transition: all 0.5s;
+        }
       }
     }
     ul {
@@ -78,8 +86,7 @@ $greydark: #333333;
       }
     }
     &::before {
-      // content: none;
-      background-color: $bgColor;
+      background-color: transparent;
     }
     &::after {
       -webkit-mask-image: none;
@@ -90,6 +97,22 @@ $greydark: #333333;
       background-image: url(/assets/svg/rudder-icon.svg);
       transform: rotate(0deg) translateY(7px);
       transition: all 0.5s;
+    }
+    + .close-toc {
+      z-index: 0;
+      bottom: 24px;
+      background-color: transparent;
+      &::before {
+        bottom: 32px;
+        -webkit-mask-image: none;
+        mask-image: none;
+        width: 46px;
+        height: 46px;
+        background-color: transparent;
+        background-image: url(/assets/svg/rudder-icon.svg);
+        transform: rotate(0deg) translateY(7px);
+        transition: all 0.5s;
+      }
     }
   }
   h1 {

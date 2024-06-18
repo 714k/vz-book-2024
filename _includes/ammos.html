@@ -5,20 +5,64 @@
     
     <table class="sprite" >
       <thead>
+        {% for data in ammo.data %}
         <tr>
-          {% for item in ammo.data %}
-           <th scope="col">
-            {{item[0]}}
+           {% for item in data %}
+           <th scope="col" class="{{item[0]}}">
+            {{item[0] | replace: 'percentage', '%'}}
            </th>
           {% endfor %} 
         </tr>
+        {% endfor %}
        </thead>
   
        <tbody>
         {% for data in ammo.data %}
-        <tr>
+
+        {% if data.isLibrary %}
+          {% assign classNames = {{data.name | downcase | replace: " ", '-' | append: ' library' | strip_html }} %}
+        {% endif %}
+
+        {% unless data.isLibrary %}
+          {% assign classNames = {{data.name | downcase | replace: " ", '' | append: ' framework' | strip_html }} %}
+        {% endunless %}
+
+        <tr class="{{classNames}}">
           {% for item in data %}
-          <td class="tdClass">{{item[1]}}</td>
+          
+          {% if item[0] == "percentage" %}
+            {% assign styleStart = 'style="' %}
+            {% assign styleEnd = '"' %}
+            {% assign cssVarValue = item[1] | strip_html %}
+            {% assign cssVar = "--percentage: " %}
+          {% endif %}
+
+          {% unless item[0] == "percentage" %}
+            {% assign styleStart = null %}
+            {% assign styleEnd = null %}
+            {% assign cssVarValue = "" | strip_html %}
+            {% assign cssVar = "" %}
+          {% endunless %}
+
+          {% if item[0] == "name" and data.isLibrary %}
+            {% assign styleStart = 'style="' %}
+            {% assign styleEnd = '"' %}
+            {% assign cssVarValue = "library" %}
+            {% assign cssVar = "--type: " %}
+          {% endif %}
+
+          {% if item[0] == "name" and data.isFramework %}
+            {% assign styleStart = 'style="' %}
+            {% assign styleEnd = '"' %}
+            {% assign cssVarValue = "framework" %}
+            {% assign cssVar = "--type: " %}
+          {% endif %}
+
+          <td 
+            class="{{item[0]}}" {{styleStart}}{{cssVar}}{{cssVarValue}}{{styleEnd}}
+            data-type="{{cssVarValue}}">
+            {{item[1] | replace: 'name', 'language'}}
+          </td>
           {% endfor %}
         </tr>
         {% endfor %}

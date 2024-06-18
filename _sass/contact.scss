@@ -2,40 +2,9 @@
 @import 'contact-message';
 @import 'contact-social-media';
 
-@font-face {
-  font-family: 'Vermin Vibes';
-  src: url('/assets/fonts/vermin-vibes.eot');
-  src: url('/assets/fonts/vermin-vibes.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/vermin-vibes.woff2') format('woff2'),
-       url('/assets/fonts/vermin-vibes.woff') format('woff'),
-       url('/assets/fonts/vermin-vibes.svg#vermin-vibes') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Spy Agency Laser';
-  src: url('/assets/fonts/spy-agency-laser.eot');
-  src: url('/assets/fonts/spy-agency-laser.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/spy-agency-laser.woff2') format('woff2'),
-       url('/assets/fonts/spy-agency-laser.woff') format('woff'),
-       url('/assets/fonts/spy-agency-laser.svg#spy-agency-laser') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Auchanted X Space';
-  src: url('/assets/fonts/auchantedxspace.eot');
-  src: url('/assets/fonts/auchantedxspace.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/auchantedxspace.woff2') format('woff2'),
-       url('/assets/fonts/auchantedxspace.woff') format('woff'),
-       url('/assets/fonts/auchantedxspace.svg#auchantedxspace') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-:root {
-  --border-color-input: #FFFFFF90;
-}
+@include fontface('Vermin Vibes', 'vermin-vibes');
+@include fontface('Spy Agency Laser', 'spy-agency-laser');
+@include fontface('Auchanted X Space', 'auchantedxspace');
 
 @mixin subTitle {
   font-size: 24px;
@@ -46,15 +15,23 @@
   font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@mixin bgCover {
+  background-image: url(/assets/images/contact/contact-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+:root {
+  --border-color-input: #FFFFFF90;
+}
+
 .nor-where-to-find-him {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
   font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
   color: white;
-  background-image: url(/assets/images/contact/contact-bg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  @include bgCover();
   #main {
      overflow: hidden; 
   }
@@ -68,15 +45,18 @@
       transition: all 0.5s;
     }
     ul {
+      opacity: 0;
+        left: auto;
         max-height: none;  
-        height: 60vh;
+        height: calc(100vh - 134px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        background-color: #000000b0;
-        backdrop-filter: blur(5px);
+        transform: scale(.001) rotate(45deg) translate(170px, -224px);
         overflow: hidden;
+        @include bgCover();
+        transition: all .25s;
       a {
         background-color: transparent;
         font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -95,10 +75,22 @@
           text-shadow: 0 0 20px white;
           transition: all .5s;
         }
+        &[href="#social-media"] {
+          line-height: 35px;
+          background-image: url(/assets/images/contact/contact-toc-social-bg.png);
+          background-repeat: no-repeat;
+          background-position: center -4px;
+          padding: 24px 16px;
+          background-size: contain;
+        }
       }
     }
     &:hover {
       transition: all 0.5s;
+      ul {
+        opacity: 1;
+        transform: scale(1);
+      }
       &::before {
         background-color: var(--color-primary);
       }
@@ -106,8 +98,16 @@
         transform: rotate(45deg);
         transition: all 0.5s;
       }
-      ul {
-        
+      + .close-toc {
+        z-index: 5;
+      }
+    }
+    + .close-toc {
+      z-index: 0;
+      bottom: 24px;
+      &::before {
+        bottom: 32px;
+        background-color: white;
       }
     }
   } 

@@ -38,6 +38,36 @@ $widthClip: calc(100% - 32px);
       background-image: url(/assets/images/projects/cover-mobile.jpg);
     }
   }
+  #tableOfContent {
+    ul {
+      padding-top: 36px;
+      max-height: calc(100vh - 100px);
+      min-height: auto;
+      height: 100vh;
+      li:first-of-type {
+        margin-top: 80px;
+      }
+    }
+    &::before {
+      transition: all .5s;
+    }
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+      + .close-toc {
+        z-index: 5;
+      }
+    }
+    + .close-toc {
+      z-index: 1;
+      bottom: 24px;
+      &::before {
+        bottom: 32px;
+      }
+    }
+  }
   h1 {
     font-family: $title;
     font-weight: 400;

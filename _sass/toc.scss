@@ -1,4 +1,44 @@
+@mixin bgTocIcon {
+  content: '';
+  position: fixed;
+  z-index: 1;
+  bottom: var(--spacing-6);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  width: calc(var(--spacing-10) + var(--spacing-2));
+  height: calc(var(--spacing-10) + var(--spacing-2));
+  left: var(--spacing-0);
+  right: var(--spacing-0);
+  margin: var(--spacing-0) auto;
+  border-radius: 50%;
+  width: calc(var(--spacing-10) + var(--spacing-2));
+  height: calc(var(--spacing-10) + var(--spacing-2));
+}
+
+@mixin iconToc {
+  content: '';
+  position: fixed;
+  z-index: 2;
+  bottom: var(--spacing-8);
+  background-color: var(--color-secondary);
+  background-color: black;
+  color: var(--color-secondary);
+  left: var(--spacing-0);
+  right: var(--spacing-0);
+  margin: var(--spacing-0) auto;
+  border-radius: 50%;
+  background-image: none;
+  width: 30px;
+  height: 30px;
+  -webkit-mask-image: url(/assets/svg/plus-icon.svg);
+  mask-image: url(/assets/svg/plus-icon.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 #tableOfContent {
+  opacity: 1;
+  transition: all .5s;
   p {
     display: none;
   }
@@ -35,40 +75,11 @@
   padding: var(--spacing-0) var(--spacing-0) calc(var(--spacing-1) * 19) var(--spacing-0);
   margin: var(--spacing-0);
   &::before {
-    content: '';
-    position: fixed;
-    z-index: 1;
-    bottom: var(--spacing-6);
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    width: calc(var(--spacing-10) + var(--spacing-2));
-    height: calc(var(--spacing-10) + var(--spacing-2));
-    left: var(--spacing-0);
-    right: var(--spacing-0);
-    margin: var(--spacing-0) auto;
-    border-radius: 50%;
-    width: calc(var(--spacing-10) + var(--spacing-2));
-    height: calc(var(--spacing-10) + var(--spacing-2));
+    @include bgTocIcon();
   }
   &::after {
-    content: '';
-    position: fixed;
-    z-index: 2;
-    bottom: var(--spacing-8);
-    background-color: var(--color-secondary);
-    background-color: black;
-    color: var(--color-secondary);
-    left: var(--spacing-0);
-    right: var(--spacing-0);
-    margin: var(--spacing-0) auto;
-    border-radius: 50%;
-    background-image: none;
-    width: 30px;
-    height: 30px;
-    -webkit-mask-image: url(/assets/svg/plus-icon.svg);
-    mask-image: url(/assets/svg/plus-icon.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    @include iconToc();
+    transition: all .5s;
   }
   &:hover {
     cursor: pointer;
@@ -76,11 +87,44 @@
       left: var(--spacing-0);
       opacity: 1;
     }
+    &::before,
+    &::after {
+      opacity: 0;
+      transition: all .5s;
+    }
     &::before {
-      background-color: black;
+      // background-color: black;
     }
     &::after {
-      background-color: var(--color-primary);
+      // background-color: var(--color-primary);
+      transform: rotate(45deg);
+      transition: all .5s;
     }
+    + .close-toc {
+      opacity: 1;
+      bottom: 56vh;
+      transition: all 0.5s;
+      &::before {
+        bottom: 57vh;
+        transform: rotate(45deg);
+        transition: all .5s;
+      }
+    }
+  }
+}
+.close-toc {
+  @include bgTocIcon();
+  opacity: 0;
+  bottom: -100vh;
+  transition: all 0.5s;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    @include iconToc();
+    display: inline-block;
+    bottom: -100vh;
+    transform: rotate(0deg);
+    transition: all 0.5s;
   }
 }

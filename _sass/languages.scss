@@ -1,0 +1,111 @@
+@mixin columns {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 8px 0;
+  text-align: left;
+  text-indent: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#languages {
+  background-image: url(/assets/images/info/fixer/fixer-languages-bg.jpg);
+  h2::after {
+    background-position: -1763px -84px;
+  }
+  table {
+    margin-top: 60px;
+    width: 100%;
+    color: #72fe00;
+    thead {
+      display: block;
+      tr {
+        display: none;
+        &:first-child {
+          display: block;
+        }
+        th {
+          @include columns();
+          padding-bottom: 16px;
+          background-image: partials.$sprite;
+          background-position: 16px 36px;
+          background-repeat: no-repeat;
+          &.type,
+          &.use,
+          &.level {
+            display: none;
+          }
+          &.name {
+            width: 45%;
+          }
+          &.years {
+            width: 20%;
+          }
+          &.percentage {
+            width: 15%;
+          }
+        }
+      }
+    }
+    tbody {
+      width: 100%;
+      display: block;
+      tr {
+        display: block;
+        &:hover {
+          background-color: #72fe00;
+          color: black;
+          cursor: pointer;
+        }
+        &.htmls {
+          // position: relative;
+          &::after {
+            content: '';
+            top: 100px;
+            background-color: black;
+            color: greenyellow;
+            height: 100vh;
+            display: none;
+            left: 0;
+            width: 100%;
+          }
+         &:hover {
+          display: block;
+          transform: translateY(-36px);
+          cursor: default;
+          background-color: black;
+          color: #72fe00;
+          &::after {
+            display: block;
+          }
+          & ~ tr {
+            display: none;
+            
+          } 
+         } 
+        }
+        td {
+          @include columns();
+          &.type,
+          &.use,
+          &.level {
+            display: none;
+          }
+          &.name {
+            width: 45%;
+          }
+          &.years {
+            width: 20%;
+          }
+          &.percentage {
+            width: 15%;
+          }
+          
+        }
+      }
+    }
+    tr {
+      background-image: none;
+    }
+  }
+}

@@ -180,10 +180,12 @@ function sendEmail() {
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
   if(mail($recipient, $reason_to_contact, $email_body, $headers)) {
-  echo "<p>Thank you for contacting me, $first_name $last_name you will get a reply with 24 hours.</p>";
-  include('form-contact-thanks.html');
+    // echo "<p>Thank you for contacting me, $first_name $last_name you will get a reply with 24 hours.</p>";
+    // include('form-contact-thanks.html');
+    header("Location: form-contact-thanks.html");
+    exit();
   } else {
-  echo '<p>We are sorry but the email did not go through.</p>';
+    echo '<p>We are sorry but the email did not go through.</p>';
   }
 }
 

@@ -126,7 +126,6 @@
           }
         }
       }
-      
     }
     &::before {
       background-color: black;
@@ -135,11 +134,21 @@
       background-color: var(--color-primary);
     }
     &:hover {
-      &::before {
-        background-color: var(--color-primary);
-      }
+      &::before,
       &::after {
-        background-color: black;
+        opacity: 1;
+      }
+      + .close-toc {
+        z-index: 5;
+      }
+    }
+    + .close-toc {
+      z-index: 0;
+      bottom: 24px;
+      background-color: black;
+      &::before {
+        bottom: 32px;
+        background-color: var(--color-primary);
       }
     }
   }
