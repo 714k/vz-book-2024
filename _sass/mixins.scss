@@ -1,3 +1,15 @@
+@mixin fontface($familyName, $fontName) {
+  @font-face {
+    font-family: $familyName;
+    src: url('/assets/fonts/'+$fontName+'.eot');
+    src: url('/assets/fonts/'+$fontName+'.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/'+$fontName+'.woff2') format('woff2'),
+         url('/assets/fonts/'+$fontName+'.woff') format('woff'),
+         url('/assets/fonts/'+$fontName+'.svg#'+$fontName) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 @mixin cover {
   background-color: transparent;
     &::before {
@@ -19,3 +31,4 @@
       position: relative;
     }
 }
+

@@ -1,0 +1,11 @@
+#cms {
+  background-image: url(/assets/images/info/fixer/fixer-cms-bg.jpg);
+  h2::after {
+    background-position: -1763px -336px;
+  }
+  table {
+    tr {
+      background-image: none;
+    }
+  }
+}
