@@ -10,3 +10,6 @@ vendor/
 
 # IDES
 .idea
+
+# System files
+*.Identifier
