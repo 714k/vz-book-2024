@@ -5,15 +5,19 @@
     
     <table class="sprite" >
       <thead>
-        {% for data in ammo.data %}
+        
         <tr>
-           {% for item in data %}
-           <th scope="col" class="{{item[0]}}">
-            {{item[0] | replace: 'percentage', '%'}}
-           </th>
-          {% endfor %} 
-        </tr>
+          {% for data in ammo.data %}
+          {% if forloop.first %}
+          {% for item in data %}
+          <th scope="col" class="{{item[0]}}">
+            {{item[0] | replace: 'percentage', '%' | replace: 'decorative', ''}}
+          </th>
+          {% endfor %}  
+          {% endif %}
         {% endfor %}
+
+        </tr>
        </thead>
   
        <tbody>

@@ -1,0 +1,99 @@
+@include fontface('Mr Robot', 'mr-robot');
+
+@mixin tocImages($href, $imgNumber) {
+  &[href='#{$href}'] {
+    background-image: url('/assets/images/info/server/server-toc-0#{$imgNumber}-bg.jpg');
+    &:hover {
+      background-image: url('/assets/images/info/server/server-toc-0#{$imgNumber}-hover-bg.jpg');
+    }
+  }
+} 
+
+.the-server {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  color: white;
+  background-image: url(/assets/images/info/server/server-cover-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  #main {
+    overflow: hidden; 
+  }
+  .cover {
+    @include cover;
+    h1 {
+      font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 400;
+      font-size: 72px;
+      text-transform: uppercase;
+      color: #c80000;
+    }
+  }
+  #tableOfContent {
+    .text {
+      display: none;
+    }
+    &:hover {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      ul {
+        top: 0;
+        left: 0;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        display: flex;
+        padding: 0;
+        background-color: transparent;
+        li {
+          width: 25%;
+          height: 100vh;
+          a {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include tocImages('#profile', 1);
+            @include tocImages('#professional-interest', 2);
+            @include tocImages('#academic-formation', 3);
+            @include tocImages('#courses', 4);
+            .prefix-text {
+              font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 48px;
+            }
+            &:hover,
+            &.active {
+              color: white;
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
+      + .close-toc {
+        z-index: 1000;
+        bottom: 75vh;
+        background-color: black;
+        &::before {
+          bottom: calc(75vh + 4px);
+          z-index: 1001;
+          width: 40px;
+          height: 40px;
+          background-image: url('/assets/images/info/server/server-toc-close-icon.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 100%;
+          mask-image: none;
+        }
+      }
+    }
+    
+  }
+}
