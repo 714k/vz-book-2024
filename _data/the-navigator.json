@@ -4,7 +4,7 @@
         "title": "The current adventure",
         "href": "adventure-7",
         "classes": "anchor-class",
-        "prefixText": 1,
+        "prefixText": 7,
         "sufixText": " ",
         "separator": "§",
         "text": "And his current adventure"
@@ -13,7 +13,7 @@
         "title": "The sixth adventure",
         "href": "adventure-6",
         "classes": "anchor-class",
-        "prefixText": 2,
+        "prefixText": 6,
         "sufixText": " ",
         "separator": "§",
         "text": "And his sixth adventure"
@@ -22,7 +22,7 @@
         "title": "The fifth adventure",
         "href": "adventure-5",
         "classes": "anchor-class",
-        "prefixText": 3,
+        "prefixText": 5,
         "sufixText": "",
         "separator": "§",
         "text": "And his fifth adventure"
@@ -40,7 +40,7 @@
         "title": "The third adventure",
         "href": "adventure-3",
         "classes": "anchor-class",
-        "prefixText": 5,
+        "prefixText": 3,
         "sufixText": "",
         "separator": "§",
         "text":"And his third adventure"
@@ -49,7 +49,7 @@
         "title": "The second adventure",
         "href": "adventure-2",
         "classes": "anchor-class",
-        "prefixText": "6",
+        "prefixText": "2",
         "sufixText": "",
         "separator": "§",
         "text": "And his second adventure"
@@ -58,7 +58,7 @@
         "title": "The first adventure",
         "href": "adventure-1",
         "classes": "anchor-class",
-        "prefixText": 7,
+        "prefixText": 1,
         "sufixText": "",
         "text": "And his first adventure"
      }

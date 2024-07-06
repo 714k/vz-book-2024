@@ -52,6 +52,11 @@
       display: block;
       tr {
         display: block;
+        &:nth-child(2n) {
+          &:hover {
+            background-color: #72fe00;
+          }
+        }
         &:hover {
           background-color: #72fe00;
           color: black;
