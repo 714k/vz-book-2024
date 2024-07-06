@@ -3,13 +3,13 @@
 @import "main-navigation";
 @import "toc";
 @import "covers";
-@import "info";
-@import "server";
-@import "navigator";
-@import "fixer";
-@import "projects";
-@import "project-n";
-@import "contact";
+// @import "info";
+// @import "server";
+// @import "navigator";
+// @import "fixer";
+// @import "projects";
+// @import "project-n";
+// @import "contact";
 
 :root {
   --spacing-0: 0;
@@ -43,7 +43,7 @@
 body {
   color: #adb6c5;
   background-color: #0f1012;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
@@ -118,28 +118,57 @@ body {
     padding-top: calc(var(--spacing-9) * 2);
   }
   section {
-    padding-top: var(--spacing-20);
+    padding-top: var(--spacing-5);
+    h2 {
+      margin-bottom: 4px;
+      line-height: 1;
+      font-size: 36px;
+    }
+    p {
+      margin-top: 6px;
+    }
+    figure {
+      margin: 0;
+    }
   }
   .back-to-top {
     text-align: right;
     margin: 48px 0 0 0;
   }
+  hr {
+    margin: 0;
+    border: dashed 1px rgb(67, 75, 91);
+  }
   #footer {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     .hide {
       display: none;
     }
     .site-navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: grid;
+      margin-top: 0;
       a {
+        display: inline-block;
         padding: 8px 16px;
+        background-color: var(--color-secondary);
+        background-color: transparent;
+        width: auto;
+        &.left {
+          margin-right: auto;
+        }
+        &.right {
+         margin-left: auto; 
+        }
+        &:hover {
+          background-color: var(--color-primary);
+        }
       }
     }
     .vz-logo {
       position: static;
+      margin-bottom: 12px;
+      display: inline-grid;
     }
     .sitemap {
       padding: 24px 0 0 0;
@@ -154,7 +183,7 @@ body {
     }
     .site-navigation {
       text-align: left;
-      margin-bottom: 90px;
+      margin-bottom: 60px;
     }
     span {
       display: block;
@@ -165,5 +194,241 @@ body {
   }
   .hide-mobile {
     display: none;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+    font-size: 24px;
+    .navigation-wrapper .main-navigation ul {
+      text-align: right;
+      li {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    max-width: 1200px;
+    font-size: 30px;
+  } 
+}
+
+.course {
+  h3 {
+    font-size: 28px;
+    line-height: 1;
+    margin-top: 56px;
+    margin-bottom: 0;
+  }
+}
+
+.adventure {
+  .period,
+  .company,
+  .industry,
+  .role,
+  .design,
+  .redesign,
+  .administration {
+    margin-bottom: 12px;
+    strong {
+      font-size: 24px;
+    }
+  }
+  h2 {
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    margin-bottom: 4px;
+  }
+  .summary {
+    margin-top: 30px;
+    h3 {
+      margin-bottom: 4px;
+    }
+    .accounts {
+      h3 {
+        margin-top: 30px;
+      }
+      br {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  .navigation-links {
+    display: none;
+  }
+}
+
+#ammos {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    thead {
+      background-color: #ffffff;
+      color: #0f1012;
+      font-style: normal;
+      font-weight: 400;
+      th {
+        padding: 4px 0;
+        text-indent: 4px;
+      }
+    }
+    th, 
+    td {
+      &.type,
+      &.use,
+      &.level,
+      &.isLibrary,
+      &.isFramework {
+        display: none;
+      }
+    }
+    tr:nth-child(even) {
+      background-color: #2d3037;
+    }
+  }
+  .ammo-links {
+    display: none;
+  }
+}
+
+.nobody-knows-he-worked-on {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  figure {
+    position: relative;
+    a {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      z-index: 3;
+      font-size: 24px;
+      padding: 8px 16px;
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+      &:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+      }
+    }
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      padding-left: 8px;
+      background-color: var(--color-secondary);
+      background-color: rgba(0,0,0,.85);
+      color: #adb6c5;
+      backdrop-filter: opacity(.4);
+    }
+  }
+}
+
+.project-n {
+  #brief {
+    strong {
+      font-size: 24px;
+    }
+  }
+  .gallery {
+    figure {
+      padding-top: 80px;
+    }
+    .navigation-links {
+      a {
+        display: inline-block;
+        margin: 6px 4px 0;
+        padding: 11px 14px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.nor-where-to-find-him {
+  #contact-data {
+    font-size: 24px;
+    line-height: 1.2;
+    .name {
+      margin-bottom: 40px;
+      .fn {
+        font-size: 30px;
+      }
+    }
+    .cards {
+      strong {
+        display: inline-block;
+        margin-bottom: 12px;
+        margin-top: 24px;        
+      }
+      .v_card {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  #message {
+    font-size: 20px;
+    label {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .text,
+    .number,
+    select,
+    textarea {
+      font-size: inherit;
+      width: 100%;
+      padding: 12px 0;
+      text-indent: 8px;
+      border: none;
+    }
+    select {
+      text-indent: 0;
+      padding-left: 8px;
+    }
+    input[type=checkbox] {
+      transform: scale(1.5);
+      border: none;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      background-color: white;
+      width: 16px;
+      height: 16px;
+    }
+    button {
+      font-size: inherit;
+      font-weight: 400;
+      border-radius: 0;
+      border: none;
+      padding: 8px 16px;
+      margin-right: 4px;
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+    }
+    .error {
+      color: #ef2727;
+    }
+  }
+  #social-media {
+    h3 {
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+    .social-network {
+      margin-bottom: 60px;
+    }
   }
 }

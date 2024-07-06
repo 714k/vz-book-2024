@@ -2,7 +2,9 @@
 layout: default
 title: At the Beginning...
 primary_color: '#ff6600'
-secondary_color: '#803300'
+secondary_color: '#572200'
+next_page: 'no-one-knows/'
+next_title: 'No one knows...'
 permalink: /at-the-beginning/
 ---
 <header class="cover">
@@ -13,8 +15,7 @@ permalink: /at-the-beginning/
 <section id="profile">
   <h2>The Server</h2>
   <p>
-  <!-- <strong>Hello Friend!</strong><br /> -->
-  My name is Víctor Zamudio, I live at Mexico City...
+  {{site.data.the-server.coverline}}
   
   <span class="links">
     <a href="/at-the-beginning/no-one-knows/the-server" title="See full profile" >See my profile</a><span> &bull;</span>
@@ -25,7 +26,7 @@ permalink: /at-the-beginning/
 
 <section id="laboral-experience">
     <h2>The Navigator</h2>
-    <p>I am an old sea wolf who has sailed the 7 seas...
+    <p>{{site.data.the-navigator.coverline}}
     
       <span class="links">
         <a href="/at-the-beginning/no-one-knows/the-navigator" title="See all experience" >See my adventures</a><span> &bull;</span>
@@ -37,7 +38,7 @@ permalink: /at-the-beginning/
 <section id="skills">
     <h2>The Fixer</h2>
     <p>
-      It bugs me that developers do not follow the standards...
+      {{site.data.the-fixer.coverline}}
 
       <span class="links">
         <a href="/at-the-beginning/no-one-knows/the-fixer" title="See my skills" >See my skills</a><span> &bull;</span>

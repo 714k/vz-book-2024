@@ -1,5 +1,5 @@
 <nav class="navigation-links {{include.classes}}">
-  <p>Navigate to {{include.type}}:</p>
+  <p class="hide-mobile">Navigate to {{include.type}}:</p>
   {% for link in include.links %}
     {% if link.title != {{include.id.title}} %}
     <a href="#{{link.href | replace: "desktop", include.gallery.title | downcase}}" title="{{link.title}}">{{link.text}}</a>

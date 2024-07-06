@@ -3,9 +3,13 @@ layout: default
 title: No one knows...
 site_title: At the beginning...
 primary_color: '#ffbc00'
-secondary_color: rgb(128, 94, 0)
+secondary_color: rgb(111, 80, 0)
 section_class: no-one-knows
 cover_bg: '/assets/images/info/cover-bg.jpg'
+previous_page: '/at-the-beginning'
+next_page: '/at-the-beginning/no-one-knows/the-server/'
+previous_title: 'At the beginning...'
+next_title: 'The Server'
 permalink: /at-the-beginning/no-one-knows/
 ---
 <header class="cover">
@@ -22,7 +26,7 @@ permalink: /at-the-beginning/no-one-knows/
   
 <section id="profile" class="teaser"> 
   <h2 class="title"><span>The</span> Server</h2>
-  <p class="sprite balloon">My name is V&iacute;ctor Zamudio and...<br>
+  <p class="sprite balloon">{{site.data.the-server.coverline}}<br>
     <a href="/at-the-beginning/no-one-knows/the-server">See my profile</a>
   </p>
   <span class="decorative sprite elliot"></span>
@@ -30,11 +34,9 @@ permalink: /at-the-beginning/no-one-knows/
   <span class="decorative sprite face-mask"></span>
 </section>
 
-{% include back-to-top.html %}
-
 <section id="laboral-experience" class="teaser">
   <h2 class="title"><span>The</span> Navigator</h2>
-  <p class="sprite balloon">I am an old sea wolf...<br>
+  <p class="sprite balloon">{{site.data.the-navigator.coverline}}<br>
     <a href="/at-the-beginning/no-one-knows/the-navigator">See my adventures</a>
   </p>	
   <span class="decorative sprite">
@@ -47,11 +49,9 @@ permalink: /at-the-beginning/no-one-knows/
   </span>
 </section>
 
-{% include back-to-top.html %}
-
 <section id="skills" class="teaser">
   <h2 class="title"><span>The</span> Fixer</h2>
-  <p class="sprite balloon">It bugs me that...<br>
+  <p class="sprite balloon">{{site.data.the-fixer.coverline}}<br>
     <a href="/at-the-beginning/no-one-knows/the-fixer">See my skills</a></p>
   <span class="decorative sprite">
     <span class="sprite hitman-a">&nbsp;</span>
