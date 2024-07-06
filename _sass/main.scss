@@ -3,13 +3,13 @@
 @import "main-navigation";
 @import "toc";
 @import "covers";
-// @import "info";
-// @import "server";
-// @import "navigator";
-// @import "fixer";
-// @import "projects";
-// @import "project-n";
-// @import "contact";
+@import "info";
+@import "server";
+@import "navigator";
+@import "fixer";
+@import "projects";
+@import "project-n";
+@import "contact";
 
 :root {
   --spacing-0: 0;
@@ -46,6 +46,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
+  line-height: 1.2;
   font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
   padding: var(--spacing-4);
   margin: var(--spcaing-0);
@@ -140,6 +141,8 @@ body {
     border: dashed 1px rgb(67, 75, 91);
   }
   #footer {
+    position: relative;
+    z-index: 2;
     text-align: center;
     margin-bottom: 80px;
     .hide {
@@ -150,10 +153,11 @@ body {
       margin-top: 0;
       a {
         display: inline-block;
-        padding: 8px 16px;
+        padding: 8px 0;
         background-color: var(--color-secondary);
         background-color: transparent;
         width: auto;
+        transition: padding 0.3s;
         &.left {
           margin-right: auto;
         }
@@ -161,6 +165,7 @@ body {
          margin-left: auto; 
         }
         &:hover {
+          padding: 8px 16px;
           background-color: var(--color-primary);
         }
       }
@@ -225,10 +230,12 @@ body {
     line-height: 1;
     margin-top: 56px;
     margin-bottom: 0;
+    color: #45526c;
   }
 }
 
 .adventure {
+  padding-top: 80px;
   .period,
   .company,
   .industry,
@@ -337,6 +344,9 @@ body {
 }
 
 .project-n {
+  section, .gallery {
+    padding-top: 80px;
+  }
   #brief {
     strong {
       font-size: 24px;

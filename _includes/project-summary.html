@@ -3,11 +3,6 @@
   id="{{summary.id}}"
   class="{{summary.classes}}">
   <figure class="figure">
-    <span 
-      class="icon desktop" 
-      title="Project for Desktop">
-    &nbsp;
-    </span>
       <img 
         id="{{summary.id}}-image" 
         src="/assets/images/projects/{{summary.id}}-thumb-b.jpg" 
@@ -32,18 +27,26 @@
         </figcaption>
     </figure>
     
-    <span 
-      class="icon desktop" 
-      title="Project for Desktop">
+    <a 
+      class="icon brief" 
+      title="Brief"
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}#brief">
     &nbsp;
-    </span>
+    </a>
+    <a 
+      class="icon desktop" 
+      title="Desktop gallery"
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}#gallery-desktop">
+    &nbsp;
+    </a>
 
     {% if summary.classes contains "mobile" %}
-    <span 
+    <a 
       class="icon mobile" 
-      title="Project for Mobile">
+      title="Mobile gallery"
+      href="/at-the-beginning/nobody-knows-he-worked-on/{{summary.link.href}}#gallery-mobile">
       &nbsp;
-    </span>
+    </a>
     {% endif %}
 
   {% include back-to-top.html %}

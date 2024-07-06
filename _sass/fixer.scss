@@ -298,6 +298,15 @@
       }
     }
   }
+  #ammos table {
+    thead {
+      background-color: transparent;
+      color: #72fe00;
+    }
+    tr:nth-child(2n) {
+      background-color: transparent;
+    }
+  }
   .close-toc {
     background-color: transparent;
     z-index: 5;

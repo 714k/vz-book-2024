@@ -77,12 +77,25 @@ $greydark: #333333;
       margin: 0 auto;
       left: 0;
       right: 0;
-      border: double 6px var(--color-primary);
+      border: double 6px var(--color-secondary);
       li {
-        padding-bottom: 24px;
+        padding-bottom: 0;
         background-image: url(/assets/svg/toc-navigator-separator.svg);
         background-repeat: no-repeat;
-        background-position: center 42px;
+        background-position: center 0;
+        a {
+          padding-top: 0;
+          padding-bottom: 0;
+          color: var(--color-secondary);
+          .prefix-text {
+            display: inline-block;
+            transform: translateY(8px);
+            font-size: 60px;
+          }
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
       }
     }
     &::before {
@@ -133,6 +146,7 @@ $greydark: #333333;
     color: #1a1a1a;
   }
   section {
+    padding-top: var(--spacing-25);
     hr {
       display: none;
     }
