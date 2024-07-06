@@ -1,8 +1,17 @@
+{% if page.previous_page == nil %}
+  {% assign align_end='align-end' %}
+{% endif %}
+
 <footer id="footer">
-  <p class="site-navigation">
-    <a href="#">previous page</a>
+  <p class="site-navigation {{align_end}}">
+    {% if page.previous_page %}
+    <a class="left" href="{{ page.previous_page }}">&laquo; {{ page.previous_title }}</a>
+    {% endif %}
+
     <span class="hide"> | </span>
-    <a href="#">next page</a>
+    {% if page.next_page %}
+    <a class="right" href="{{ page.next_page }}">{{ page.next_title }} &raquo;</a>
+    {% endif %}
   </p>
   {% include logo.html %}
   <span>Designed & Developed by Victor Zamudio,</span> 

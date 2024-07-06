@@ -102,10 +102,11 @@
     }
     + .close-toc {
       opacity: 1;
-      bottom: 56vh;
+      z-index: 5;
+      bottom: 24px;
       transition: all 0.5s;
       &::before {
-        bottom: 57vh;
+        bottom:32px;
         transform: rotate(45deg);
         transition: all .5s;
       }
@@ -114,8 +115,9 @@
 }
 .close-toc {
   @include bgTocIcon();
+  z-index: -1;
   opacity: 0;
-  bottom: -100vh;
+  bottom: 24px;
   transition: all 0.5s;
   &:hover {
     cursor: pointer;
@@ -123,7 +125,7 @@
   &::before {
     @include iconToc();
     display: inline-block;
-    bottom: -100vh;
+    bottom: 32px;
     transform: rotate(0deg);
     transition: all 0.5s;
   }
