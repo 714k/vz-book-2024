@@ -31,16 +31,16 @@
             top: 90px;
           }
           .years {
-            top: 50px;
+            top: 52px;
           }
           .level {
-            top: -30px;
+            top: -22px;
           }
           .use {
-            top: 10px;
+            top: 14px;
           }
           .percentage {
-            top: -70px;
+            top: -58px;
           }
           .scroll {
             background-position:-364px -48px;
@@ -70,19 +70,22 @@
             color: #000;
           }
           &.type {
+            display: block;
             top: -15px;
           }
           &.years {
             top: -55px;
           }
           &.use {
+            display: block;
             top: -90px;
           }
           &.level {
+            display: block;
             top: -120px
           }
           &.percentage {
-            top: -150px;
+            top: -160px;
           }
           &.years::after {
             content: ' years';
