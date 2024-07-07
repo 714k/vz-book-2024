@@ -1,11 +1,12 @@
 {% if include.courses %}
 <section id="courses" class="courses">
   <h2>Courses</h2>
-  <p>These are some of the most significant courses I've taken  :</p>
+  <p>These are some of the most significant courses I've taken:</p>
 
   {% for course in include.courses %}
   <div class="course">
     <h3>{{course.title}}</h3>
+    <p>Course {{forloop.index}} of {{include.courses.size}}</p>
     <p>
       <strong class="who">
         Who:
