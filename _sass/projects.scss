@@ -27,7 +27,7 @@ $widthClip: calc(100% - 32px);
       left: auto;
       bottom: -100vh;
       li:first-of-type {
-        margin-top: 220px;
+        margin-top: 120px;
       }
       a:not(.vz-logo) {
         font-family: 'Segoe Script', 'Times New Roman', Times, serif;
@@ -46,10 +46,9 @@ $widthClip: calc(100% - 32px);
       transition: all 0.5s;
     }
     &:hover {
-      padding-bottom: 120px;
       background-color: rgba(0, 0, 0, 0.9);
       ul {
-        bottom: 120px;
+        bottom: 0;
       }
       &::before,
       &::after {

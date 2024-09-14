@@ -27,11 +27,11 @@
   position: fixed;
   padding: 0.5rem;
   z-index: 101;
-  top: 1.25rem;
+  top: 24px;
   right: 20px;
   cursor: pointer;
   mix-blend-mode: exclusion;
-  transform: scale(1.5);
+  transform: scale(1.25);
   transition: all 0.3s ease-in-out;
 
   &::before,
