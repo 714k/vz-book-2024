@@ -112,7 +112,7 @@ body {
       position: fixed;
       top: var(--spacing-0);
       left: var(--spacing-0);
-      // backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
     }
   }
   #main {
