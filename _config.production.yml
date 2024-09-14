@@ -1,13 +1,13 @@
-include: [".htaccess"]
+include: ['.htaccess']
 
 title: Victor Zamudio
-url: "https://book2025.victorzamudio.info"
+url: 'https://book2025.victorzamudio.rocks'
 
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
-      layout: "default"
+      layout: 'default'
 
 plugins:
   - jekyll-sitemap
