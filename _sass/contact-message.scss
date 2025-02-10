@@ -76,7 +76,6 @@
       //   // background-color: red;
       //   // background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="red" fill-opacity=".1" stroke="red" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
       // }
-      @include inputForm();
       appearance: none;
       /* safari */
       -webkit-appearance: none;
@@ -87,6 +86,7 @@
       width: 100%;
       color: var(--border-color-input);
       outline: none;
+      @include inputForm();
       &::-ms-expand {
         display: none;
       }
@@ -104,12 +104,12 @@
     }
   }
   textarea {
-    @include inputForm();
     color: white;
     height: 80px;
     padding-top: 8px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="80" xml:space="preserve"><path fill="%23FFF" fill-opacity="0.1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M351.539 79H1V1h382v48.75z"/></svg>');
     background-size: 100% 80px;
+    @include inputForm();
     &.invalid {
       background-size: 100% 105px;
     }

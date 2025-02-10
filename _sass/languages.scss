@@ -142,6 +142,7 @@
             width: 90%;
             margin: 12px 20px;
             text-shadow: 0 0 5px white;
+            color: white;
             abbr {
               padding-top: 8px;
               padding-bottom: 4px;
@@ -159,7 +160,6 @@
               color: red;
               text-shadow: 0 0 5px red;
             }
-            color: white;
           }
           &.type,
           &.years,

@@ -39,6 +39,14 @@
 #tableOfContent {
   opacity: 1;
   transition: all .5s;
+  position: fixed;
+  z-index: 5;
+  bottom: var(--spacing-0);
+  left: var(--spacing-0);
+  width: 100%;
+  background-color: transparent;
+  padding: var(--spacing-0) var(--spacing-0) calc(var(--spacing-1) * 19) var(--spacing-0);
+  margin: var(--spacing-0);
   p {
     display: none;
   }
@@ -66,14 +74,6 @@
       }
     }
   }
-  position: fixed;
-  z-index: 5;
-  bottom: var(--spacing-0);
-  left: var(--spacing-0);
-  width: 100%;
-  background-color: transparent;
-  padding: var(--spacing-0) var(--spacing-0) calc(var(--spacing-1) * 19) var(--spacing-0);
-  margin: var(--spacing-0);
   &::before {
     @include bgTocIcon();
   }
