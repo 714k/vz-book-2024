@@ -50,6 +50,9 @@ body {
   font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
   padding: var(--spacing-4);
   margin: var(--spcaing-0);
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
   .vz-logo {
     position: fixed;
     top: var(--spacing-4);
@@ -200,10 +203,6 @@ body {
   .hide-mobile {
     display: none;
   }
-
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.2;
 
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {

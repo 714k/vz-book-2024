@@ -126,6 +126,7 @@
       height: 50px;
       left: 4vw;
       top: 16vh;
+      transition: inherit;
       a {
         display: inline-block;
         margin-top: 4px;
@@ -133,7 +134,6 @@
       &::before {
         @include lineBalloon;
       }
-      transition: inherit;
       a {
         font-family: 'Palette Mosaic', Arial, Helvetica, sans-serif;
         background-color: transparent;
