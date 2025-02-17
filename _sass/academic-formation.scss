@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
 @include fontface('Book Antiqua', 'book-antiqua');
 @include fontface('Hatten', 'hatten');
 
 #academic-formation {
   width: 100%;
   height: calc(100vh - var(--spacing-18));
-  height: 300%;
+  height: 300vh;
   padding: 0;
   background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
   background-size: cover;
@@ -17,7 +23,7 @@
     top: auto;
     display: block;
     width: 100%;
-    height: 300%;
+    height: 300vh;
     background-color: rgba(255, 255, 255, 0.9);
     opacity: 0.9;
     color: black;
@@ -31,21 +37,39 @@
     margin: 0;
     // background-color: rgba(255,255,255, .9);
   }
-  p {
+  #bachelor-degree,
+  #newsletter-college,
+  #self-taught {
+    position: relative;
+    top: 0px;
+    margin: 0;
+    left: 0;
+    // bottom: 20px;
+
+    width: calc(100%);
+    height: calc(100vh - 144px);
+    // padding: 0 20px;
+    // opacity: .5;
+    // background-color: rgba(255,255,255, .9);
+    color: black;
+  }
+  #bachelor-degree {
+    // background-color: aqua;
     #uam {
       position: absolute;
       top: 20px;
       left: 20px;
       z-index: 1;
-      font-family: 'Hatten', Impact, sans-serif;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 30px;
+      font-family: 'Saira Extra Condensed', Impact, sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 22px;
       text-transform: uppercase;
     }
     #xochimilco-unit {
       position: absolute;
-      top: 38%;
+      top: 48%;
       left: 20px;
       width: calc(100% - 40px);
       text-align: center;
@@ -60,7 +84,7 @@
     }
     #graphic-communication-designer {
       position: absolute;
-      bottom: 220px;
+      bottom: 79px;
       left: 20px;
       z-index: 1;
       display: inline-grid;
@@ -74,33 +98,93 @@
       position: absolute;
       z-index: 1;
       right: 20px;
-      bottom: 200px;
+      bottom: 79px;
       width: calc(33.3% - 20px);
       font-family: 'Book antiqua', 'Times New Roman', Times, serif;
       font-size: 18px;
       font-style: italic;
+      line-height: 1.2;
       text-align: left;
     }
-  }
-  #bachelor-degree,
-  #newsletter-college,
-  #self-taught {
-    position: relative;
-    top: 0px;
-    margin: 0;
-    left: 0;
-    // bottom: 20px;
-
-    width: calc(100%);
-    height: calc(100vh - 10px);
-    // padding: 0 20px;
-    // opacity: .5;
-    // background-color: rgba(255,255,255, .9);
-    color: black;
+    .photo {
+      top: 61px;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 160px;
+      // opacity: .2;
+      background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
+      background-position: center -266px;
+      background-size: 114% auto;
+    }
   }
   #newsletter-college {
     // top: 100vh;
-    padding-top: 20px;
+    // padding-top: 20px;
+    // background-color: aquamarine;
+    .grid {
+      display: none;
+    }
+    &.newsletter-college {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    &-tagline,
+    &-title,
+    &-endtag,
+    &-text,
+    &-list {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+    }
+    &-tagline {
+      top: 0px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #333;
+      color: white;
+    }
+    &-title {
+      top: 52px;
+      font-family: 'Kumar One', serif;
+      font-size: 40px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: #333;
+    }
+    &-endtag {
+      top: 160px;
+      text-transform: uppercase;
+      color: #333;
+    }
+    &-text {
+      top: 50%;
+      left: 20px;
+      right: 20px;
+      font-family: 'Barlow Condensed', 'Franklin Gothic Medium', 'Arial Narrow',
+        Arial, sans-serif;
+      line-height: 20px;
+      // text-transform: capitalize;
+      // background-color: aqua;
+    }
+    &-list {
+      top: auto;
+      left: 20px;
+      right: 20px;
+      bottom: 80px;
+      font-family: 'Barlow Condensed', 'Franklin Gothic Medium', 'Arial Narrow',
+        Arial, sans-serif;
+      // display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      line-height: 20px;
+      font-size: 18px;
+    }
   }
   .decorative {
     position: absolute;
@@ -115,32 +199,29 @@
     display: block;
   }
   .grid {
+    position: absolute;
+    // height: calc(100vh - 240px);
     display: grid;
     left: 20px;
-    right: 20px;
-    bottom: 200px;
-    top: 20px;
+    // right: 20px;
+    // bottom: 200px;
+    bottom: 80px;
+    top: 21px;
+    // min-height: 440px;
+    // transform: translateY(-20px);
+    width: calc(100% - 40px);
+    // background-color: aqua;
     grid-template-columns: 1fr 1fr 1fr;
     // grid-row: 1fr 1fr;
     grid-template-rows: 100%;
     gap: 10px;
     border: solid 1px rgb(153 51 255 / 20%);
+    border-top: none;
     background-image: url(/assets/images/info/server/academic-formation/guias-base.png);
     background-repeat: repeat-x;
     background-position: 0 bottom;
     .col-3 {
       border: solid 1px #9933ff;
     }
-  }
-  .photo {
-    top: 94px;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 120px;
-    // opacity: .2;
-    background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
-    background-position: center -267px;
-    background-size: 114% auto;
   }
 }
