@@ -4,10 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
 @include fontface('Book Antiqua', 'book-antiqua');
 @include fontface('Hatten', 'hatten');
 
 #academic-formation {
+  position: relative;
+  top: 0;
   width: 100%;
   height: calc(100vh - var(--spacing-18));
   height: 300vh;
@@ -30,9 +36,10 @@
   }
   h2 {
     position: sticky;
-    top: 0; /* required */
+    z-index: 1;
+    top: 72px; /* required */
     // overflow: hidden;
-    padding-top: 72px;
+    // padding-top: 72px;
     line-height: 1;
     margin: 0;
     // background-color: rgba(255,255,255, .9);
@@ -40,19 +47,21 @@
   #bachelor-degree,
   #newsletter-college,
   #self-taught {
-    position: relative;
+    position: sticky;
+    z-index: 0;
     top: 0px;
-    margin: 0 0 80px 0;
+    margin: 0;
     left: 0;
-    width: calc(100%);
-    height: calc(100vh - 144px);
+    // width: calc(100%);
+    // height: calc(100vh - 144px);
+    width: 100%;
+    height: 100vh;
     color: black;
   }
   #bachelor-degree {
-    // background-color: aqua;
     #uam {
       position: absolute;
-      top: 20px;
+      top: 90px;
       left: 20px;
       z-index: 1;
       font-family: 'Saira Extra Condensed', Impact, sans-serif;
@@ -64,7 +73,7 @@
     }
     #xochimilco-unit {
       position: absolute;
-      top: 48%;
+      top: 49%;
       left: 20px;
       width: calc(100% - 40px);
       text-align: center;
@@ -79,7 +88,7 @@
     }
     #graphic-communication-designer {
       position: absolute;
-      bottom: 79px;
+      bottom: 151px;
       left: 20px;
       z-index: 1;
       display: inline-grid;
@@ -93,7 +102,7 @@
       position: absolute;
       z-index: 1;
       right: 20px;
-      bottom: 79px;
+      bottom: 151px;
       width: calc(33.3% - 20px);
       font-family: 'Book antiqua', 'Times New Roman', Times, serif;
       font-size: 18px;
@@ -102,7 +111,7 @@
       text-align: left;
     }
     .photo {
-      top: 61px;
+      top: 81px;
       z-index: 1;
       display: block;
       width: 100%;
@@ -113,8 +122,11 @@
     }
   }
   #newsletter-college {
+    background-color: white;
     .grid {
       grid-template-columns: 1fr 1fr;
+      top: 145px;
+      bottom: 60px;
       background-image: none;
       border: none;
       .col-2 {
@@ -122,9 +134,10 @@
         border: none;
         .photo {
           position: absolute;
-          top: 43%;
+          top: auto;
+          bottom: 180px;
           width: 100%;
-          height: 60px;
+          height: 80px;
           background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
           background-position: -20px calc(40% - 40px);
           background-repeat: no-repeat;
@@ -150,7 +163,7 @@
       left: 0;
     }
     &-tagline {
-      top: 0px;
+      top: 150px;
       height: 40px;
       line-height: 40px;
       padding: 0 10px;
@@ -162,7 +175,7 @@
       color: white;
     }
     &-title {
-      top: 52px;
+      top: 198px;
       font-family: 'Kumar One', serif;
       font-size: 40px;
       line-height: 40px;
@@ -170,12 +183,13 @@
       color: #333;
     }
     &-endtag {
-      top: 160px;
+      top: 305px;
       text-transform: uppercase;
       color: #333;
     }
     &-text {
-      top: 50%;
+      top: auto;
+      bottom: 180px;
       left: 20px;
       right: 20px;
       font-family: 'Barlow Condensed', 'Franklin Gothic Medium', 'Arial Narrow',
@@ -185,7 +199,9 @@
       // background-color: aqua;
     }
     &-list {
-      top: calc(50% + 60px);
+      top: calc(50% + 150px);
+      top: auto;
+      bottom: 60px;
       left: 20px;
       right: 20px;
       // bottom: 80px;
@@ -207,6 +223,106 @@
       }
     }
   }
+  #self-taught {
+    // z-index: 1;
+    position: relative;
+    background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
+    background-size: cover;
+    height: 100vh;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      background-blend-mode: multiply;
+    }
+    .text {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      z-index: 2;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', Haettenschweiler, 'Arial Narrow Bold',
+        sans-serif;
+      &-5 {
+        left: auto;
+        right: 288px;
+        top: 242px;
+        font-size: 30px;
+        color: #ffd800;
+      }
+      &-6 {
+        left: auto;
+        right: 0;
+        top: 230px;
+        font-size: 54px;
+        font-weight: 500;
+        font-family: 'Silkscreen', Courier, monospace;
+        color: rgb(255 255 255 / 90%);
+        // text-decoration: none;
+      }
+      &-7 {
+        top: 320px;
+        right: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 14px;
+        color: black;
+        text-transform: none;
+        width: 150px;
+      }
+      &-8 {
+        top: auto;
+        bottom: 200px;
+        right: 20px;
+        font-size: 48px;
+        line-height: 32px;
+        text-align: center;
+        strong {
+          display: block;
+          color: #ffd800;
+        }
+      }
+      &-9 {
+        top: auto;
+        left: auto;
+        bottom: 165px;
+        right: 132px;
+        font-size: 24px;
+      }
+      &-10 {
+        top: auto;
+        left: auto;
+        bottom: 124px;
+        right: 20px;
+        font-size: 60px;
+        line-height: 48px;
+        text-align: right;
+        color: #ffd800;
+      }
+      &-11 {
+        top: auto;
+        left: auto;
+        bottom: 80px;
+        right: 20px;
+        font-size: 60px;
+        line-height: 48px;
+        text-align: right;
+        color: #ffd800;
+      }
+    }
+  }
   .decorative {
     position: absolute;
     bottom: 0px;
@@ -221,19 +337,12 @@
   }
   .grid {
     position: absolute;
-    // height: calc(100vh - 240px);
     display: grid;
     left: 20px;
-    // right: 20px;
-    // bottom: 200px;
-    bottom: 80px;
-    top: 21px;
-    // min-height: 440px;
-    // transform: translateY(-20px);
+    bottom: 153px;
+    top: 72px;
     width: calc(100% - 40px);
-    // background-color: aqua;
     grid-template-columns: 1fr 1fr 1fr;
-    // grid-row: 1fr 1fr;
     grid-template-rows: 100%;
     gap: 10px;
     border: solid 1px rgb(153 51 255 / 20%);
