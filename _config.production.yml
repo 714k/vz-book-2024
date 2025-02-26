@@ -1,7 +1,7 @@
 include: ['.htaccess']
 
 title: Victor Zamudio
-url: 'https://book2025.victorzamudio.rocks'
+url: 'https://victorzamudio.rocks'
 
 defaults:
   - scope:

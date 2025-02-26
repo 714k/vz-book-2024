@@ -1,15 +1,15 @@
-@import "typography";
-@import "mixins";
-@import "main-navigation";
-@import "toc";
-@import "covers";
-@import "info";
-@import "server";
-@import "navigator";
-@import "fixer";
-@import "projects";
-@import "project-n";
-@import "contact";
+@import 'typography';
+@import 'mixins';
+@import 'main-navigation';
+@import 'toc';
+@import 'covers';
+// @import 'info';
+// @import 'server';
+// @import 'navigator';
+// @import 'fixer';
+// @import 'projects';
+// @import 'project-n';
+// @import 'contact';
 
 :root {
   --spacing-0: 0;
@@ -47,16 +47,17 @@ body {
   font-weight: 500;
   line-height: 24px;
   line-height: 1.2;
-  font-family:'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
   padding: var(--spacing-4);
+  padding: 1em;
   margin: var(--spcaing-0);
   margin-left: auto;
   margin-right: auto;
   line-height: 1.2;
   .vz-logo {
     position: fixed;
-    top: var(--spacing-4);
-    left: var(--spacing-4);
+    top: 1em;
+    left: 1em;
     z-index: 200;
     mix-blend-mode: exclusion;
   }
@@ -67,7 +68,7 @@ body {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
   }
   a:not(.vz-logo) {
@@ -108,7 +109,7 @@ body {
   }
   #main-header {
     &::before {
-      content: "";
+      content: '';
       height: calc(var(--spacing-10) * 2);
       width: 100%;
       margin: var(--spacing-0);
@@ -165,7 +166,7 @@ body {
           margin-right: auto;
         }
         &.right {
-         margin-left: auto; 
+          margin-left: auto;
         }
         &:hover {
           padding: 8px 16px;
@@ -207,7 +208,11 @@ body {
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     max-width: 768px;
-    font-size: 24px;
+    font-size: 30px;
+    .vz-logo {
+      width: 2em;
+      height: 2em;
+    }
     .navigation-wrapper .main-navigation ul {
       text-align: right;
       li {
@@ -220,7 +225,7 @@ body {
   @media only screen and (min-width: 1200px) {
     max-width: 1920px;
     font-size: 30px;
-  } 
+  }
 }
 
 .course {
@@ -290,7 +295,7 @@ body {
         text-indent: 4px;
       }
     }
-    th, 
+    th,
     td {
       &.type,
       &.use,
@@ -335,15 +340,16 @@ body {
       bottom: 0;
       padding-left: 8px;
       background-color: var(--color-secondary);
-      background-color: rgba(0,0,0,.85);
+      background-color: rgba(0, 0, 0, 0.85);
       color: #adb6c5;
-      backdrop-filter: opacity(.4);
+      backdrop-filter: opacity(0.4);
     }
   }
 }
 
 .project-n {
-  section, .gallery {
+  section,
+  .gallery {
     padding-top: 80px;
   }
   #brief {
@@ -380,7 +386,7 @@ body {
       strong {
         display: inline-block;
         margin-bottom: 12px;
-        margin-top: 24px;        
+        margin-top: 24px;
       }
       .v_card {
         display: inline-block;
@@ -408,7 +414,7 @@ body {
       text-indent: 0;
       padding-left: 8px;
     }
-    input[type=checkbox] {
+    input[type='checkbox'] {
       transform: scale(1.5);
       border: none;
       margin-right: 8px;
