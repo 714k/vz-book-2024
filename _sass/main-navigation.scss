@@ -27,8 +27,8 @@
   position: fixed;
   padding: 0.5rem;
   z-index: 101;
-  top: 24px;
-  right: 20px;
+  top: 1.3em;
+  right: 1em;
   cursor: pointer;
   mix-blend-mode: exclusion;
   transform: scale(1.25);
@@ -235,5 +235,11 @@
 
   100% {
     transform: rotate(-135deg) translateX(8px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-icon {
+    transform: scale(2);
   }
 }

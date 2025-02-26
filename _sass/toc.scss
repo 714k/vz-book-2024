@@ -38,14 +38,15 @@
 
 #tableOfContent {
   opacity: 1;
-  transition: all .5s;
+  transition: all 0.5s;
   position: fixed;
   z-index: 5;
   bottom: var(--spacing-0);
   left: var(--spacing-0);
   width: 100%;
   background-color: transparent;
-  padding: var(--spacing-0) var(--spacing-0) calc(var(--spacing-1) * 19) var(--spacing-0);
+  padding: var(--spacing-0) var(--spacing-0) calc(var(--spacing-1) * 19)
+    var(--spacing-0);
   margin: var(--spacing-0);
   p {
     display: none;
@@ -63,7 +64,7 @@
     overflow: auto;
     text-align: center;
     margin: var(--spacing-0) auto;
-    transition: all .5s ease-in;
+    transition: all 0.5s ease-in;
     li {
       a {
         display: block;
@@ -79,7 +80,7 @@
   }
   &::after {
     @include iconToc();
-    transition: all .5s;
+    transition: all 0.5s;
   }
   &:hover {
     cursor: pointer;
@@ -90,7 +91,7 @@
     &::before,
     &::after {
       opacity: 0;
-      transition: all .5s;
+      transition: all 0.5s;
     }
     &::before {
       // background-color: black;
@@ -98,7 +99,7 @@
     &::after {
       // background-color: var(--color-primary);
       transform: rotate(45deg);
-      transition: all .5s;
+      transition: all 0.5s;
     }
     + .close-toc {
       opacity: 1;
@@ -106,9 +107,9 @@
       bottom: 24px;
       transition: all 0.5s;
       &::before {
-        bottom:32px;
+        bottom: 32px;
         transform: rotate(45deg);
-        transition: all .5s;
+        transition: all 0.5s;
       }
     }
   }
@@ -128,5 +129,14 @@
     bottom: 32px;
     transform: rotate(0deg);
     transition: all 0.5s;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #tableOfContent {
+    &::before,
+    &::after {
+      transform: scale(1.25);
+    }
   }
 }
