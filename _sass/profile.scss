@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+#profile {
+  position: relative;
+  height: 2200vh;
+  background-color: red;
+  h2 {
+    position: sticky;
+    top: 72px;
+    z-index: 2;
+  }
+  p {
+    margin: 0;
+  }
+  .view {
+    position: absolute;
+    top: 2100vh; // change to 0 when completes
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
+      sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 72px;
+
+    &.bg-attached {
+      background-attachment: fixed;
+    }
+
+    &[data-id='hello-friend-first'] {
+      top: 0;
+      background-image: url(/assets/images/info/server/profile/bg-01.jpg);
+    }
+    &[data-id='hello-friend-second'] {
+      top: 100vh;
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+    }
+    &[data-id*='game'] {
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      font-size: 120px;
+      line-height: 90px;
+    }
+    &[data-id='game-first'] {
+      top: 200vh;
+      background-image: url(/assets/images/info/server/profile/bg-03.jpg);
+    }
+    &[data-id='game-second'] {
+      top: 300vh;
+      font-size: 150px;
+      [data-sp='maybe'] {
+        width: calc(100% - 40px);
+      }
+    }
+    &[data-id='game-third'] {
+      top: 400vh;
+      font-size: 120px;
+      line-height: 100px;
+    }
+    &[data-id='game-fourth'] {
+      top: 500vh;
+      font-size: 120px;
+      line-height: 100px;
+    }
+    &[data-id='my-name'] {
+      top: 600vh;
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      [data-sp='my-name-is'] {
+        z-index: 2;
+        left: 40px;
+        font-size: 48px;
+        text-align: left;
+        color: #ffc600;
+        top: calc(50% - 72px);
+      }
+      [data-sp='victor-zamudio'] {
+        font-size: 120px;
+        line-height: 96px;
+        top: calc(50%);
+      }
+    }
+    &[data-id='im-uxe'] {
+      top: 700vh;
+      font-size: 120px;
+      line-height: 96px;
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      [data-sp='im-a'] {
+        font-size: 48px;
+        text-align: left;
+        color: #ffc600;
+        top: calc(50% - 140px);
+        width: 50px;
+        line-height: 40px;
+        left: 20px;
+      }
+    }
+    &[data-id='at-thomson-reuters'] {
+      top: 800vh;
+      font-size: 120px;
+      line-height: 96px;
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      [data-sp='at'] {
+        font-size: 48px;
+        text-align: left;
+        top: calc(50% - 140px);
+      }
+    }
+
+    [data-sp] {
+      z-index: 1;
+      position: absolute;
+      padding: 0 20px;
+      height: 100vh;
+      top: calc(50% - 52px);
+      left: 0;
+    }
+  }
+}
