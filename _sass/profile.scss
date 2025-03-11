@@ -2,7 +2,10 @@
 
 #profile {
   position: relative;
+  width: 100vw;
   height: 2200vh;
+  padding: 0;
+  margin: 0;
   background-color: red;
   h2 {
     position: sticky;
@@ -10,7 +13,9 @@
     z-index: 2;
   }
   p {
+    padding: 0;
     margin: 0;
+    background-color: #ffc600;
   }
   .view {
     position: absolute;
@@ -35,7 +40,10 @@
     }
 
     &[data-id='hello-friend-first'] {
+      position: relative;
+      display: block;
       top: 0;
+      margin: 0;
       background-image: url(/assets/images/info/server/profile/bg-01.jpg);
     }
     &[data-id='hello-friend-second'] {
@@ -44,7 +52,7 @@
     }
     &[data-id*='game'] {
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
-      font-size: 120px;
+      font-size: 100px;
       line-height: 90px;
     }
     &[data-id='game-first'] {
@@ -53,19 +61,19 @@
     }
     &[data-id='game-second'] {
       top: 300vh;
-      font-size: 150px;
+      font-size: 120px;
       [data-sp='maybe'] {
-        width: calc(100% - 40px);
+        // width: calc(100% - 40px);
       }
     }
     &[data-id='game-third'] {
       top: 400vh;
-      font-size: 120px;
+      font-size: 100px;
       line-height: 100px;
     }
     &[data-id='game-fourth'] {
       top: 500vh;
-      font-size: 120px;
+      font-size: 100px;
       line-height: 100px;
     }
     &[data-id='my-name'] {
@@ -73,49 +81,129 @@
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp='my-name-is'] {
         z-index: 2;
+        height: auto;
+        width: auto;
         left: 40px;
         font-size: 48px;
-        text-align: left;
+        text-align: center;
         color: #ffc600;
-        top: calc(50% - 72px);
+        top: calc(50% - 56px);
       }
       [data-sp='victor-zamudio'] {
-        font-size: 120px;
-        line-height: 96px;
-        top: calc(50%);
+        height: auto;
+        font-size: 100px;
+        line-height: 80px;
+        top: 50%;
+        text-align: left;
+        left: 40px;
+        width: auto;
       }
     }
     &[data-id='im-uxe'] {
       top: 700vh;
-      font-size: 120px;
+      font-size: 100px;
       line-height: 96px;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp='im-a'] {
         font-size: 48px;
         text-align: left;
         color: #ffc600;
-        top: calc(50% - 140px);
+        top: calc(50% - 136px);
         width: 50px;
+        height: auto;
         line-height: 40px;
-        left: 20px;
+        left: calc(50% - 150px);
+      }
+      [data-sp='uxe'] {
+        font-size: 120px;
+        height: auto;
+      }
+      abbr {
+        display: block;
       }
     }
     &[data-id='at-thomson-reuters'] {
       top: 800vh;
-      font-size: 120px;
+      font-size: 100px;
       line-height: 96px;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp='at'] {
+        width: auto;
+        height: auto;
         font-size: 48px;
         text-align: left;
-        top: calc(50% - 140px);
+        top: calc(50% - 116px);
+        left: calc(50% - 138px);
+      }
+      a {
+        font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
+          sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 96px;
+        line-height: 80px;
+        height: auto;
+        background-color: transparent;
       }
     }
-
+    &[data-id='at-thomson-reuters-since'] {
+      top: 900vh;
+      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      [data-sp='since'] {
+        width: auto;
+        height: auto;
+        font-size: 48px;
+        color: #ffc600;
+        top: calc(50% - 60px);
+        left: calc(50% - 158px);
+      }
+      [data-sp='september'] {
+        top: 50%;
+        [data-sp='2022'] {
+          font-size: 150px;
+          top: 96px;
+          left: calc(50% - 164px);
+          height: auto;
+          width: auto;
+          text-align: left;
+        }
+      }
+    }
+    &[data-id='born-and-raised'] {
+      top: 1000vh;
+      background-image: url(/assets/images/info/server/profile/bg-04.jpg);
+      [data-sp] {
+        width: auto;
+        height: auto;
+      }
+      [data-sp='born'] {
+        font-size: 76px;
+        left: 20px;
+        top: 30%;
+      }
+      [data-sp='and'] {
+        font-size: 36px;
+        color: #ffc600;
+        left: 146px;
+        top: calc(30% + 12px);
+      }
+      [data-sp='raised'] {
+        font-size: 76px;
+        left: 20px;
+        top: calc(30% + 80px);
+      }
+      [data-sp='in'] {
+        font-size: 36px;
+        color: #ffc600;
+        left: 146px;
+        top: calc(30% + 80px);
+      }
+    }
     [data-sp] {
       z-index: 1;
       position: absolute;
-      padding: 0 20px;
+      padding: 0;
+      width: 100%;
       height: 100vh;
       top: calc(50% - 52px);
       left: 0;
