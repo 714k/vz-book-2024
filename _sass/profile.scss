@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@include fontface('Mr Robot', 'mr-robot');
 
 #profile {
   position: relative;
@@ -179,25 +180,142 @@
       [data-sp='born'] {
         font-size: 76px;
         left: 20px;
-        top: 30%;
+        top: 25%;
       }
       [data-sp='and'] {
         font-size: 36px;
         color: #ffc600;
         left: 146px;
-        top: calc(30% + 12px);
+        top: calc(25% + 12px);
       }
       [data-sp='raised'] {
         font-size: 76px;
         left: 20px;
-        top: calc(30% + 80px);
+        top: calc(25% + 56px);
       }
       [data-sp='in'] {
         font-size: 36px;
         color: #ffc600;
-        left: 146px;
-        top: calc(30% + 80px);
+        left: 184px;
+        top: calc(25% + 68px);
       }
+      [data-sp='mexico'] {
+        font-size: 72px;
+        font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        left: auto;
+        right: 20px;
+        top: calc(40% + 70px);
+        background: rgb(0, 171, 105);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 171, 105, 1) 0%,
+          rgba(0, 171, 105, 1) 35%,
+          rgba(255, 255, 255, 1) 35%,
+          rgba(255, 255, 255, 1) 60%,
+          rgba(215, 0, 96, 1) 60%,
+          rgba(215, 0, 96, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+      }
+      [data-sp='my'] {
+        top: auto;
+        font-size: 36px;
+        left: auto;
+        bottom: 140px;
+        right: 224px;
+        color: #ffc600;
+      }
+      [data-sp='beloved'] {
+        font-size: 72px;
+        left: auto;
+        right: 30px;
+        top: auto;
+        bottom: 150px;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 30%,
+          rgba(215, 0, 96, 1) 30%,
+          rgba(215, 0, 96, 1) 85%,
+          rgba(255, 255, 255, 1) 85%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+      }
+      [data-sp='country'] {
+        font-size: 72px;
+        left: auto;
+        right: 20px;
+        top: auto;
+        bottom: 90px;
+      }
+    }
+    &[data-id='around-the-web'] {
+      top: 1100vh;
+      background-image: url(/assets/images/info/server/profile/bg-05.jpg);
+      [data-sp='been'] {
+        font-size: 36px;
+        top: 30%;
+        left: 20px;
+        color: #ffc600;
+        width: 80px;
+        height: auto;
+        line-height: 35px;
+        text-align: right;
+      }
+      [data-sp='around'] {
+        width: auto;
+        left: auto;
+        top: 30%;
+        left: 104px;
+      }
+      [data-sp='the'] {
+        top: 50%;
+        font-size: 36px;
+        color: #ffc600;
+        height: auto;
+        width: auto;
+        left: auto;
+        transform: translateY(-50px);
+      }
+      [data-sp='web'] {
+        top: 50%;
+      }
+      [data-sp='since'] {
+        font-size: 36px;
+        color: #ffc600;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        bottom: 170px;
+        right: 240px;
+      }
+      [data-sp='june-2006'] {
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        bottom: 120px;
+        right: 20px;
+      }
+      [data-sp='n-years'] {
+        font-size: 28px;
+        color: #ffc600;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        bottom: 72px;
+        right: 20px;
+      }
+    }
+    &[data-id='working-with-brands'] {
+      top: 1200vh;
+      background-image: url(/assets/images/info/server/profile/bg-06.jpg);
     }
     [data-sp] {
       z-index: 1;
