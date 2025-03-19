@@ -27,6 +27,7 @@
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
       sans-serif;
     font-weight: 400;
@@ -316,6 +317,150 @@
     &[data-id='working-with-brands'] {
       top: 1200vh;
       background-image: url(/assets/images/info/server/profile/bg-06.jpg);
+      [data-sp] {
+        height: auto;
+        width: auto;
+        text-shadow: -7px 14px 4px black;
+      }
+      [data-sp='and'] {
+        top: 30%;
+        left: calc(50% - 50px);
+        color: #ffc600;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+      [data-sp='working'] {
+        top: calc(30% + 54px);
+        left: calc(50% - 140px);
+      }
+      [data-sp='with'] {
+        top: calc(30% + 100px);
+        left: calc(50% - 124px);
+        color: #ffc600;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+      [data-sp='brands'] {
+        top: calc(30% + 150px);
+        left: calc(50% - 120px);
+      }
+      [data-sp='like'] {
+        top: calc(30% + 220px);
+        left: calc(50% + 20px);
+      }
+    }
+    &[data-id='warner-media'] {
+      top: 1300vh;
+      background-image: url(/assets/images/info/server/profile/bg-07.jpg);
+      [data-sp] {
+        font-size: 120px;
+        width: auto;
+        height: auto;
+        top: 40%;
+        left: calc(50% - 156px);
+      }
+      [data-sp='warner'] {
+        // top: 47%;
+      }
+      [data-sp='media'] {
+        top: calc(40% + 90px);
+        left: calc(50% - 116px);
+        color: #939498;
+      }
+    }
+    &[data-id='jnj'] {
+      top: 1400vh;
+      background-image: url(/assets/images/info/server/profile/bg-08.jpg);
+    }
+    &[data-id='google'] {
+      top: 1500vh;
+      background-image: url(/assets/images/info/server/profile/bg-09.jpg);
+      [data-sp] {
+        font-size: 120px;
+        line-height: 1.2;
+        width: auto;
+        height: auto;
+        left: calc(50% - 140px);
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(72, 137, 244, 1) 0%,
+          rgba(72, 137, 244, 1) 16%,
+          rgba(235, 73, 59, 1) 16%,
+          rgba(235, 73, 59, 1) 33%,
+          rgba(251, 190, 13, 1) 33%,
+          rgba(251, 190, 13, 1) 51%,
+          rgba(72, 137, 244, 1) 51%,
+          rgba(72, 137, 244, 1) 68%,
+          rgba(58, 171, 88, 1) 68%,
+          rgba(58, 171, 88, 1) 84%,
+          rgba(235, 73, 59, 1) 84%,
+          rgba(235, 73, 59, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+      }
+    }
+    &[data-id='ibm'] {
+      top: 1600vh;
+      background-image: url(/assets/images/info/server/profile/bg-10.jpg);
+      [data-sp] {
+        font-size: 200px;
+        line-height: 1.2;
+        width: auto;
+        height: auto;
+        top: 35%;
+        left: calc(50% - 118px);
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 5%,
+          rgba(255, 255, 255, 0) 5%,
+          rgba(255, 255, 255, 0) 10%,
+          rgba(255, 255, 255, 1) 10%,
+          rgba(255, 255, 255, 1) 15%,
+          rgba(255, 255, 255, 0) 15%,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 1) 20%,
+          rgba(255, 255, 255, 1) 25%,
+          rgba(255, 255, 255, 0) 25%,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 1) 30%,
+          rgba(255, 255, 255, 1) 35%,
+          rgba(255, 255, 255, 0) 35%,
+          rgba(255, 255, 255, 0) 40%,
+          rgba(255, 255, 255, 1) 40%,
+          rgba(255, 255, 255, 1) 45%,
+          rgba(255, 255, 255, 0) 45%,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 1) 55%,
+          rgba(255, 255, 255, 0) 55%,
+          rgba(255, 255, 255, 0) 60%,
+          rgba(255, 255, 255, 1) 60%,
+          rgba(255, 255, 255, 1) 65%,
+          rgba(255, 255, 255, 0) 65%,
+          rgba(255, 255, 255, 0) 70%,
+          rgba(255, 255, 255, 1) 70%,
+          rgba(255, 255, 255, 1) 75%,
+          rgba(255, 255, 255, 0) 75%,
+          rgba(255, 255, 255, 0) 80%,
+          rgba(255, 255, 255, 1) 80%,
+          rgba(255, 255, 255, 1) 85%,
+          rgba(255, 255, 255, 0) 85%,
+          rgba(255, 255, 255, 0) 90%,
+          rgba(255, 255, 255, 1) 90%,
+          rgba(255, 255, 255, 1) 95%,
+          rgba(255, 255, 255, 0) 95%,
+          rgba(255, 255, 255, 0) 100%,
+          rgba(255, 255, 255, 1) 100%,
+          rgba(255, 255, 255, 1) 105%
+        );
+        background-clip: text;
+        color: transparent;
+      }
     }
     [data-sp] {
       z-index: 1;
