@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @include fontface('Mr Robot', 'mr-robot');
 
-#profile {
+.the-server #profile {
   position: relative;
   width: 100vw;
-  height: 2200vh;
+  height: 1900vh;
   padding: 0;
   margin: 0;
   background-color: red;
@@ -461,6 +461,51 @@
         background-clip: text;
         color: transparent;
       }
+    }
+    &[data-id='microsoft'] {
+      top: 1700vh;
+      background-image: url(/assets/images/info/server/profile/bg-11.jpg);
+      [data-sp] {
+        width: auto;
+        height: auto;
+        left: calc(50% - 86px);
+      }
+      [data-sp='and'] {
+        top: calc(50% + 10px);
+        font-size: 50px;
+        color: #05a6f0;
+        transform: rotate(-90deg);
+        left: calc(50% - 95px);
+      }
+      [data-sp='micro'] {
+        background: rgb(243, 83, 37);
+        background: linear-gradient(
+          90deg,
+          rgba(243, 83, 37, 1) 0%,
+          rgba(243, 83, 37, 1) 37%,
+          rgba(129, 188, 6, 1) 37%,
+          rgba(129, 188, 6, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+      }
+      [data-sp='soft'] {
+        top: calc(50% + 16px);
+        left: calc(50% - 48px);
+        color: #ffba08;
+      }
+    }
+    &[data-id='among-others'] {
+      top: 1800vh;
+      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
+    }
+    &[data-id='remember'] {
+      top: 1900vh;
+      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
+    }
+    &[data-id='my-sheet'] {
+      top: 2000vh;
+      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
     }
     [data-sp] {
       z-index: 1;
