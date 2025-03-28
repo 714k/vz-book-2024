@@ -1,0 +1,129 @@
+@include fontface('Consola', 'consola');
+
+#courses {
+  position: relative;
+  width: 100vw;
+  height: 4300vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Consola', 'Courier New', Courier, monospace;
+  background-image: url(/assets/images/info/server/courses/background01.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  .course-presentation {
+    margin: 120px 20px 20px 20px;
+    color: grey;
+    position: fixed;
+  }
+
+  .course {
+    position: relative;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100vh;
+    // background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: 400;
+    font-style: normal;
+    padding: 20px;
+    // font-size: 90px;
+    // text-transform: uppercase;
+    // text-align: center;
+    // line-height: 72px;
+
+    &::before {
+      content: attr(data-console);
+      font-size: 12px;
+      font-weight: 700;
+      background: rgb(255, 108, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 108, 0, 1) 0%,
+        rgba(255, 108, 0, 1) 18%,
+        rgba(66, 81, 93, 1) 18%,
+        rgba(66, 81, 93, 1) 100%
+      );
+      background-clip: text;
+      color: transparent;
+    }
+    h3 {
+      // position: absolute;
+      font-family: 'Consola', 'Courier New', Courier, monospace;
+      color: white;
+      font-size: 21px;
+      border: dotted 4px #7c00ff;
+      border-style: double dashed;
+      border-left-width: 2px;
+      border-right-width: 2px;
+      margin: 0 0 1em 0;
+      padding: 4px;
+      border: none;
+      // border-bottom: dotted 4px purple;
+    }
+    p {
+      margin: 0;
+      &.course-count {
+        font-size: 16px;
+        color: grey;
+        &::before {
+          font-size: 12px;
+          content: attr(data-path);
+          display: block;
+          margin-bottom: 12px;
+          color: #7dbaff;
+        }
+      }
+      &.course-details {
+        padding: 0;
+      }
+      strong,
+      em {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 0.8;
+      }
+      strong {
+        display: inline-flex;
+        color: #7dbaff;
+        width: 11em;
+        &::before {
+          content: '-rw-r--r--';
+          width: 4em;
+          flex-grow: 1;
+          color: white;
+          display: inline;
+        }
+        &.where::before {
+          content: 'drwxr-xr-x';
+        }
+        &.academy::before {
+          content: 'r-rw------';
+        }
+        &.author::before {
+          content: 'lrwxrw-w-x';
+        }
+      }
+      em {
+        color: #ffdc00;
+        font-style: normal;
+      }
+      .certificate {
+        font-size: 15px;
+        display: block;
+        text-align: right;
+        margin-top: 0.5em;
+        a {
+          font-weight: 700;
+          background-color: transparent;
+        }
+      }
+    }
+    .course-count {
+      // position: absolute;
+    }
+  }
+}

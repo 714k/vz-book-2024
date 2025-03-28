@@ -1,5 +1,6 @@
 @import 'profile';
 @import 'academic-formation';
+@import 'courses';
 
 @include fontface('Mr Robot', 'mr-robot');
 @include fontface('Consola', 'consola');
@@ -114,6 +115,10 @@
     line-height: 135%;
     color: #c80000;
     margin-top: 0;
+    position: sticky;
+    z-index: 1;
+    top: 72px;
+    margin: 0;
     &::before,
     &::after {
       font-family: 'Consola', 'Courier New', Courier, monospace;
