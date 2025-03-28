@@ -1,25 +1,51 @@
 {% if include.courses %}
 <section id="courses" class="courses">
   <h2 data-section="1.4_">Courses</h2>
-  <p>These are some of the most significant courses I've taken:</p>
+  <p class="course-presentation">
+    These are some of the most significant courses I've taken:
+  </p>
 
-  {% for course in include.courses %}
-  <div class="course">
+  {% for course in include.courses %} {% assign categories = course.categories |
+  join: ', ' %}
+
+  <div
+    class="course"
+    data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
+  >
+    <p
+      class="course-count"
+      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}\/n » echo $COURSES {{replace }}"
+    >
+      Course {{forloop.index}} of {{include.courses.size}}
+    </p>
     <h3>{{course.title}}</h3>
-    <p>Course {{forloop.index}} of {{include.courses.size}}</p>
-    <p>
-      <strong class="who">
-        Who:
-      </strong>
-      <span class="text">{{ course.who }}</span><br>
-      <strong class="when">
-        When:
-      </strong>
-      <span class="text">{{ course.when }}</span><br>
-      <strong class="where">
-        Where:
-      </strong>
-      <span class="text">{{ course.where }}</span><br>
+    <p class="course-details">
+      <strong class="year"> Year: </strong>
+      <em class="text">{{ course.year }}</em><br />
+      <strong class="academy"> Academy: </strong>
+      <em class="text">{{ course.academy }}</em><br />
+      <strong class="author"> Author: </strong>
+      <em class="text">{{ course.author }}</em><br />
+      <strong class="where"> Where: </strong>
+      <em class="text">{{ course.where }}</em><br />
+      <!-- Enable categories when is ready -->
+      <!-- <strong>Categories:</strong>
+      <span>
+        {% for category in course.categories %}
+        <a
+          href="/filter-by-category/{{category}}"
+          title="See course by '{{category}}' category"
+          >{{category}}</a
+        >
+        {% endfor %} </span
+      ><br /> -->
+      <span class="certificate">
+        <a
+          href="{{ course.certificateHref}}"
+          title="See the certificate of this course in PDF format"
+          >View certificate</a
+        >
+      </span>
     </p>
   </div>
   {% endfor %}
