@@ -14,7 +14,7 @@
   >
     <p
       class="course-count"
-      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}\/n » echo $COURSES {{replace }}"
+      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}&#xa;» echo $COURSES {{replace }}"
     >
       Course {{forloop.index}} of {{include.courses.size}}
     </p>
