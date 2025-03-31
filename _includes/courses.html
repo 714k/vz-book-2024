@@ -6,17 +6,33 @@
   </p>
 
   {% for course in include.courses %} {% assign categories = course.categories |
-  join: ', ' %}
+  join: ', ' %} {% assign courseId = course.title | downcase | replace: ' ',
+  '-'%}
 
   <div
+    id="course-{{forloop.index}}"
     class="course"
     data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
   >
     <p
       class="course-count"
-      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}&#xa;» echo $COURSES {{replace }}"
+      data-prompt="» echo $COURSES"
+      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
     >
-      Course {{forloop.index}} of {{include.courses.size}}
+      {% if forloop.index > 1 %}
+      <a
+        href="#course-{{forloop.index | minus: 1}}"
+        title="See the previous course"
+        >«</a
+      >
+      {% endif %}
+      <span> Course {{forloop.index}} of {{include.courses.size}}</span>
+
+      {% if forloop.index < forloop.length %}
+      <a href="#course-{{forloop.index | plus: 1}}" title="See the next course"
+        >»</a
+      >
+      {% endif %}
     </p>
     <h3>{{course.title}}</h3>
     <p class="course-details">
@@ -42,7 +58,8 @@
       <span class="certificate">
         <a
           href="{{ course.certificateHref}}"
-          title="See the certificate of this course in PDF format"
+          title="See the {{course.title}} certificate in PDF format"
+          target="_blank"
           >View certificate</a
         >
       </span>
