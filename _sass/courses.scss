@@ -1,9 +1,11 @@
 @include fontface('Consola', 'consola');
 
-#courses {
+$details_top_position: 55%;
+
+.the-server #courses {
   position: relative;
   width: 100vw;
-  height: 4300vh;
+  height: 5300vh;
   padding: 0;
   margin: 0;
   font-family: 'Consola', 'Courier New', Courier, monospace;
@@ -13,11 +15,12 @@
   background-size: cover;
 
   .course-presentation {
-    margin: 120px 20px 20px 20px;
+    font-size: 18px;
+    margin: 80px 20px 30px 20px;
     color: #f5f5f5;
-    position: fixed;
+    position: sticky;
     z-index: 2;
-    top: 20px;
+    top: 140px;
     backdrop-filter: blur(4px);
   }
   .course {
@@ -31,11 +34,12 @@
     font-weight: 400;
     font-style: normal;
     padding: 20px;
+    margin-top: 100px;
     &::before {
       position: absolute;
-      top: calc(50% - 170px);
+      top: calc($details_top_position - 150px);
       content: attr(data-console);
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       background: rgb(255, 108, 0);
       background: linear-gradient(
@@ -50,7 +54,8 @@
     }
     h3 {
       position: absolute;
-      top: calc(50% - 96px);
+      top: calc($details_top_position - 50px);
+      width: calc(100% - 40px);
       font-family: 'Consola', 'Courier New', Courier, monospace;
       color: white;
       font-size: 21px;
@@ -59,42 +64,50 @@
       border-left-width: 2px;
       border-right-width: 2px;
       margin: 0 0 1em 0;
-      padding: 4px;
+      padding: 4px 0;
       border: none;
-      // border-bottom: dotted 4px purple;
+      border-top: 2px dashed purple;
     }
     p {
       margin: 0;
       &.course-count {
         position: absolute;
-        top: calc(50% - 156px);
+        top: calc($details_top_position - 136px);
         font-size: 16px;
         text-align: right;
         margin-right: 20px;
-        color: grey;
-        &::before {
-          font-size: 12px;
+        color: #bababa;
+        line-height: 24px;
+        &::before,
+        &::after {
+          font-size: 14px;
+          line-height: 1;
           content: attr(data-path);
           white-space: break-spaces;
           display: inline-block;
+          width: 100%;
           text-align: left;
-          margin-bottom: 12px;
-          background: rgb(53, 148, 255);
-          background: linear-gradient(
-            180deg,
-            rgba(53, 148, 255, 1) 0%,
-            rgba(53, 148, 255, 1) 70%,
-            rgba(255, 220, 0, 1) 70%,
-            rgba(255, 220, 0, 1) 100%
-          );
-          background-clip: text;
-          color: transparent;
+          margin-bottom: 30px;
+          color: rgb(53, 148, 255);
+        }
+        &::after {
+          content: attr(data-prompt);
+          transform: translateY(-60px);
+          color: #ffdc00;
+        }
+        a {
+          font-size: 24px;
+          line-height: 24px;
+          background-color: transparent;
         }
       }
       &.course-details {
         position: absolute;
-        top: calc(50% - 40px);
+        width: calc(100% - 40px);
+        top: $details_top_position;
         padding: 0;
+        margin-top: 12px;
+        border-top: 2px dashed purple;
       }
       strong,
       em {
@@ -130,16 +143,16 @@
       .certificate {
         font-size: 15px;
         display: block;
-        text-align: right;
-        margin-top: 0.5em;
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+        padding-top: 8px;
+        border-top: 2px dashed purple;
         a {
           font-weight: 700;
           background-color: transparent;
         }
       }
-    }
-    .course-count {
-      // position: absolute;
     }
   }
 }
