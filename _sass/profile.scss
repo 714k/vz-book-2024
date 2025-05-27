@@ -4,7 +4,7 @@
 .the-server #profile {
   position: relative;
   width: 100vw;
-  height: 1900vh;
+  height: 2100vh;
   padding: 0;
   margin: 0;
   background-image: url(/assets/images/info/server/profile/bg-01.jpg);
@@ -49,7 +49,7 @@
       top: 100vh;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp] {
-        top: calc(50% - 100px);
+        top: calc(60% - 100px);
       }
     }
     &[data-id*='game'] {
@@ -58,14 +58,18 @@
       line-height: 90px;
     }
     &[data-id='game-first'] {
-      top: 200vh;
+      top: calc(200vh + 92px);
       background-image: url(/assets/images/info/server/profile/bg-03.jpg);
+      z-index: 1;
+      [data-sp] {
+        top: 50%;
+      }
     }
     &[data-id='game-second'] {
       top: 300vh;
       font-size: 120px;
       [data-sp='maybe'] {
-        // width: calc(100% - 40px);
+        top: calc(70% - 30px);
       }
     }
     &[data-id='game-third'] {
@@ -77,6 +81,9 @@
       top: 500vh;
       font-size: 100px;
       line-height: 100px;
+      [data-sp] {
+        top: 50%;
+      }
     }
     &[data-id='my-name'] {
       top: 600vh;
@@ -134,7 +141,7 @@
         height: auto;
         font-size: 48px;
         text-align: left;
-        top: calc(50% - 116px);
+        top: calc(50% - 62px);
         left: calc(50% - 138px);
       }
       a {
@@ -146,6 +153,7 @@
         font-size: 96px;
         line-height: 80px;
         width: 280px;
+        top: 50%;
         left: calc(50% - 140px);
         text-align: center;
         height: auto;
@@ -160,11 +168,11 @@
         height: auto;
         font-size: 48px;
         color: #ffc600;
-        top: calc(50% - 60px);
+        top: calc(50% - 92px);
         left: calc(50% - 158px);
       }
       [data-sp='september'] {
-        top: 50%;
+        top: calc(50% - 40px);
         [data-sp='2022'] {
           font-size: 150px;
           top: 96px;
@@ -185,31 +193,31 @@
       [data-sp='born'] {
         font-size: 76px;
         left: 20px;
-        top: 25%;
+        top: 30%;
       }
       [data-sp='and'] {
         font-size: 36px;
         color: #ffc600;
         left: 146px;
-        top: calc(25% + 12px);
+        top: calc(25% + 46px);
       }
       [data-sp='raised'] {
         font-size: 76px;
         left: 20px;
-        top: calc(25% + 56px);
+        top: calc(30% + 56px);
       }
       [data-sp='in'] {
         font-size: 36px;
         color: #ffc600;
         left: 184px;
-        top: calc(25% + 68px);
+        top: calc(25% + 102px);
       }
       [data-sp='mexico'] {
         font-size: 72px;
         font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         left: auto;
         right: 20px;
-        top: calc(40% + 70px);
+        top: calc(40% + 90px);
         background: rgb(0, 171, 105);
         background: linear-gradient(
           90deg,
@@ -327,29 +335,29 @@
         text-shadow: -7px 14px 4px black;
       }
       [data-sp='and'] {
-        top: 30%;
+        top: 35%;
         left: calc(50% - 50px);
         color: #ffc600;
         font-size: 36px;
         text-transform: uppercase;
       }
       [data-sp='working'] {
-        top: calc(30% + 54px);
+        top: calc(35% + 54px);
         left: calc(50% - 140px);
       }
       [data-sp='with'] {
-        top: calc(30% + 100px);
+        top: calc(35% + 100px);
         left: calc(50% - 124px);
         color: #ffc600;
         font-size: 36px;
         text-transform: uppercase;
       }
       [data-sp='brands'] {
-        top: calc(30% + 150px);
+        top: calc(35% + 150px);
         left: calc(50% - 120px);
       }
       [data-sp='like'] {
-        top: calc(30% + 220px);
+        top: calc(35% + 220px);
         left: calc(50% + 20px);
       }
     }
@@ -360,14 +368,14 @@
         font-size: 120px;
         width: auto;
         height: auto;
-        top: 40%;
+        top: 45%;
         left: calc(50% - 156px);
       }
       [data-sp='warner'] {
         // top: 47%;
       }
       [data-sp='media'] {
-        top: calc(40% + 90px);
+        top: calc(45% + 86px);
         left: calc(50% - 116px);
         color: #939498;
       }
@@ -375,6 +383,9 @@
     &[data-id='jnj'] {
       top: 1400vh;
       background-image: url(/assets/images/info/server/profile/bg-08.jpg);
+      [data-sp] {
+        top: calc(55% - 52px);
+      }
     }
     &[data-id='google'] {
       top: 1500vh;
@@ -384,6 +395,7 @@
         line-height: 1.2;
         width: auto;
         height: auto;
+        top: calc(50% - 36px);
         left: calc(50% - 140px);
         background: rgb(255, 255, 255);
         background: linear-gradient(
@@ -413,7 +425,7 @@
         line-height: 1.2;
         width: auto;
         height: auto;
-        top: 35%;
+        top: 38%;
         left: calc(50% - 118px);
         background: rgb(255, 255, 255);
         background: linear-gradient(
@@ -475,11 +487,11 @@
         left: calc(50% - 86px);
       }
       [data-sp='and'] {
-        top: calc(50% + 10px);
+        top: calc(50% - 124px);
         font-size: 50px;
         color: #05a6f0;
-        transform: rotate(-90deg);
-        left: calc(50% - 95px);
+        // transform: rotate(-90deg);
+        left: calc(50% - 120px);
       }
       [data-sp='micro'] {
         background: rgb(243, 83, 37);
@@ -494,9 +506,18 @@
         color: transparent;
       }
       [data-sp='soft'] {
-        top: calc(50% + 16px);
-        left: calc(50% - 48px);
-        color: #ffba08;
+        font-size: 112px;
+        line-height: 1;
+        top: calc(50% + 4px);
+        left: calc(50% - 84px);
+        background: #ffba08;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 186, 8, 1) 51%,
+          rgba(5, 166, 240, 1) 50%
+        );
+        background-clip: text;
+        color: transparent;
       }
     }
     &[data-id='among-others'] {
@@ -520,7 +541,10 @@
       [data-sp='last'] {
         color: #ffc600;
         font-size: 36px;
-        top: calc(35% + 100px);
+        display: inline-block;
+        width: auto;
+        top: calc(35% + 96px);
+        left: calc(50% - 60px);
       }
       [data-sp='n-years'] {
         font-size: 120px;
@@ -528,9 +552,9 @@
       }
       [data-sp='th'] {
         width: auto;
-        font-size: 24px;
-        top: calc(30% + 150px);
-        left: calc(50% + 50px);
+        font-size: 30px;
+        top: calc(30% + 160px);
+        left: calc(50% + 46px);
       }
       [data-sp='years'] {
         font-size: 120px;
