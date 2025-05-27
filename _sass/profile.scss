@@ -4,7 +4,7 @@
 .the-server #profile {
   position: relative;
   width: 100vw;
-  height: 2100vh;
+  height: 2000vh;
   padding: 0;
   margin: 0;
   background-image: url(/assets/images/info/server/profile/bg-01.jpg);
@@ -50,11 +50,13 @@
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp] {
         top: calc(60% - 100px);
+        font-size: 120px;
+        line-height: 0.75;
       }
     }
     &[data-id*='game'] {
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
-      font-size: 100px;
+      font-size: 120px;
       line-height: 90px;
     }
     &[data-id='game-first'] {
@@ -63,6 +65,7 @@
       z-index: 1;
       [data-sp] {
         top: 50%;
+        font-size: 120px;
       }
     }
     &[data-id='game-second'] {
@@ -76,9 +79,13 @@
       top: 400vh;
       font-size: 100px;
       line-height: 100px;
+      [data-sp='give-you'] {
+        font-size: 120px;
+        line-height: 90px;
+      }
     }
     &[data-id='game-fourth'] {
-      top: 500vh;
+      top: 2100vh;
       font-size: 100px;
       line-height: 100px;
       [data-sp] {
@@ -86,7 +93,7 @@
       }
     }
     &[data-id='my-name'] {
-      top: 600vh;
+      top: 500vh;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp='my-name-is'] {
         z-index: 2;
@@ -99,9 +106,10 @@
         top: calc(50% - 56px);
       }
       [data-sp='victor-zamudio'] {
+        z-index: 2;
         height: auto;
-        font-size: 100px;
-        line-height: 80px;
+        font-size: 120px;
+        line-height: 90px;
         top: 50%;
         text-align: left;
         left: 40px;
@@ -109,7 +117,7 @@
       }
     }
     &[data-id='im-uxe'] {
-      top: 700vh;
+      top: 600vh;
       font-size: 100px;
       line-height: 96px;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
@@ -132,7 +140,7 @@
       }
     }
     &[data-id='at-thomson-reuters'] {
-      top: 800vh;
+      top: 700vh;
       font-size: 100px;
       line-height: 96px;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
@@ -141,7 +149,7 @@
         height: auto;
         font-size: 48px;
         text-align: left;
-        top: calc(50% - 62px);
+        top: calc(50% - 70px);
         left: calc(50% - 138px);
       }
       a {
@@ -150,7 +158,7 @@
           sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 96px;
+        font-size: 100px;
         line-height: 80px;
         width: 280px;
         top: 50%;
@@ -161,7 +169,7 @@
       }
     }
     &[data-id='at-thomson-reuters-since'] {
-      top: 900vh;
+      top: 800vh;
       background-image: url(/assets/images/info/server/profile/bg-02.jpg);
       [data-sp='since'] {
         width: auto;
@@ -181,10 +189,15 @@
           width: auto;
           text-align: left;
         }
+        [data-sp='remainig'] {
+          font-size: 36px;
+          color: #ffc600;
+          top: calc(50% + 130px);
+        }
       }
     }
     &[data-id='born-and-raised'] {
-      top: 1000vh;
+      top: 900vh;
       background-image: url(/assets/images/info/server/profile/bg-04.jpg);
       [data-sp] {
         width: auto;
@@ -267,11 +280,11 @@
       }
     }
     &[data-id='around-the-web'] {
-      top: 1100vh;
+      top: 1000vh;
       background-image: url(/assets/images/info/server/profile/bg-05.jpg);
       [data-sp='been'] {
         font-size: 36px;
-        top: 30%;
+        top: calc(30% + 30px);
         left: 20px;
         color: #ffc600;
         width: 80px;
@@ -282,11 +295,11 @@
       [data-sp='around'] {
         width: auto;
         left: auto;
-        top: 30%;
+        top: calc(30% + 30px);
         left: 104px;
       }
       [data-sp='the'] {
-        top: 50%;
+        top: calc(50% + 30px);
         font-size: 36px;
         color: #ffc600;
         height: auto;
@@ -295,7 +308,7 @@
         transform: translateY(-50px);
       }
       [data-sp='web'] {
-        top: 50%;
+        top: calc(50% + 30px);
       }
       [data-sp='since'] {
         font-size: 36px;
@@ -304,7 +317,7 @@
         height: auto;
         top: auto;
         left: auto;
-        bottom: 170px;
+        bottom: 150px;
         right: 240px;
       }
       [data-sp='june-2006'] {
@@ -312,7 +325,7 @@
         height: auto;
         top: auto;
         left: auto;
-        bottom: 120px;
+        bottom: 100px;
         right: 20px;
       }
       [data-sp='n-years'] {
@@ -322,12 +335,12 @@
         height: auto;
         top: auto;
         left: auto;
-        bottom: 72px;
+        bottom: 52px;
         right: 20px;
       }
     }
     &[data-id='working-with-brands'] {
-      top: 1200vh;
+      top: 1100vh;
       background-image: url(/assets/images/info/server/profile/bg-06.jpg);
       [data-sp] {
         height: auto;
@@ -362,7 +375,7 @@
       }
     }
     &[data-id='warner-media'] {
-      top: 1300vh;
+      top: 1200vh;
       background-image: url(/assets/images/info/server/profile/bg-07.jpg);
       [data-sp] {
         font-size: 120px;
@@ -371,9 +384,6 @@
         top: 45%;
         left: calc(50% - 156px);
       }
-      [data-sp='warner'] {
-        // top: 47%;
-      }
       [data-sp='media'] {
         top: calc(45% + 86px);
         left: calc(50% - 116px);
@@ -381,21 +391,23 @@
       }
     }
     &[data-id='jnj'] {
-      top: 1400vh;
+      top: 1300vh;
       background-image: url(/assets/images/info/server/profile/bg-08.jpg);
       [data-sp] {
         top: calc(55% - 52px);
+        font-size: 180px;
+        text-shadow: 20px -7px 16px black;
       }
     }
     &[data-id='google'] {
-      top: 1500vh;
+      top: 1400vh;
       background-image: url(/assets/images/info/server/profile/bg-09.jpg);
       [data-sp] {
         font-size: 120px;
         line-height: 1.2;
         width: auto;
         height: auto;
-        top: calc(50% - 36px);
+        top: calc(50% - 16px);
         left: calc(50% - 140px);
         background: rgb(255, 255, 255);
         background: linear-gradient(
@@ -418,7 +430,7 @@
       }
     }
     &[data-id='ibm'] {
-      top: 1600vh;
+      top: 1500vh;
       background-image: url(/assets/images/info/server/profile/bg-10.jpg);
       [data-sp] {
         font-size: 200px;
@@ -479,7 +491,7 @@
       }
     }
     &[data-id='microsoft'] {
-      top: 1700vh;
+      top: 1600vh;
       background-image: url(/assets/images/info/server/profile/bg-11.jpg);
       [data-sp] {
         width: auto;
@@ -490,7 +502,6 @@
         top: calc(50% - 124px);
         font-size: 50px;
         color: #05a6f0;
-        // transform: rotate(-90deg);
         left: calc(50% - 120px);
       }
       [data-sp='micro'] {
@@ -521,7 +532,7 @@
       }
     }
     &[data-id='among-others'] {
-      top: 1800vh;
+      top: 1700vh;
       background-image: url(/assets/images/info/server/profile/bg-12.jpg);
       [data-sp] {
         text-shadow: 20px 20x 20px black;
@@ -544,7 +555,7 @@
         display: inline-block;
         width: auto;
         top: calc(35% + 96px);
-        left: calc(50% - 60px);
+        left: calc(50% - 45px);
       }
       [data-sp='n-years'] {
         font-size: 120px;
@@ -562,26 +573,27 @@
       }
     }
     &[data-id='remember'] {
-      top: 1900vh;
+      top: 1800vh;
+      font-size: 100px;
       background-image: url(/assets/images/info/server/profile/bg-12.jpg);
       [data-sp='have-to'],
       [data-sp='that'] {
         color: #ffc600;
       }
       [data-sp='have-to'] {
-        font-size: 36px;
-        top: calc(50% - 110px);
+        font-size: 48px;
+        top: calc(50% - 115px);
       }
       [data-sp='that'] {
         top: calc(50% + 30px);
       }
     }
     &[data-id='my-sheet'] {
-      top: 2000vh;
+      top: 1900vh;
       background-image: url(/assets/images/info/server/profile/bg-12.jpg);
       [data-sp='this-is'] {
         color: #ffc600;
-        left: 40px;
+        left: 60px;
         font-size: 36px;
         text-align: right;
         line-height: 0.9;
@@ -591,13 +603,14 @@
         font-size: 150px;
         left: auto;
         width: auto;
-        right: 40px;
+        right: 100px;
       }
       [data-sp='sheet'] {
         background-color: transparent;
         width: auto;
-        left: calc(50% - 100px);
-        top: calc(50% + 40px);
+        left: calc(50% - 168px);
+        top: calc(50% + 50px);
+        font-size: 130px;
         font-weight: 700;
         letter-spacing: -8px;
       }
