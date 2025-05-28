@@ -34,16 +34,28 @@
       >
       {% endif %}
     </p>
-    <h3>{{course.title}}</h3>
+    <h3>
+      <span>{{course.title}}</span>
+    </h3>
     <p class="course-details">
+      <strong class="author"> Author: </strong>
+      <em class="text">{{ course.instructor }}</em><br />
+      <strong class="role`"> role: </strong>
+      <em class="text">{{ course.role }}</em><br />
+      <strong class="hours"> Hours: </strong>
+      <em class="text">{{ course.hours }}</em><br />
+      <strong class="rating"> Rating: </strong>
+      <em class="text">{{ course.rating }}</em><br />
+      <strong class="nationality"> Nation: </strong>
+      <em class="text">{{ course.nationality }}</em><br />
       <strong class="year"> Year: </strong>
       <em class="text">{{ course.year }}</em><br />
       <strong class="academy"> Academy: </strong>
       <em class="text">{{ course.academy }}</em><br />
-      <strong class="author"> Author: </strong>
-      <em class="text">{{ course.author }}</em><br />
+      <strong class="students"> Students: </strong>
+      <em class="text">{{ course.students }}</em><br />
       <strong class="where"> Where: </strong>
-      <em class="text">{{ course.where }}</em><br />
+      <em class="text">{{ course.location }}</em><br />
       <!-- Enable categories when is ready -->
       <!-- <strong>Categories:</strong>
       <span>

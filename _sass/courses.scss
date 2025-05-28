@@ -1,6 +1,6 @@
 @include fontface('Consola', 'consola');
 
-$details_top_position: 55%;
+$details_top_position: 45%;
 
 .the-server #courses {
   position: relative;
@@ -15,9 +15,9 @@ $details_top_position: 55%;
   background-size: cover;
 
   .course-presentation {
-    font-size: 18px;
+    font-size: 16px;
     margin: 80px 20px 30px 20px;
-    color: #f5f5f5;
+    color: #95a6c7;
     position: sticky;
     z-index: 2;
     top: 140px;
@@ -37,7 +37,7 @@ $details_top_position: 55%;
     margin-top: 100px;
     &::before {
       position: absolute;
-      top: calc($details_top_position - 150px);
+      top: calc($details_top_position - 120px);
       content: attr(data-console);
       font-size: 14px;
       font-weight: 700;
@@ -53,26 +53,34 @@ $details_top_position: 55%;
       color: transparent;
     }
     h3 {
+      display: flex;
+      align-items: center;
       position: absolute;
-      top: calc($details_top_position - 50px);
+      top: calc($details_top_position - 20px);
       width: calc(100% - 40px);
-      font-family: 'Consola', 'Courier New', Courier, monospace;
-      color: white;
-      font-size: 21px;
-      border: dotted 4px #7c00ff;
+      height: 36px;
+      border: dotted 4px purple;
       border-style: double dashed;
       border-left-width: 2px;
       border-right-width: 2px;
-      margin: 0 0 1em 0;
-      padding: 4px 0;
-      border: none;
-      border-top: 2px dashed purple;
+      margin-top: 0;
+      > span {
+        display: flex;
+        font-family: 'Consola', 'Courier New', Courier, monospace;
+        color: white;
+        font-size: 18px;
+        margin: 0;
+        padding: 0 8px;
+        border: none;
+        border-top: 2px dashed purple;
+        border: none;
+      }
     }
     p {
       margin: 0;
       &.course-count {
         position: absolute;
-        top: calc($details_top_position - 136px);
+        top: calc($details_top_position - 100px);
         font-size: 16px;
         text-align: right;
         margin-right: 20px;
@@ -104,7 +112,8 @@ $details_top_position: 55%;
       &.course-details {
         position: absolute;
         width: calc(100% - 40px);
-        top: $details_top_position;
+        // top: $details_top_position;
+        bottom: 115px;
         padding: 0;
         margin-top: 12px;
         border-top: 2px dashed purple;
@@ -145,8 +154,8 @@ $details_top_position: 55%;
         display: block;
         width: 100%;
         text-align: center;
-        margin-top: 1em;
-        padding-top: 8px;
+        margin-top: 6px;
+        padding-top: 4px;
         border-top: 2px dashed purple;
         a {
           font-weight: 700;
