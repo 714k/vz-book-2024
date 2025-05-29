@@ -112,7 +112,7 @@
     font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 34px;
     text-align: center;
-    line-height: 135%;
+    line-height: 1;
     color: #c80000;
     margin-top: 0;
     position: sticky;
@@ -135,5 +135,8 @@
   }
   .back-to-top {
     display: none;
+  }
+  #footer {
+    background-color: rgba(0, 0, 0, 0.75);
   }
 }
