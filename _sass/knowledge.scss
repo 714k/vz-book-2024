@@ -19,13 +19,17 @@
         overflow: hidden;
         background-position: -427px -332px;
         transition: background-position 0.6s;
+        transform: scale(1);
+        transition: all 0.6s;
         &:hover {
           cursor: default;
+          transform: scale(1.5);
+          transition: all 0.6s;
           td {
             transition: all 0.6s;
           }
           .name {
-            top:100px;
+            top: 100px;
           }
           .type {
             top: 90px;
@@ -43,7 +47,7 @@
             top: -58px;
           }
           .scroll {
-            background-position:-364px -48px;
+            background-position: -364px -48px;
             transition: background-position 0.6s;
           }
         }
@@ -82,7 +86,7 @@
           }
           &.level {
             display: block;
-            top: -120px
+            top: -120px;
           }
           &.percentage {
             top: -160px;

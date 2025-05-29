@@ -37,7 +37,7 @@ $details_top_position: 45%;
     margin-top: 100px;
     &::before {
       position: absolute;
-      top: calc($details_top_position - 120px);
+      top: calc($details_top_position - 130px);
       content: attr(data-console);
       font-size: 14px;
       font-weight: 700;
@@ -56,9 +56,9 @@ $details_top_position: 45%;
       display: flex;
       align-items: center;
       position: absolute;
-      top: calc($details_top_position - 20px);
+      top: calc($details_top_position - 30px);
       width: calc(100% - 40px);
-      height: 36px;
+      height: 48px;
       border: dotted 4px purple;
       border-style: double dashed;
       border-left-width: 2px;
@@ -80,12 +80,16 @@ $details_top_position: 45%;
       margin: 0;
       &.course-count {
         position: absolute;
-        top: calc($details_top_position - 100px);
+        top: calc($details_top_position - 112px);
         font-size: 16px;
         text-align: right;
         margin-right: 20px;
         color: #bababa;
         line-height: 24px;
+        a,
+        span {
+          font-size: 20px;
+        }
         &::before,
         &::after {
           font-size: 14px;
@@ -112,11 +116,9 @@ $details_top_position: 45%;
       &.course-details {
         position: absolute;
         width: calc(100% - 40px);
-        // top: $details_top_position;
-        bottom: 115px;
+        bottom: 140px;
         padding: 0;
-        margin-top: 12px;
-        border-top: 2px dashed purple;
+        margin-top: 0;
       }
       strong,
       em {

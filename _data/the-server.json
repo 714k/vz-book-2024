@@ -26,7 +26,7 @@
     },
     {
       "title": "My hard training",
-      "href": "courses",
+      "href": "course-1",
       "classes": "anchor-class",
       "prefixText": "04",
       "sufixText": "",
@@ -37,16 +37,15 @@
     {
       "title": "Mastering the Eight Paradoxes of Effective Leaders",
       "instructor": "Pete Mockaitis",
-      "role": "AWS certified",
-      "nationality": "English, Bulgarian",
+      "country": "English, Bulgarian",
       "academy": "LinkedIn Learning",
       "short-description": "Dive in and learn React from scratch",
       "year": "Feb 2023",
       "location": "Online",
       "language": "English",
-      "last-updated": "04/2015",
+      "last-updated": "Apr, 2015",
       "students": "963,948",
-      "hours": "39h 12m",
+      "duration": "39h 12m",
       "rating": "4.6 of 5",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
