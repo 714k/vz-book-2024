@@ -67,7 +67,7 @@
     },
     {
       "title": "UX Foundations: Information Architecture",
-      "Instructor": "Pete Mockaitis",
+      "Instructor": "Chris Noder",
       "academy": "LinkedIn Learning",
       "year": "Jan 2023",
       "where": "Online",
@@ -88,9 +88,9 @@
       ]
     },
     {
-      "title": "Learning Web Components",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
+      "title": "Fundamentals of Web Components",
+      "Instructor": "Basar Buyukkahraman",
+      "academy": "Udemy",
       "year": "Dec 2022",
       "where": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
