@@ -12,12 +12,22 @@
   <div
     id="course-{{forloop.index}}"
     class="course"
-    data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
+    data-consoles="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
   >
+    <span class="data-terminal-container">
+      <span class="console"
+        >714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}</span
+      >
+      <span class="path"
+        >~/the-server/courses/{{course.title | replace: ' ', '-' | downcase |
+        replace: ':', '' | replace: '.', '' }}</span
+      >
+      <span class="prompt">» echo $COURSES</span>
+    </span>
     <p
       class="course-count"
-      data-prompt="» echo $COURSES"
-      data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
+      data-prompts="» echo $COURSES"
+      data-paths="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
     >
       {% if forloop.index > 1 %}
       <a
@@ -34,35 +44,28 @@
       >
       {% endif %}
     </p>
-    <h3>
-      <span>{{course.title}}</span>
-    </h3>
-    <p class="course-details">
-      <strong class="author"> Author: </strong>
-      <em class="text">{{ course.instructor }}</em><br />
-      <strong class="rating"> Rating: </strong>
-      <em class="text">{{ course.rating }}</em><br />
 
-      <strong class="duration"> Duration: </strong>
-      <em class="text">{{ course.duration }}</em><br />
+    <div class="course-details-container">
+      <h3>
+        <span>{{course.title}}</span>
+      </h3>
+      <p class="course-details">
+        <strong class="author">{{ course.instructor }}</strong>
+        <!-- <em class="text">{{ course.instructor }}</em><br /> -->
 
-      <!-- <strong class="last-updated"> Updated: </strong>
+        <!-- <strong class="last-updated"> Updated: </strong>
       <em class="text">{{ course.last-updated }}</em><br /> -->
 
-      <strong class="country"> Country: </strong>
-      <em class="text">{{ course.country }}</em><br />
-      <strong class="year"> Year: </strong>
-      <em class="text">{{ course.year }}</em><br />
+        <strong class="year">{{ course.year }}</strong>
+        <!-- <em class="text">{{ course.year }}</em><br /> -->
 
-      <strong class="academy"> Academy: </strong>
-      <em class="text">{{ course.academy }}</em><br />
-      <strong class="students"> Students: </strong>
-      <em class="text">{{ course.students }}</em><br />
+        <strong class="academy">{{ course.academy }}</strong>
+        <!-- <em class="text">{{ course.academy }}</em><br /> -->
 
-      <strong class="where"> Location: </strong>
-      <em class="text">{{ course.location }}</em><br />
-      <!-- Enable categories when is ready -->
-      <!-- <strong>Categories:</strong>
+        <strong class="where">{{ course.location }}</strong>
+        <!-- <em class="text">{{ course.location }}</em><br /> -->
+        <!-- Enable categories when is ready -->
+        <!-- <strong>Categories:</strong>
       <span>
         {% for category in course.categories %}
         <a
@@ -72,15 +75,16 @@
         >
         {% endfor %} </span
       ><br /> -->
-      <span class="certificate">
-        <a
-          href="{{ course.certificateHref}}"
-          title="See the {{course.title}} certificate in PDF format"
-          target="_blank"
-          >View certificate</a
-        >
-      </span>
-    </p>
+        <span class="certificate">
+          <a
+            href="{{ course.certificateHref}}"
+            title="See the {{course.title}} certificate in PDF format"
+            target="_blank"
+            >View certificate</a
+          >
+        </span>
+      </p>
+    </div>
   </div>
   {% endfor %}
 </section>

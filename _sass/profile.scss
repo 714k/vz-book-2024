@@ -4,10 +4,10 @@
 .the-server #profile {
   position: relative;
   width: 100vw;
-  height: 2000vh;
+  height: 2100vh;
   padding: 0;
   margin: 0;
-  background-image: url(/assets/images/info/server/profile/bg-01.jpg);
+  background-image: url(/assets/images/info/server/profile/hello-friend.jpg);
   background-attachment: fixed;
   background-size: cover;
   p {
@@ -42,68 +42,80 @@
       margin: 0;
       background: transparent;
       [data-sp] {
-        top: calc(50% - 100px);
+        top: calc(50% - 120px);
+        font-size: 120px;
+        line-height: 0.75;
       }
     }
     &[data-id='hello-friend-second'] {
       top: 100vh;
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      background-image: url(/assets/images/info/server/profile/hello-friend-b.jpg);
       [data-sp] {
-        top: calc(60% - 100px);
+        top: calc(60% - 190px);
         font-size: 120px;
         line-height: 0.75;
       }
     }
     &[data-id*='game'] {
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      background-image: url(/assets/images/info/server/profile/lets-game.jpg);
       font-size: 120px;
       line-height: 90px;
     }
     &[data-id='game-first'] {
-      top: calc(200vh + 92px);
-      background-image: url(/assets/images/info/server/profile/bg-03.jpg);
+      top: 200vh;
+      background-image: url(/assets/images/info/server/profile/lets-game.jpg);
       z-index: 1;
       [data-sp] {
-        top: 50%;
-        font-size: 120px;
+        top: calc(50% - 80px);
+        font-size: 150px;
+        line-height: 0.75;
       }
     }
     &[data-id='game-second'] {
       top: 300vh;
+      height: calc(100vh + 92px);
       font-size: 120px;
+      background-image: url(/assets/images/info/server/profile/maybe.jpg);
       [data-sp='maybe'] {
-        top: calc(70% - 30px);
+        top: calc(60% - 180px);
+        font-size: 150px;
+        line-height: 0.75;
       }
     }
     &[data-id='game-third'] {
       top: 400vh;
       font-size: 100px;
       line-height: 100px;
+      background-image: url(/assets/images/info/server/profile/give-you.jpg);
       [data-sp='give-you'] {
-        font-size: 120px;
-        line-height: 90px;
+        top: calc(50% - 180px);
+        font-size: 150px;
+        line-height: 0.75;
       }
     }
     &[data-id='game-fourth'] {
-      top: 2100vh;
+      top: 500vh;
       font-size: 100px;
       line-height: 100px;
+      background-image: url(/assets/images/info/server/profile/my-name.jpg);
       [data-sp] {
-        top: 50%;
+        top: calc(50% - 80px);
+        font-size: 150px;
+        line-height: 0.75;
       }
     }
     &[data-id='my-name'] {
-      top: 500vh;
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      top: 600vh;
+      background-image: url(/assets/images/info/server/profile/my-name-is.jpg);
       [data-sp='my-name-is'] {
         z-index: 2;
         height: auto;
         width: auto;
-        left: 40px;
-        font-size: 48px;
+        left: 20px;
+        font-size: 60px;
         text-align: center;
         color: #ffc600;
-        top: calc(50% - 56px);
+        top: calc(50% - 60px);
       }
       [data-sp='victor-zamudio'] {
         z-index: 2;
@@ -112,24 +124,24 @@
         line-height: 90px;
         top: 50%;
         text-align: left;
-        left: 40px;
+        left: 20px;
         width: auto;
       }
     }
     &[data-id='im-uxe'] {
-      top: 600vh;
+      top: 700vh;
       font-size: 100px;
       line-height: 96px;
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      background-image: url(/assets/images/info/server/profile/senior.jpg);
       [data-sp='im-a'] {
-        font-size: 48px;
+        font-size: 72px;
         text-align: left;
         color: #ffc600;
-        top: calc(50% - 136px);
+        top: calc(50% - 162px);
         width: 50px;
         height: auto;
-        line-height: 40px;
-        left: calc(50% - 150px);
+        line-height: 0.75;
+        left: calc(50% - 160px);
       }
       [data-sp='uxe'] {
         font-size: 120px;
@@ -140,16 +152,16 @@
       }
     }
     &[data-id='at-thomson-reuters'] {
-      top: 700vh;
+      top: 800vh;
       font-size: 100px;
       line-height: 96px;
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      background-image: url(/assets/images/info/server/profile/at-tr.jpg);
       [data-sp='at'] {
         width: auto;
         height: auto;
-        font-size: 48px;
+        font-size: 90px;
         text-align: left;
-        top: calc(50% - 70px);
+        top: calc(50% - 80px);
         left: calc(50% - 138px);
       }
       a {
@@ -158,29 +170,30 @@
           sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 100px;
-        line-height: 80px;
+        font-size: 120px;
+        line-height: 70px;
         width: 280px;
         top: 50%;
-        left: calc(50% - 140px);
+        left: calc(50% - 172px);
         text-align: center;
         height: auto;
         background-color: transparent;
+        text-shadow: -16px 0 20px black;
       }
     }
     &[data-id='at-thomson-reuters-since'] {
-      top: 800vh;
-      background-image: url(/assets/images/info/server/profile/bg-02.jpg);
+      top: 900vh;
+      background-image: url(/assets/images/info/server/profile/since.jpg);
       [data-sp='since'] {
         width: auto;
         height: auto;
-        font-size: 48px;
+        font-size: 60px;
         color: #ffc600;
-        top: calc(50% - 92px);
+        top: calc(50% - 120px);
         left: calc(50% - 158px);
       }
       [data-sp='september'] {
-        top: calc(50% - 40px);
+        top: calc(50% - 60px);
         [data-sp='2022'] {
           font-size: 150px;
           top: 96px;
@@ -190,55 +203,57 @@
           text-align: left;
         }
         [data-sp='remainig'] {
-          font-size: 36px;
+          font-size: 56px;
           color: #ffc600;
-          top: calc(50% + 130px);
+          top: calc(50% + 140px);
         }
       }
     }
     &[data-id='born-and-raised'] {
-      top: 900vh;
-      background-image: url(/assets/images/info/server/profile/bg-04.jpg);
+      top: 1000vh;
+      background-image: url(/assets/images/info/server/profile/beloved-country.jpg);
       [data-sp] {
         width: auto;
         height: auto;
       }
       [data-sp='born'] {
-        font-size: 76px;
+        font-size: 90px;
         left: 20px;
-        top: 30%;
+        top: calc(25% + 16px);
       }
       [data-sp='and'] {
-        font-size: 36px;
+        font-size: 42px;
         color: #ffc600;
-        left: 146px;
-        top: calc(25% + 46px);
+        left: 166px;
+        top: calc(25% + 32px);
       }
       [data-sp='raised'] {
-        font-size: 76px;
+        font-size: 90px;
         left: 20px;
-        top: calc(30% + 56px);
+        top: calc(30% + 42px);
       }
       [data-sp='in'] {
-        font-size: 36px;
+        font-size: 42px;
         color: #ffc600;
-        left: 184px;
-        top: calc(25% + 102px);
+        left: 212px;
+        top: calc(25% + 98px);
       }
       [data-sp='mexico'] {
-        font-size: 72px;
+        font-size: 80px;
         font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        left: auto;
+        left: 20px;
         right: 20px;
         top: calc(40% + 90px);
+        height: 100px;
+        line-height: 1.2;
         background: rgb(0, 171, 105);
         background: linear-gradient(
           90deg,
           rgba(0, 171, 105, 1) 0%,
-          rgba(0, 171, 105, 1) 35%,
-          rgba(255, 255, 255, 1) 35%,
-          rgba(255, 255, 255, 1) 60%,
-          rgba(215, 0, 96, 1) 60%,
+          rgba(0, 171, 105, 1) 37%,
+          rgba(255, 255, 255, 1) 37%,
+          rgba(255, 255, 255, 1) 61%,
+          rgba(215, 0, 96, 1) 61%,
           rgba(215, 0, 96, 1) 100%
         );
         background-clip: text;
@@ -257,14 +272,14 @@
         left: auto;
         right: 30px;
         top: auto;
-        bottom: 150px;
+        bottom: 170px;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 1) 0%,
           rgba(255, 255, 255, 1) 30%,
-          rgba(215, 0, 96, 1) 30%,
-          rgba(215, 0, 96, 1) 85%,
+          rgb(255, 0, 0) 30%,
+          rgb(215, 0, 0) 85%,
           rgba(255, 255, 255, 1) 85%,
           rgba(255, 255, 255, 1) 100%
         );
@@ -276,17 +291,17 @@
         left: auto;
         right: 20px;
         top: auto;
-        bottom: 90px;
+        bottom: 110px;
       }
     }
     &[data-id='around-the-web'] {
-      top: 1000vh;
-      background-image: url(/assets/images/info/server/profile/bg-05.jpg);
+      top: 1100vh;
+      background-image: url(/assets/images/info/server/profile/around.jpg);
       [data-sp='been'] {
-        font-size: 36px;
-        top: calc(30% + 30px);
+        font-size: 42px;
+        top: 30%;
         left: 20px;
-        color: #ffc600;
+        color: #00b6ff;
         width: 80px;
         height: auto;
         line-height: 35px;
@@ -295,120 +310,127 @@
       [data-sp='around'] {
         width: auto;
         left: auto;
-        top: calc(30% + 30px);
+        font-size: 100px;
+        top: 30%;
         left: 104px;
       }
       [data-sp='the'] {
-        top: calc(50% + 30px);
-        font-size: 36px;
-        color: #ffc600;
+        top: 50%;
+        font-size: 50px;
+        color: #00b6ff;
         height: auto;
         width: auto;
         left: auto;
         transform: translateY(-50px);
       }
       [data-sp='web'] {
-        top: calc(50% + 30px);
+        top: calc(50% + 20px);
+        font-size: 120px;
       }
       [data-sp='since'] {
-        font-size: 36px;
-        color: #ffc600;
+        font-size: 42px;
+        color: #00b6ff;
         width: auto;
         height: auto;
         top: auto;
         left: auto;
-        bottom: 150px;
-        right: 240px;
+        bottom: 200px;
+        right: 260px;
       }
       [data-sp='june-2006'] {
         width: auto;
         height: auto;
         top: auto;
         left: auto;
-        bottom: 100px;
+        bottom: 146px;
         right: 20px;
+        font-size: 100px;
       }
       [data-sp='n-years'] {
-        font-size: 28px;
-        color: #ffc600;
+        font-size: 42px;
+        color: #00b6ff;
         width: auto;
         height: auto;
         top: auto;
         left: auto;
-        bottom: 52px;
+        bottom: 92px;
         right: 20px;
       }
     }
     &[data-id='working-with-brands'] {
-      top: 1100vh;
-      background-image: url(/assets/images/info/server/profile/bg-06.jpg);
+      top: 1200vh;
+      background-image: url(/assets/images/info/server/profile/brands.jpg);
       [data-sp] {
         height: auto;
         width: auto;
         text-shadow: -7px 14px 4px black;
       }
       [data-sp='and'] {
-        top: 35%;
-        left: calc(50% - 50px);
+        top: calc(35% - 50px);
+        left: calc(50% - 30px);
         color: #ffc600;
-        font-size: 36px;
+        font-size: 60px;
         text-transform: uppercase;
       }
       [data-sp='working'] {
-        top: calc(35% + 54px);
+        top: calc(35% + 14px);
         left: calc(50% - 140px);
+        font-size: 100px;
       }
       [data-sp='with'] {
         top: calc(35% + 100px);
         left: calc(50% - 124px);
         color: #ffc600;
-        font-size: 36px;
+        font-size: 60px;
         text-transform: uppercase;
       }
       [data-sp='brands'] {
-        top: calc(35% + 150px);
-        left: calc(50% - 120px);
+        top: calc(35% + 170px);
+        left: calc(50% - 140px);
+        font-size: 120px;
       }
       [data-sp='like'] {
-        top: calc(35% + 220px);
-        left: calc(50% + 20px);
+        top: calc(40% + 270px);
+        left: calc(30%);
+        font-size: 150px;
       }
     }
     &[data-id='warner-media'] {
-      top: 1200vh;
-      background-image: url(/assets/images/info/server/profile/bg-07.jpg);
+      top: 1300vh;
+      background-image: url(/assets/images/info/server/profile/warner-media.jpg);
       [data-sp] {
         font-size: 120px;
         width: auto;
         height: auto;
-        top: 45%;
+        top: 40%;
         left: calc(50% - 156px);
       }
       [data-sp='media'] {
-        top: calc(45% + 86px);
-        left: calc(50% - 116px);
+        top: calc(40% + 103px);
+        left: calc(40% - 116px);
         color: #939498;
+        font-size: 165px;
       }
     }
     &[data-id='jnj'] {
-      top: 1300vh;
-      background-image: url(/assets/images/info/server/profile/bg-08.jpg);
+      top: 1400vh;
+      background-image: url(/assets/images/info/server/profile/jonhson-and-jonhson.jpg);
       [data-sp] {
         top: calc(55% - 52px);
-        font-size: 180px;
+        font-size: 280px;
         text-shadow: 20px -7px 16px black;
       }
     }
     &[data-id='google'] {
-      top: 1400vh;
-      background-image: url(/assets/images/info/server/profile/bg-09.jpg);
+      top: 1500vh;
+      background-image: url(/assets/images/info/server/profile/google.jpg);
       [data-sp] {
-        font-size: 120px;
+        font-size: 140px;
         line-height: 1.2;
         width: auto;
         height: auto;
-        top: calc(50% - 16px);
-        left: calc(50% - 140px);
+        top: calc(50% - 36px);
+        left: 20px;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           90deg,
@@ -430,15 +452,15 @@
       }
     }
     &[data-id='ibm'] {
-      top: 1500vh;
-      background-image: url(/assets/images/info/server/profile/bg-10.jpg);
+      top: 1600vh;
+      background-image: url(/assets/images/info/server/profile/ibm.jpg);
       [data-sp] {
-        font-size: 200px;
+        font-size: 280px;
         line-height: 1.2;
         width: auto;
         height: auto;
         top: 38%;
-        left: calc(50% - 118px);
+        left: 20px;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           0deg,
@@ -491,18 +513,18 @@
       }
     }
     &[data-id='microsoft'] {
-      top: 1600vh;
-      background-image: url(/assets/images/info/server/profile/bg-11.jpg);
+      top: 1700vh;
+      background-image: url(/assets/images/info/server/profile/microsoft.jpg);
       [data-sp] {
         width: auto;
         height: auto;
         left: calc(50% - 86px);
       }
       [data-sp='and'] {
-        top: calc(50% - 124px);
-        font-size: 50px;
+        top: calc(50% - 96px);
+        font-size: 90px;
         color: #05a6f0;
-        left: calc(50% - 120px);
+        left: calc(50% - 138px);
       }
       [data-sp='micro'] {
         background: rgb(243, 83, 37);
@@ -515,12 +537,16 @@
         );
         background-clip: text;
         color: transparent;
+        font-size: 150px;
+        line-height: 1.2;
+        left: calc(50% - 140px);
+        top: calc(60% - 142px);
       }
       [data-sp='soft'] {
-        font-size: 112px;
+        font-size: 180px;
         line-height: 1;
-        top: calc(50% + 4px);
-        left: calc(50% - 84px);
+        top: calc(60% - 24px);
+        left: calc(50% - 130px);
         background: #ffba08;
         background: linear-gradient(
           90deg,
@@ -532,10 +558,10 @@
       }
     }
     &[data-id='among-others'] {
-      top: 1700vh;
-      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
+      top: 1800vh;
+      background-image: url(/assets/images/info/server/profile/others.jpg);
       [data-sp] {
-        text-shadow: 20px 20x 20px black;
+        text-shadow: 20px 20px black;
       }
       [data-sp='among'] {
         color: #ffc600;
@@ -547,7 +573,9 @@
       }
       [data-sp='others'] {
         font-size: 120px;
-        top: calc(35% + 0px);
+        top: 35%;
+        left: 50px;
+        width: auto;
       }
       [data-sp='last'] {
         color: #ffc600;
@@ -573,27 +601,33 @@
       }
     }
     &[data-id='remember'] {
-      top: 1800vh;
+      top: 1900vh;
       font-size: 100px;
-      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
+      background-image: url(/assets/images/info/server/profile/remember.jpg);
       [data-sp='have-to'],
       [data-sp='that'] {
         color: #ffc600;
       }
+      [data-sp='remember'] {
+        top: calc(50% + 25px);
+      }
       [data-sp='have-to'] {
-        font-size: 48px;
+        font-size: 72px;
+        width: 200px;
+        left: calc(50% - 100px);
         top: calc(50% - 115px);
       }
       [data-sp='that'] {
-        top: calc(50% + 30px);
+        top: calc(50% + 106px);
       }
     }
     &[data-id='my-sheet'] {
-      top: 1900vh;
-      background-image: url(/assets/images/info/server/profile/bg-12.jpg);
+      top: 2000vh;
+      background-image: url(/assets/images/info/server/profile/sheet.jpg);
       [data-sp='this-is'] {
         color: #ffc600;
-        left: 60px;
+        left: 40px;
+        top: calc(60% - 54px);
         font-size: 36px;
         text-align: right;
         line-height: 0.9;
@@ -604,12 +638,13 @@
         left: auto;
         width: auto;
         right: 100px;
+        top: calc(60% - 54px);
       }
       [data-sp='sheet'] {
         background-color: transparent;
         width: auto;
         left: calc(50% - 168px);
-        top: calc(50% + 50px);
+        top: calc(60% + 50px);
         font-size: 130px;
         font-weight: 700;
         letter-spacing: -8px;
