@@ -43,7 +43,7 @@
       "academy": "LinkedIn Learning",
       "short-description": "Dive in and learn React from scratch",
       "year": "Feb 2023",
-      "location": "Online",
+      "type": "Online",
       "language": "English",
       "last-updated": "Apr, 2015",
       "students": "963,948",
@@ -70,7 +70,7 @@
       "Instructor": "Chris Noder",
       "academy": "LinkedIn Learning",
       "year": "Jan 2023",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -92,7 +92,7 @@
       "Instructor": "Basar Buyukkahraman",
       "academy": "Udemy",
       "year": "Dec 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -114,7 +114,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Nov 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -136,7 +136,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Oct 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -158,7 +158,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Oct 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -180,7 +180,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Sep 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -202,7 +202,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Sep 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -224,7 +224,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "LinkedIn Learning",
       "year": "Aug 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -246,7 +246,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Jun 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -268,7 +268,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Apr 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -290,7 +290,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Feb 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -312,7 +312,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Jan 2022",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -334,7 +334,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Nov 2021",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -356,7 +356,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "May 2021",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -378,7 +378,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Feb 2021",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -400,7 +400,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Nov 2020",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -422,7 +422,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Aug 2020",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -444,7 +444,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Apr 2020",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -466,7 +466,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Mar 2019",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -488,7 +488,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udemy",
       "year": "Mar 2019",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -510,7 +510,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Globant University",
       "year": "Jul 2018",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -532,7 +532,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Globant University",
       "year": "Feb 2018",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -554,7 +554,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Globant University",
       "year": "May 2017",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -576,7 +576,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Globant University",
       "year": "Sep 2016",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -598,7 +598,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "Jun 2016",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -620,7 +620,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "Apr 2016",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -642,7 +642,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "Jan 2016",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -664,7 +664,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "Oct 2015",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -686,7 +686,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "Jul 2015",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -708,7 +708,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Acamica",
       "year": "May 2015",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -730,7 +730,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "<abbr title='The University of new south wales'>UNSW</abbr> Australia",
       "year": "Mar 2015",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -752,7 +752,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Tutsplus",
       "year": "Oct 2014",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -774,7 +774,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udacity",
       "year": "Jun 2014",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -796,7 +796,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Udacity",
       "year": "Apr 2014",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -818,7 +818,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Microsoft Virtual Academy",
       "year": "Jul 2013",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -840,7 +840,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Microsoft Mexico",
       "year": "May 2013",
-      "where": "Microsoft Mexico Headquarters",
+      "type": "Microsoft Mexico Headquarters",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -862,7 +862,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Microsoft Mexico",
       "year": "Feb 2013",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -884,7 +884,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Microsoft Mexico",
       "year": "Nov 2012",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -906,7 +906,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Microsoft Virtual Academy",
       "year": "Sep 2012",
-      "where": "Online",
+      "type": "Online",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -928,7 +928,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Codice",
       "year": "Aug 2012",
-      "where": "Codice Headquarters",
+      "type": "Codice Headquarters",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -950,7 +950,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "Codice",
       "year": "Jun 2012",
-      "where": "Codice Headquarters",
+      "type": "Codice Headquarters",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
@@ -972,7 +972,7 @@
       "Instructor": "Pete Mockaitis",
       "academy": "CTIC Fundation W3C",
       "year": "Jun 2009",
-      "where": "Infotec Headquarters",
+      "type": "Infotec Headquarters",
       "certificateHref": "/docs/certificates/01.pdf",
       "categories": [
         "Soft skills",
