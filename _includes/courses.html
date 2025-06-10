@@ -12,9 +12,10 @@
   <div
     id="course-{{forloop.index}}"
     class="course"
-    data-consoles="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
+    data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
+    data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
   >
-    <span class="data-terminal-container">
+    <!-- <span class="data-terminal-container">
       <span class="console"
         >714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}</span
       >
@@ -23,12 +24,8 @@
         replace: ':', '' | replace: '.', '' }}</span
       >
       <span class="prompt">» echo $COURSES</span>
-    </span>
-    <p
-      class="course-count"
-      data-prompts="» echo $COURSES"
-      data-paths="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
-    >
+    </span> -->
+    <p class="course-count" data-prompt="» echo $COURSES">
       {% if forloop.index > 1 %}
       <a
         href="#course-{{forloop.index | minus: 1}}"
@@ -50,20 +47,21 @@
         <span>{{course.title}}</span>
       </h3>
       <p class="course-details">
-        <strong class="author">{{ course.instructor }}</strong>
-        <!-- <em class="text">{{ course.instructor }}</em><br /> -->
+        <strong class="author">Author: </strong>
+        <em class="text">{{ course.instructor }}</em><br />
 
         <!-- <strong class="last-updated"> Updated: </strong>
       <em class="text">{{ course.last-updated }}</em><br /> -->
 
-        <strong class="year">{{ course.year }}</strong>
-        <!-- <em class="text">{{ course.year }}</em><br /> -->
+        <strong class="year">Year: </strong>
+        <em class="text">{{ course.year }}</em><br />
 
-        <strong class="academy">{{ course.academy }}</strong>
-        <!-- <em class="text">{{ course.academy }}</em><br /> -->
+        <strong class="academy">Academy: </strong>
+        <em class="text">{{ course.academy }}</em><br />
 
-        <strong class="where">{{ course.location }}</strong>
-        <!-- <em class="text">{{ course.location }}</em><br /> -->
+        <strong class="where">Type: </strong>
+        <em class="text">{{ course.type }}</em><br />
+
         <!-- Enable categories when is ready -->
         <!-- <strong>Categories:</strong>
       <span>

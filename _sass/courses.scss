@@ -1,6 +1,6 @@
 @include fontface('Consola', 'consola');
 
-$details_top_position: 48%;
+$details_top_position: 45%;
 
 .the-server #courses {
   position: relative;
@@ -25,8 +25,8 @@ $details_top_position: 48%;
   .course {
     position: relative;
     left: 0;
-    width: calc(100% - 40px);
-    height: 100vh;
+    width: calc(100% - 60px);
+    height: calc(100vh - 40px);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -34,10 +34,42 @@ $details_top_position: 48%;
     font-style: normal;
     padding: 20px;
     margin-top: 100px;
-    border-top: 1px dashed aqua;
+    &::before {
+      position: absolute;
+      top: calc($details_top_position - 132px);
+      content: attr(data-console);
+      font-size: 12px;
+      text-align: left;
+      font-weight: 700;
+      background: rgb(255, 108, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 108, 0, 1) 0%,
+        rgba(255, 108, 0, 1) 18%,
+        rgba(66, 81, 93, 1) 18%,
+        rgba(66, 81, 93, 1) 100%
+      );
+      background-clip: text;
+      color: transparent;
+    }
+    &::after {
+      position: absolute;
+      top: calc($details_top_position - 120px);
+      content: attr(data-path);
+      font-size: 15px;
+      line-height: 1;
+      white-space: break-spaces;
+      display: flex;
+      height: 30px;
+      justify-content: center;
+      width: 100%;
+      text-align: left;
+      color: #7dbaff;
+    }
     .course-details-container {
       position: absolute;
       top: $details_top_position;
+      width: calc(100% - 20px);
     }
     h3 {
       display: flex;
@@ -60,57 +92,33 @@ $details_top_position: 48%;
         border: none;
       }
     }
-    .data-terminal-container {
-      position: absolute;
-      top: 250px;
-      height: 90px;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      .console {
-        font-size: 12px;
-        text-align: left;
-        font-weight: 700;
-        background: rgb(255, 108, 0);
-        background: linear-gradient(
-          90deg,
-          rgba(255, 108, 0, 1) 0%,
-          rgba(255, 108, 0, 1) 18%,
-          rgba(66, 81, 93, 1) 18%,
-          rgba(66, 81, 93, 1) 100%
-        );
-        background-clip: text;
-        color: transparent;
-      }
-      .path,
-      .prompt {
-        font-size: 16px;
-        line-height: 1;
-        white-space: break-spaces;
-        display: inline-block;
-        width: 100%;
-        text-align: left;
-        color: rgb(53, 148, 255);
-      }
-      .prompt {
-        content: attr(data-prompt);
-        margin-bottom: 20px;
-        display: block;
-        color: #ffdc00;
-      }
-    }
     p {
       margin: 0;
       padding: 0;
       &.course-count {
         position: absolute;
         top: calc($details_top_position - 36px);
-        right: 20px;
+        right: 0;
+        width: calc(100% - 20px);
         display: flex;
+        justify-content: end;
         font-size: 18px;
         text-align: right;
         color: #bababa;
         line-height: 32px;
+        &::before {
+          position: absolute;
+          top: calc($details_top_position - 64px);
+          left: 0;
+          content: attr(data-prompt);
+          font-size: 16px;
+          line-height: 1;
+          white-space: break-spaces;
+          display: inline-block;
+          width: 100%;
+          text-align: left;
+          color: #ffdc00;
+        }
         a,
         span {
           width: auto;
@@ -133,29 +141,32 @@ $details_top_position: 48%;
         line-height: 0.8;
       }
       strong {
-        display: inline-flex;
-        color: #7dbaff;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        color: #d167fd;
         width: 100%;
-        &::before {
-          content: '-rw-r--r--';
+        &::after {
+          content: '3000: rw-r--r';
           margin-right: 8px;
-          color: white;
+          color: grey;
           display: inline;
           font-weight: 400;
         }
-        &.where::before {
-          content: 'drwxr-xr-x';
+        &.where::after {
+          content: '8080: drwxr--';
         }
-        &.academy::before {
-          content: 'r-rw------';
+        &.academy::after {
+          content: '9021: r-rw--r';
         }
-        &.author::before {
-          content: 'lrwxrw-w-x';
+        &.author::after {
+          content: '4200: lrwxrw-';
         }
       }
       em {
-        color: #ffdc00;
+        color: white;
         font-style: normal;
+        margin-bottom: 12px;
       }
       .certificate {
         font-size: 15px;
