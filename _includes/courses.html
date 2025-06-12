@@ -1,6 +1,11 @@
 {% if include.courses %}
 <section id="courses" class="courses">
   <h2 data-section="1.4_">Courses</h2>
+
+  <div id="chartDonut" style="width: 100%; height: 400px"></div>
+  <div id="chartHorizontalBar" style="width: 100%; height: 800px"></div>
+  <div id="chartByAcademy" style="width: 100%; height: 800px"></div>
+
   <p class="course-presentation">
     These are some of the most significant courses I've taken:
   </p>
@@ -25,7 +30,7 @@
       >
       <span class="prompt">» echo $COURSES</span>
     </span> -->
-    <p class="course-count" data-prompt="» echo $COURSES">
+    <p class="course-count" data-prompt="» echo $COURSE">
       {% if forloop.index > 1 %}
       <a
         href="#course-{{forloop.index | minus: 1}}"
@@ -48,19 +53,19 @@
       </h3>
       <p class="course-details">
         <strong class="author">Author: </strong>
-        <em class="text">{{ course.instructor }}</em><br />
+        <em class="text author">{{ course.instructor }}</em><br />
 
         <!-- <strong class="last-updated"> Updated: </strong>
       <em class="text">{{ course.last-updated }}</em><br /> -->
 
         <strong class="year">Year: </strong>
-        <em class="text">{{ course.year }}</em><br />
+        <em class="text year">{{ course.year }}</em><br />
 
         <strong class="academy">Academy: </strong>
-        <em class="text">{{ course.academy }}</em><br />
+        <em class="text academy">{{ course.academy }}</em><br />
 
-        <strong class="where">Type: </strong>
-        <em class="text">{{ course.type }}</em><br />
+        <strong class="type">Type: </strong>
+        <em class="text type">{{ course.type }}</em><br />
 
         <!-- Enable categories when is ready -->
         <!-- <strong>Categories:</strong>

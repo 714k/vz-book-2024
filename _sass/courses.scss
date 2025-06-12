@@ -13,6 +13,9 @@ $details_top_position: 45%;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  #chart {
+    margin-top: 20px;
+  }
   .course-presentation {
     font-size: 20px;
     margin: 80px 20px 30px 20px;
@@ -60,8 +63,8 @@ $details_top_position: 45%;
       line-height: 1;
       white-space: break-spaces;
       display: flex;
+      align-items: end;
       height: 30px;
-      justify-content: center;
       width: 100%;
       text-align: left;
       color: #7dbaff;
@@ -134,11 +137,15 @@ $details_top_position: 45%;
         padding: 8px 0 0 0;
         margin-top: 8px;
         font-size: 18px;
+        br {
+          display: none;
+        }
       }
       strong,
       em {
-        display: inline-block;
-        line-height: 0.8;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1;
       }
       strong {
         display: flex;
@@ -147,26 +154,42 @@ $details_top_position: 45%;
         color: #d167fd;
         width: 100%;
         &::after {
-          content: '3000: rw-r--r';
+          content: '301kb rw-r--r';
           margin-right: 8px;
-          color: grey;
+          color: #7c6585;
           display: inline;
           font-weight: 400;
         }
-        &.where::after {
-          content: '8080: drwxr--';
+        &.author::after {
+          content: '656kb lrwxrw-';
         }
         &.academy::after {
-          content: '9021: r-rw--r';
+          content: '328kb r-rw--r';
         }
-        &.author::after {
-          content: '4200: lrwxrw-';
+        &.type::after {
+          content: '164kb drwxr--';
         }
       }
       em {
         color: white;
         font-style: normal;
         margin-bottom: 12px;
+        &::after {
+          content: '220ms';
+          margin-right: 8px;
+          color: #7c6585;
+          display: flex;
+          font-weight: 400;
+        }
+        &.author::after {
+          content: 'root';
+        }
+        &.academy::after {
+          content: 'ttl=51';
+        }
+        &.type::after {
+          content: '144.2.236.4/30';
+        }
       }
       .certificate {
         font-size: 15px;

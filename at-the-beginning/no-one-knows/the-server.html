@@ -8,6 +8,8 @@ next_page: '/at-the-beginning/no-one-knows/the-navigator/'
 previous_title: 'No one knows...'
 next_title: 'The Navigator'
 permalink: /at-the-beginning/no-one-knows/the-server/
+scripts: |
+  <script src="/assets/js/the-server/charts.js" type="module"></script>
 ---
 
 <header class="cover">
@@ -78,7 +80,7 @@ permalink: /at-the-beginning/no-one-knows/the-server/
       <span data-sp="september"
         >September <span data-sp="2022">2022</span>
         <span data-sp="remainig"
-          >({{ site.time | date: '%Y' | minus: 2023 }} years)</span
+          >({{ site.time | date: '%Y' | minus: 2023 }} years ago)</span
         >
         <span class="hide">.</span></span
       >
@@ -105,7 +107,7 @@ permalink: /at-the-beginning/no-one-knows/the-server/
       <span data-sp="since">since</span>&nbsp;
       <span data-sp="june-2006">June 2006</span>&nbsp;
       <span data-sp="n-years"
-        >({{ site.time | date: '%Y' | minus: 2006 }} years),</span
+        >({{ site.time | date: '%Y' | minus: 2006 }} years ago),</span
       >&nbsp;
     </span>
     <span class="view" data-id="working-with-brands">
@@ -113,7 +115,7 @@ permalink: /at-the-beginning/no-one-knows/the-server/
       <span data-sp="working">working</span>&nbsp;
       <span data-sp="with">with</span>&nbsp;
       <span data-sp="brands">brands</span>&nbsp;
-      <span data-sp="like">like</span>
+      <span data-sp="like">like:</span>
     </span>
     <span class="view" data-id="warner-media">
       <span data-sp="warner">Warner</span>
