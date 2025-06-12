@@ -14,6 +14,13 @@
     padding: 0;
     margin: 0;
   }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: var(--color-primary);
+    }
+  }
   [data-sp='hello-friend'] {
     position: relative;
   }
@@ -91,6 +98,7 @@
         top: calc(50% - 180px);
         font-size: 150px;
         line-height: 0.75;
+        text-shadow: -8px 11px 0px #000000;
       }
     }
     &[data-id='game-fourth'] {
@@ -149,6 +157,7 @@
       }
       abbr {
         display: block;
+        // font-size: 150px;
       }
     }
     &[data-id='at-thomson-reuters'] {
@@ -171,7 +180,7 @@
         font-weight: 400;
         font-style: normal;
         font-size: 120px;
-        line-height: 70px;
+        line-height: 90px;
         width: 280px;
         top: 50%;
         left: calc(50% - 172px);
@@ -188,7 +197,7 @@
         width: auto;
         height: auto;
         font-size: 60px;
-        color: #ffc600;
+        color: #ff6c00;
         top: calc(50% - 120px);
         left: calc(50% - 158px);
       }
@@ -204,7 +213,7 @@
         }
         [data-sp='remainig'] {
           font-size: 56px;
-          color: #ffc600;
+          color: #ff6c00;
           top: calc(50% + 140px);
         }
       }
@@ -249,8 +258,8 @@
         background: rgb(0, 171, 105);
         background: linear-gradient(
           90deg,
-          rgba(0, 171, 105, 1) 0%,
-          rgba(0, 171, 105, 1) 37%,
+          #00ff9d 0%,
+          #00ff9d 37%,
           rgba(255, 255, 255, 1) 37%,
           rgba(255, 255, 255, 1) 61%,
           rgba(215, 0, 96, 1) 61%,
@@ -400,16 +409,22 @@
       background-image: url(/assets/images/info/server/profile/warner-media.jpg);
       [data-sp] {
         font-size: 120px;
-        width: auto;
+        width: 100%;
         height: auto;
         top: 40%;
-        left: calc(50% - 156px);
+        padding: 0;
+        margin: 0;
+        text-indent: -36px;
       }
       [data-sp='media'] {
         top: calc(40% + 103px);
-        left: calc(40% - 116px);
+        left: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
         color: #939498;
         font-size: 165px;
+        text-indent: 36px;
       }
     }
     &[data-id='jnj'] {
@@ -427,23 +442,23 @@
       [data-sp] {
         font-size: 140px;
         line-height: 1.2;
-        width: auto;
+        width: 100%;
         height: auto;
         top: calc(50% - 36px);
-        left: 20px;
+        left: 0;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           90deg,
           rgba(72, 137, 244, 1) 0%,
-          rgba(72, 137, 244, 1) 16%,
-          rgba(235, 73, 59, 1) 16%,
-          rgba(235, 73, 59, 1) 33%,
-          rgba(251, 190, 13, 1) 33%,
+          rgba(72, 137, 244, 1) 20%,
+          rgba(235, 73, 59, 1) 20%,
+          rgba(235, 73, 59, 1) 35%,
+          rgba(251, 190, 13, 1) 35%,
           rgba(251, 190, 13, 1) 51%,
           rgba(72, 137, 244, 1) 51%,
           rgba(72, 137, 244, 1) 68%,
           rgba(58, 171, 88, 1) 68%,
-          rgba(58, 171, 88, 1) 84%,
+          rgba(58, 171, 88, 1) 80%,
           rgba(235, 73, 59, 1) 84%,
           rgba(235, 73, 59, 1) 100%
         );
@@ -456,11 +471,11 @@
       background-image: url(/assets/images/info/server/profile/ibm.jpg);
       [data-sp] {
         font-size: 280px;
-        line-height: 1.2;
-        width: auto;
+        line-height: 1.5;
+        width: 100%;
         height: auto;
         top: 38%;
-        left: 20px;
+        left: 0;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           0deg,
@@ -506,7 +521,7 @@
           rgba(255, 255, 255, 0) 95%,
           rgba(255, 255, 255, 0) 100%,
           rgba(255, 255, 255, 1) 100%,
-          rgba(255, 255, 255, 1) 105%
+          rgba(255, 255, 255, 1) 120%
         );
         background-clip: text;
         color: transparent;
@@ -567,9 +582,8 @@
         color: #ffc600;
         font-size: 36px;
         width: auto;
-        left: 0;
-        top: calc(35% - 10px);
-        transform: rotate(-90deg);
+        left: 40px;
+        top: calc(35% - 67px);
       }
       [data-sp='others'] {
         font-size: 120px;
@@ -579,11 +593,12 @@
       }
       [data-sp='last'] {
         color: #ffc600;
-        font-size: 36px;
+        font-size: 40px;
         display: inline-block;
         width: auto;
-        top: calc(35% + 96px);
-        left: calc(50% - 45px);
+        top: calc(35% + 154px);
+        left: calc(50% - 116px);
+        transform: rotate(-90deg);
       }
       [data-sp='n-years'] {
         font-size: 120px;
@@ -606,45 +621,48 @@
       background-image: url(/assets/images/info/server/profile/remember.jpg);
       [data-sp='have-to'],
       [data-sp='that'] {
-        color: #ffc600;
+        color: #ff0050;
       }
       [data-sp='remember'] {
-        top: calc(50% + 25px);
+        top: calc(50% + 50px);
       }
       [data-sp='have-to'] {
         font-size: 72px;
+        line-height: 1;
         width: 200px;
-        left: calc(50% - 100px);
-        top: calc(50% - 115px);
+        left: 20px;
+        top: calc(50% - 100px);
+        text-align: left;
       }
       [data-sp='that'] {
-        top: calc(50% + 106px);
+        top: calc(50% + 160px);
+        left: auto;
+        width: auto;
+        right: 20px;
+        font-size: 150px;
       }
     }
     &[data-id='my-sheet'] {
       top: 2000vh;
       background-image: url(/assets/images/info/server/profile/sheet.jpg);
       [data-sp='this-is'] {
-        color: #ffc600;
-        left: 40px;
-        top: calc(60% - 54px);
-        font-size: 36px;
-        text-align: right;
+        color: #00b6ff;
+        left: calc(50% - 46px);
+        top: calc(60% - 240px);
+        font-size: 72px;
+        text-align: center;
         line-height: 0.9;
-        width: 74px;
+        width: 98px;
       }
       [data-sp='my'] {
         font-size: 150px;
-        left: auto;
-        width: auto;
-        right: 100px;
+        width: 100%;
         top: calc(60% - 54px);
       }
       [data-sp='sheet'] {
         background-color: transparent;
-        width: auto;
-        left: calc(50% - 168px);
-        top: calc(60% + 50px);
+        width: 100%;
+        top: calc(60% + 85px);
         font-size: 130px;
         font-weight: 700;
         letter-spacing: -8px;

@@ -2,7 +2,7 @@ import 'https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js'
 
 const chartDonut = echarts.init(document.getElementById('chartDonut'))
 
-var optionDonut = {
+const optionDonut = {
   tooltip: {
     trigger: 'item',
   },
