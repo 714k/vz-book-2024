@@ -13,17 +13,17 @@ $details_top_position: 45%;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  #chart {
-    margin-top: 20px;
+  #chartDonut {
+    padding-top: 160px;
   }
   .course-presentation {
     font-size: 20px;
-    margin: 80px 20px 30px 20px;
+    padding: 80px 20px 0px 20px;
     color: #95a6c7;
     position: sticky;
     z-index: 2;
-    top: 140px;
-    backdrop-filter: blur(4px);
+    top: 80px;
+    backdrop-filter: blur(10px);
   }
   .course {
     position: relative;
@@ -39,7 +39,7 @@ $details_top_position: 45%;
     margin-top: 100px;
     &::before {
       position: absolute;
-      top: calc($details_top_position - 132px);
+      top: calc($details_top_position - 112px);
       content: attr(data-console);
       font-size: 12px;
       text-align: left;
@@ -57,7 +57,7 @@ $details_top_position: 45%;
     }
     &::after {
       position: absolute;
-      top: calc($details_top_position - 120px);
+      top: calc($details_top_position - 100px);
       content: attr(data-path);
       font-size: 15px;
       line-height: 1;
@@ -67,7 +67,7 @@ $details_top_position: 45%;
       height: 30px;
       width: 100%;
       text-align: left;
-      color: #7dbaff;
+      color: #35b3ff;
     }
     .course-details-container {
       position: absolute;
@@ -111,7 +111,7 @@ $details_top_position: 45%;
         line-height: 32px;
         &::before {
           position: absolute;
-          top: calc($details_top_position - 64px);
+          top: calc($details_top_position - 48px);
           left: 0;
           content: attr(data-prompt);
           font-size: 16px;
@@ -151,7 +151,7 @@ $details_top_position: 45%;
         display: flex;
         justify-content: space-between;
         text-align: left;
-        color: #d167fd;
+        color: #ae00ff;
         width: 100%;
         &::after {
           content: '301kb rw-r--r';
