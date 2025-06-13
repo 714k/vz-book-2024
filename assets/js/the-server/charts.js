@@ -3,13 +3,25 @@ import 'https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js'
 const chartDonut = echarts.init(document.getElementById('chartDonut'))
 
 const optionDonut = {
+  title: {
+    text: 'All Courses',
+    itemStyle: {
+      color: 'white',
+    },
+    textStyle: {
+      fontSize: 30,
+      fontWeight: 'bold',
+      color: 'white',
+    },
+    left: 'center',
+  },
   tooltip: {
     trigger: 'item',
   },
   legend: {
     show: false,
-    top: '10%',
-    left: 'center',
+    top: '50%',
+    // left: 'center',
   },
   series: [
     {
@@ -18,12 +30,12 @@ const optionDonut = {
       radius: ['30%', '100%'],
       avoidLabelOverlap: false,
       label: {
-        show: false,
+        show: true,
         position: 'center',
       },
       emphasis: {
         label: {
-          show: false,
+          show: true,
           fontSize: 40,
           fontWeight: 'bold',
         },
@@ -52,7 +64,7 @@ const optionDonut = {
         },
       ],
 
-      color: ['#33488480', '#3d205680'],
+      color: ['#33488490', '#3d205690'],
     },
   ],
 }
@@ -124,17 +136,17 @@ const optionsHorizontalBar = {
       type: 'bar',
       data: [2, 5, 3, 8, 7, 6, 12, 9, 11, 10, 15, 14, 13, 16, 18, 20, 22],
       itemStyle: {
-        color: '#adfe00',
+        color: '#33488490',
       },
       emphasis: {
         itemStyle: {
-          color: '#adfe0080',
+          color: '#3d205690',
         },
       },
       link: {
         symbol: 'arrow',
         symbolSize: 10,
-        color: '#adfe00',
+        color: '#33488490',
       },
     },
   ],
@@ -215,7 +227,7 @@ const optionsByAcademy = {
       },
       data: [8, 12, 7, 3, 5, 6, 4, 10, 9, 2, 11, 1, 13],
       itemStyle: {
-        color: '#adfe00',
+        color: '#33488490',
       },
       emphasis: {
         itemStyle: {
@@ -225,7 +237,7 @@ const optionsByAcademy = {
       link: {
         symbol: 'arrow',
         symbolSize: 10,
-        color: '#adfe00',
+        color: '#33488490',
       },
     },
   ],
