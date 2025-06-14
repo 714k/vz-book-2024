@@ -6,7 +6,11 @@
   <div id="chartHorizontalBar" style="width: 100%; height: 800px"></div>
   <div id="chartByAcademy" style="width: 100%; height: 800px"></div>
 
-  <p class="course-presentation">
+  <p
+    class="course-presentation"
+    data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
+    data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}&#xa;» echo $COURSE"
+  >
     These are some of the most significant courses I've taken:
   </p>
 
@@ -14,23 +18,8 @@
   join: ', ' %} {% assign courseId = course.title | downcase | replace: ' ',
   '-'%}
 
-  <div
-    id="course-{{forloop.index}}"
-    class="course"
-    data-console="714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}"
-    data-path="~/the-server/courses/{{course.title | replace: ' ', '-' | downcase | replace: ':', '' | replace: '.', '' }}"
-  >
-    <!-- <span class="data-terminal-container">
-      <span class="console"
-        >714k {{site.time | date: '%-Y.%m.%d %H:%M:%S'}}</span
-      >
-      <span class="path"
-        >~/the-server/courses/{{course.title | replace: ' ', '-' | downcase |
-        replace: ':', '' | replace: '.', '' }}</span
-      >
-      <span class="prompt">» echo $COURSES</span>
-    </span> -->
-    <p class="course-count" data-prompt="» echo $COURSE">
+  <div id="course-{{forloop.index}}" class="course">
+    <!-- <p class="course-count">
       {% if forloop.index > 1 %}
       <a
         href="#course-{{forloop.index | minus: 1}}"
@@ -45,39 +34,40 @@
         >»</a
       >
       {% endif %}
-    </p>
+    </p> -->
 
     <div class="course-details-container">
       <h3>
         <span>{{course.title}}</span>
       </h3>
       <p class="course-details">
-        <strong class="author">Author: </strong>
+        <!-- <strong class="author">Author: </strong> -->
         <em class="text author">{{ course.instructor }}</em><br />
 
         <!-- <strong class="last-updated"> Updated: </strong>
       <em class="text">{{ course.last-updated }}</em><br /> -->
 
-        <strong class="year">Year: </strong>
+        <!-- <strong class="year">Year: </strong> -->
         <em class="text year">{{ course.year }}</em><br />
 
-        <strong class="academy">Academy: </strong>
+        <!-- <strong class="academy">Academy: </strong> -->
         <em class="text academy">{{ course.academy }}</em><br />
 
-        <strong class="type">Type: </strong>
-        <em class="text type">{{ course.type }}</em><br />
+        <!-- <strong class="type">Type: </strong>
+        <em class="text type">{{ course.type }}</em><br /> -->
 
         <!-- Enable categories when is ready -->
         <!-- <strong>Categories:</strong>
-      <span>
-        {% for category in course.categories %}
-        <a
-          href="/filter-by-category/{{category}}"
-          title="See course by '{{category}}' category"
-          >{{category}}</a
-        >
-        {% endfor %} </span
-      ><br /> -->
+      -->
+        <!-- <span>
+          {% for category in course.categories %}
+          <a
+            href="/filter-by-category/{{category}}"
+            title="See course by '{{category}}' category"
+            >{{category}}</a
+          >
+          {% endfor %} </span
+        ><br /> -->
         <span class="certificate">
           <a
             href="{{ course.certificateHref}}"

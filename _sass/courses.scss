@@ -18,28 +18,14 @@ $details_top_position: 45%;
   }
   .course-presentation {
     font-size: 20px;
-    padding: 80px 20px 0px 20px;
-    color: #95a6c7;
-    position: sticky;
+    margin-top: 60px;
+    padding: 20px 20px 20px 20px;
+    color: white;
     z-index: 2;
     top: 80px;
     backdrop-filter: blur(10px);
-  }
-  .course {
-    position: relative;
-    left: 0;
-    width: calc(100% - 60px);
-    height: calc(100vh - 40px);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-weight: 400;
-    font-style: normal;
-    padding: 20px;
-    margin-top: 100px;
     &::before {
-      position: absolute;
-      top: calc($details_top_position - 112px);
+      display: block;
       content: attr(data-console);
       font-size: 12px;
       text-align: left;
@@ -56,8 +42,6 @@ $details_top_position: 45%;
       color: transparent;
     }
     &::after {
-      position: absolute;
-      top: calc($details_top_position - 100px);
       content: attr(data-path);
       font-size: 15px;
       line-height: 1;
@@ -67,10 +51,36 @@ $details_top_position: 45%;
       height: 30px;
       width: 100%;
       text-align: left;
-      color: #35b3ff;
+      background: #ffba08;
+      background: linear-gradient(0deg, #fffc00 51%, #9d73ff 50%);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  .course {
+    position: relative;
+    left: 0;
+    width: calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 0 0 20px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      content: attr(data-prompt);
+      font-size: 16px;
+      line-height: 1;
+      white-space: break-spaces;
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      color: #ffdc00;
     }
     .course-details-container {
-      position: absolute;
       top: $details_top_position;
       width: calc(100% - 20px);
     }
@@ -79,7 +89,7 @@ $details_top_position: 45%;
       align-items: center;
       height: 72px;
       padding: 4px 0 8px 0;
-      border: dashed 2px purple;
+      border: dashed 2px #9d73ff;
       border-left: none;
       border-right: none;
       margin-top: 0;
@@ -89,7 +99,7 @@ $details_top_position: 45%;
         color: white;
         font-size: 24px;
         margin: 0;
-        padding: 0 8px;
+        padding: 0;
         border: none;
         border-top: 2px dashed purple;
         border: none;
@@ -99,9 +109,6 @@ $details_top_position: 45%;
       margin: 0;
       padding: 0;
       &.course-count {
-        position: absolute;
-        top: calc($details_top_position - 36px);
-        right: 0;
         width: calc(100% - 20px);
         display: flex;
         justify-content: end;
@@ -109,19 +116,6 @@ $details_top_position: 45%;
         text-align: right;
         color: #bababa;
         line-height: 32px;
-        &::before {
-          position: absolute;
-          top: calc($details_top_position - 48px);
-          left: 0;
-          content: attr(data-prompt);
-          font-size: 16px;
-          line-height: 1;
-          white-space: break-spaces;
-          display: inline-block;
-          width: 100%;
-          text-align: left;
-          color: #ffdc00;
-        }
         a,
         span {
           width: auto;
@@ -134,7 +128,7 @@ $details_top_position: 45%;
         }
       }
       &.course-details {
-        padding: 8px 0 0 0;
+        padding: 0;
         margin-top: 8px;
         font-size: 18px;
         br {
@@ -171,9 +165,9 @@ $details_top_position: 45%;
         }
       }
       em {
-        color: white;
+        color: #9d73ff;
         font-style: normal;
-        margin-bottom: 12px;
+        margin-bottom: 2px;
         &::after {
           content: '220ms';
           margin-right: 8px;
@@ -195,14 +189,11 @@ $details_top_position: 45%;
         font-size: 15px;
         display: block;
         width: 100%;
-        text-align: center;
-        margin-top: 16px;
-        padding-top: 4px;
-        border-top: 2px dashed purple;
+        padding-bottom: 8px;
         a {
           display: inline-block;
-          font-size: 20px;
-          padding: 12px;
+          font-size: 16px;
+          padding-left: 0;
           font-weight: 700;
           background-color: transparent;
         }

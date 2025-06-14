@@ -12,6 +12,7 @@ const optionDonut = {
       fontSize: 30,
       fontWeight: 'bold',
       color: 'white',
+      margin: 50,
     },
     left: 'center',
   },
@@ -20,7 +21,7 @@ const optionDonut = {
   },
   legend: {
     show: false,
-    top: '50%',
+    top: '60%',
     // left: 'center',
   },
   series: [
@@ -64,7 +65,7 @@ const optionDonut = {
         },
       ],
 
-      color: ['#33488490', '#3d205690'],
+      color: ['#33488490', '#9d73ff'],
     },
   ],
 }
@@ -136,7 +137,7 @@ const optionsHorizontalBar = {
       type: 'bar',
       data: [2, 5, 3, 8, 7, 6, 12, 9, 11, 10, 15, 14, 13, 16, 18, 20, 22],
       itemStyle: {
-        color: '#33488490',
+        color: '#9d73ff',
       },
       emphasis: {
         itemStyle: {
@@ -227,7 +228,7 @@ const optionsByAcademy = {
       },
       data: [8, 12, 7, 3, 5, 6, 4, 10, 9, 2, 11, 1, 13],
       itemStyle: {
-        color: '#33488490',
+        color: '#9d73ff',
       },
       emphasis: {
         itemStyle: {
