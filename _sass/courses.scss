@@ -1,6 +1,7 @@
 @include fontface('Consola', 'consola');
 
 $details_top_position: 45%;
+$border: 2px dashed #9d73ff;
 
 .the-server #courses {
   position: relative;
@@ -67,7 +68,7 @@ $details_top_position: 45%;
       height: 30px;
       width: 100%;
       text-align: left;
-      color: #35b3ff;
+      color: #00b6ff;
     }
     .course-details-container {
       position: absolute;
@@ -79,7 +80,7 @@ $details_top_position: 45%;
       align-items: center;
       height: 72px;
       padding: 4px 0 8px 0;
-      border: dashed 2px purple;
+      border: $border;
       border-left: none;
       border-right: none;
       margin-top: 0;
@@ -91,7 +92,6 @@ $details_top_position: 45%;
         margin: 0;
         padding: 0 8px;
         border: none;
-        border-top: 2px dashed purple;
         border: none;
       }
     }
@@ -120,7 +120,7 @@ $details_top_position: 45%;
           display: inline-block;
           width: 100%;
           text-align: left;
-          color: #ffdc00;
+          color: yellow;
         }
         a,
         span {
@@ -151,7 +151,7 @@ $details_top_position: 45%;
         display: flex;
         justify-content: space-between;
         text-align: left;
-        color: #ae00ff;
+        color: #9d73ff;
         width: 100%;
         &::after {
           content: '301kb rw-r--r';
@@ -198,7 +198,7 @@ $details_top_position: 45%;
         text-align: center;
         margin-top: 16px;
         padding-top: 4px;
-        border-top: 2px dashed purple;
+        border-top: $border;
         a {
           display: inline-block;
           font-size: 20px;
