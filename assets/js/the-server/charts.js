@@ -1,8 +1,32 @@
 import 'https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js'
 
-const chartDonut = echarts.init(document.getElementById('chartDonut'))
+const mainColorCharts = '#9d73ff'
 
-const optionDonut = {
+function createPattern(color = mainColorCharts) {
+  const canvas = document.createElement('canvas')
+  const ctx = canvas.getContext('2d')
+  const symbols = ['#', '@', '%', '=', '+', '*', '-', ':', '.', ' ']
+  const step = 14
+  canvas.width = 70
+  canvas.height = 70
+  ctx.fillStyle = color
+  ctx.font = `${step}px monospace`
+
+  for (let i = 0; i < canvas.height / step; i++) {
+    for (let j = 0; j < canvas.width / step; j++) {
+      const char = symbols[Math.floor(Math.random() * symbols.length)]
+      ctx.fillText(char, j * step, i * step + step) // Baseline correction for vertical alignment
+    }
+  }
+
+  return {
+    image: canvas,
+    repeat: 'repeat',
+  }
+}
+
+const allCoursesChart = echarts.init(document.getElementById('allCoursesChart'))
+const allCoursesOptions = {
   title: {
     text: 'All Courses',
     itemStyle: {
@@ -13,6 +37,8 @@ const optionDonut = {
       fontWeight: 'bold',
       color: 'white',
     },
+    top: 0,
+    padding: [0, 0, 40, 0],
     left: 'center',
   },
   tooltip: {
@@ -20,17 +46,22 @@ const optionDonut = {
   },
   legend: {
     show: false,
-    top: '50%',
-    // left: 'center',
+  },
+  grid: {
+    top: '20%',
+    left: '3%',
+    right: '4%',
+    bottom: '10%',
+    containLabel: true,
   },
   series: [
     {
       name: 'Courses',
       type: 'pie',
-      radius: ['30%', '100%'],
+      radius: ['40%', '90%'],
       avoidLabelOverlap: false,
       label: {
-        show: true,
+        show: false,
         position: 'center',
       },
       emphasis: {
@@ -38,6 +69,9 @@ const optionDonut = {
           show: true,
           fontSize: 40,
           fontWeight: 'bold',
+        },
+        itemStyle: {
+          color: mainColorCharts,
         },
       },
       labelLine: {
@@ -63,22 +97,17 @@ const optionDonut = {
           },
         },
       ],
-
-      color: ['#9d73ff70', '#9d73ff'],
+      color: [createPattern(`${mainColorCharts}70`), createPattern()],
     },
   ],
 }
-
-// Display the chart using the configuration items and data just specified.
-chartDonut.setOption(optionDonut)
+allCoursesChart.setOption(allCoursesOptions)
 // ---------------------------------------------------------
 
-const chartHorizontalBar = echarts.init(
-  document.getElementById('chartHorizontalBar')
+const coursesByYearChart = echarts.init(
+  document.getElementById('coursesByYearChart')
 )
-
-// Specify the configuration items and data for the chart
-const optionsHorizontalBar = {
+const coursesByYearOptions = {
   title: {
     text: 'Courses By Year',
     itemStyle: {
@@ -107,6 +136,9 @@ const optionsHorizontalBar = {
   xAxis: {
     type: 'value',
     boundaryGap: [0, 0.01],
+    splitLine: {
+      show: false,
+    },
   },
   yAxis: {
     type: 'category',
@@ -134,13 +166,15 @@ const optionsHorizontalBar = {
     {
       //   name: 'Courses by Year',
       type: 'bar',
+      barWidth: 20,
       data: [2, 5, 3, 8, 7, 6, 12, 9, 11, 10, 15, 14, 13, 16, 18, 20, 22],
       itemStyle: {
-        color: '#9d73ff',
+        // color: '#9d73ff',
+        color: createPattern(),
       },
       emphasis: {
         itemStyle: {
-          color: '#adfe0080',
+          color: mainColorCharts,
         },
       },
       link: {
@@ -151,16 +185,89 @@ const optionsHorizontalBar = {
     },
   ],
 }
+coursesByYearChart.setOption(coursesByYearOptions)
 
-// Display the chart using the configuration items and data just specified.
-chartHorizontalBar.setOption(optionsHorizontalBar)
+// const data = []
+// for (let i = 0; i < 10; ++i) {
+//   data.push(Math.round(Math.random() * 200))
+// }
+// const raceBar = {
+//   xAxis: {
+//     max: 'dataMax',
+//   },
+//   yAxis: {
+//     type: 'category',
+//     data: [
+//       'Linkedin Learning',
+//       'Coursera',
+//       'Udacity',
+//       'Codecademy',
+//       'Glbant University',
+//       'Udemy',
+//       'TutsPlus',
+//       'Microsoft Learn',
+//       'UNSW',
+//       'CTIC',
+//     ],
+//     inverse: true,
+//     animationDuration: 300,
+//     animationDurationUpdate: 300,
+//     max: 2, // only the largest 3 bars will be displayed
+//   },
+//   series: [
+//     {
+//       realtimeSort: true,
+//       name: 'X',
+//       type: 'bar',
+//       data: data,
+//       label: {
+//         show: true,
+//         position: 'right',
+//         valueAnimation: true,
+//       },
+//     },
+//   ],
+//   legend: {
+//     show: true,
+//   },
+//   animationDuration: 0,
+//   animationDurationUpdate: 3000,
+//   animationEasing: 'linear',
+//   animationEasingUpdate: 'linear',
+// }
+// function run() {
+//   for (var i = 0; i < data.length; ++i) {
+//     if (Math.random() > 0.9) {
+//       data[i] += Math.round(Math.random() * 2000)
+//     } else {
+//       data[i] += Math.round(Math.random() * 200)
+//     }
+//   }
+
+//   if (coursesByYearChart) {
+//     console.log('Updating coursesByYearChart with new data:', data)
+//     console.log(
+//       'Updating coursesByYearChart with new coursesByYearChart:',
+//       coursesByYearChart
+//     )
+//     coursesByYearChart.setOption(raceBar)
+//   }
+// }
+// setTimeout(function () {
+//   run()
+// }, 0)
+// setInterval(function () {
+//   run()
+// }, 1000)
+
+// coursesByYearChart.setOption(raceBar)
 
 // ---------------------------------------------------------
 
-const chartByAcademy = echarts.init(document.getElementById('chartByAcademy'))
-
-// Specify the configuration items and data for the chart
-const optionsByAcademy = {
+const coursesByAcademyChart = echarts.init(
+  document.getElementById('coursesByAcademyChart')
+)
+const coursesByAcademyOptions = {
   title: {
     text: 'Courses By Academy',
     itemStyle: {
@@ -180,9 +287,6 @@ const optionsByAcademy = {
     },
   },
   legend: {},
-  axisLine: {
-    show: false,
-  },
   grid: {
     left: '3%',
     right: '4%',
@@ -196,10 +300,6 @@ const optionsByAcademy = {
       fontSize: 14,
       color: 'white',
     },
-    lineStyle: {
-      opacity: 0,
-    },
-
     data: [
       'LinkedIn Learning',
       'Coursera',
@@ -212,25 +312,40 @@ const optionsByAcademy = {
       'UNSW',
       'CTIC',
     ],
+    inverse: true,
+    animationDuration: 300,
+    animationDurationUpdate: 300,
+    // max: 2, // only the largest 3 bars will be displayed
   },
   yAxis: {
     type: 'value',
     boundaryGap: [0, 0.01],
+    splitLine: {
+      show: false,
+    },
   },
   series: [
     {
       type: 'bar',
-      showBackground: true,
-      backgroundStyle: {
-        color: 'rgba(180, 180, 180, 0.2)',
-      },
-      data: [8, 12, 7, 3, 5, 6, 4, 10, 9, 2, 11, 1, 13],
+      barWidth: 10,
+      // realtimeSort: true,
+      showBackground: false,
+      // backgroundStyle: {
+      //   color: 'rgba(180, 180, 180, 0.2)',
+      // },
+      data: [8, 12, 7, 3, 5, 6, 4, 15, 9, 11],
+      // label: {
+      //   // show: true,
+      //   position: 'right',
+      //   // valueAnimation: true,
+      // },
       itemStyle: {
-        color: '#9d73ff',
+        // color: '#9d73ff',
+        color: createPattern(),
       },
       emphasis: {
         itemStyle: {
-          color: '#adfe0080',
+          color: mainColorCharts,
         },
       },
       link: {
@@ -241,6 +356,4 @@ const optionsByAcademy = {
     },
   ],
 }
-
-// Display the chart using the configuration items and data just specified.
-chartByAcademy.setOption(optionsByAcademy)
+coursesByAcademyChart.setOption(coursesByAcademyOptions)
