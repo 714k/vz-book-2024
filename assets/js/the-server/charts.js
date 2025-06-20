@@ -1,5 +1,39 @@
 import 'https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js'
 
+function generateRandomData(startYear, endYear, min = 1, max = 10) {
+  const data = []
+  for (let year = startYear; year <= endYear; year++) {
+    const value = Math.floor(Math.random() * (max - min + 1)) + min
+    data.push({ year, value })
+  }
+  return data
+}
+
+function generateGrowingData(startYear, endYear, startValue = 4, maxStep = 2) {
+  const data = []
+  let currentValue = startValue
+
+  for (let year = startYear; year <= endYear; year++) {
+    // Randomly increase value within a step range
+    currentValue += Math.floor(Math.random() * maxStep) + 1
+    data.push({ year, value: currentValue })
+  }
+
+  return data
+}
+
+function generateYears(start, end) {
+  const years = []
+  for (let year = start; year <= end; year++) {
+    years.push(year)
+  }
+  return years
+}
+
+const growingData = generateGrowingData(2009, 2025)
+const randomData = generateRandomData(2009, 2025)
+const data = generateYears('09', '25')
+
 const mainColorCharts = '#9d73ff'
 
 function createPattern(color = mainColorCharts) {
@@ -25,6 +59,13 @@ function createPattern(color = mainColorCharts) {
   }
 }
 
+const grid = {
+  left: '10px',
+  right: '10px',
+  bottom: '90px',
+  containLabel: true,
+}
+
 const allCoursesChart = echarts.init(document.getElementById('allCoursesChart'))
 const allCoursesOptions = {
   title: {
@@ -48,10 +89,10 @@ const allCoursesOptions = {
     show: false,
   },
   grid: {
-    top: '20%',
-    left: '3%',
-    right: '4%',
-    bottom: '10%',
+    top: '10px',
+    left: '10px',
+    right: '10px',
+    bottom: '60px',
     containLabel: true,
   },
   series: [
@@ -127,12 +168,7 @@ const coursesByYearOptions = {
     },
   },
   legend: {},
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true,
-  },
+  grid,
   xAxis: {
     type: 'value',
     boundaryGap: [0, 0.01],
@@ -142,6 +178,9 @@ const coursesByYearOptions = {
   },
   yAxis: {
     type: 'category',
+    axisLabel: {
+      color: 'white',
+    },
     data: [
       '2009',
       '2010',
@@ -287,12 +326,7 @@ const coursesByAcademyOptions = {
     },
   },
   legend: {},
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true,
-  },
+  grid,
   xAxis: {
     type: 'category',
     axisLabel: {
@@ -327,7 +361,7 @@ const coursesByAcademyOptions = {
   series: [
     {
       type: 'bar',
-      barWidth: 10,
+      barWidth: 14,
       // realtimeSort: true,
       showBackground: false,
       // backgroundStyle: {
@@ -357,3 +391,96 @@ const coursesByAcademyOptions = {
   ],
 }
 coursesByAcademyChart.setOption(coursesByAcademyOptions)
+
+const chartByType = echarts.init(document.getElementById('chartByType'))
+
+const optionsByType = {
+  title: {
+    text: 'Courses By Year',
+    itemStyle: {
+      color: 'white',
+    },
+    textStyle: {
+      fontSize: 30,
+      fontWeight: 'bold',
+      color: 'white',
+    },
+    left: 'center',
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross',
+      label: {
+        backgroundColor: '#c80000',
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {},
+    },
+  },
+  grid,
+  xAxis: [
+    {
+      type: 'category',
+      boundaryGap: false,
+      axisTick: {
+        show: true,
+      },
+      axisLabel: {
+        color: 'white',
+      },
+      data,
+    },
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      axisTick: {
+        show: true,
+      },
+      splitLine: {
+        show: false,
+      },
+    },
+  ],
+  series: [
+    {
+      name: 'In person',
+      type: 'line',
+      stack: 'Total',
+      areaStyle: {
+        color: createPattern(mainColorCharts),
+      },
+      itemStyle: {
+        color: mainColorCharts,
+      },
+      emphasis: {
+        focus: 'series',
+      },
+      data: randomData,
+    },
+    {
+      name: 'Online',
+      type: 'line',
+      stack: 'Total',
+      areaStyle: {
+        color: createPattern(mainColorCharts),
+      },
+      itemStyle: {
+        color: mainColorCharts,
+      },
+      emphasis: {
+        focus: 'series',
+      },
+      data: growingData,
+    },
+  ],
+}
+
+chartByType.setOption(optionsByType)
