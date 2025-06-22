@@ -210,3 +210,18 @@ $border: 2px dashed #9d73ff;
     }
   }
 }
+
+.echarts-tooltip {
+  min-width: 70px;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 20px 20px !important;
+  background-color: #1d002f !important;
+  div div,
+  div div span {
+    color: white !important;
+  }
+  div div span:first-child {
+    background-color: #9d73ff !important;
+  }
+}
