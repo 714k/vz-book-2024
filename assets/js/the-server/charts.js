@@ -32,7 +32,7 @@ function generateYears(start, end) {
 
 const growingData = generateGrowingData(2009, 2025)
 const randomData = generateRandomData(2009, 2025)
-const data = generateYears('09', '25')
+const data = generateYears('2009', '2025')
 
 const mainColorCharts = '#9d73ff'
 
@@ -66,6 +66,18 @@ const grid = {
   containLabel: true,
 }
 
+const titleStyle = {
+  fontSize: 30,
+  fontWeight: 400,
+  fontFamily: '"Consola", "Courier New", Courier, monospace',
+  color: 'white',
+}
+
+const tooltip = {
+  renderMode: 'html',
+  className: 'echarts-tooltip',
+}
+
 const allCoursesChart = echarts.init(document.getElementById('allCoursesChart'))
 const allCoursesOptions = {
   title: {
@@ -73,12 +85,8 @@ const allCoursesOptions = {
     itemStyle: {
       color: 'white',
     },
-    textStyle: {
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white',
-    },
     top: 0,
+    textStyle: titleStyle,
     padding: [0, 0, 40, 0],
     left: 'center',
   },
@@ -88,22 +96,22 @@ const allCoursesOptions = {
   legend: {
     show: false,
   },
-  grid: {
-    top: '10px',
-    left: '10px',
-    right: '10px',
-    bottom: '60px',
-    containLabel: true,
-  },
+  tooltip,
+  grid,
   series: [
     {
       name: 'Courses',
       type: 'pie',
-      radius: ['40%', '90%'],
+      radius: ['30%', '90%'],
+      center: ['50%', '220px'],
       avoidLabelOverlap: false,
       label: {
         show: false,
         position: 'center',
+        textShadowColor: 'black',
+        textShadowBlur: 12,
+        textShadowOffsetX: -6,
+        textShadowOffsetY: -6,
       },
       emphasis: {
         label: {
@@ -116,7 +124,7 @@ const allCoursesOptions = {
         },
       },
       labelLine: {
-        show: true,
+        show: false,
       },
       data: [
         {
@@ -129,6 +137,7 @@ const allCoursesOptions = {
         {
           value: 54,
           name: 'Completed',
+          url: '#course-1',
           label: {
             name: 'Completed',
             color: '#fff',
@@ -143,6 +152,15 @@ const allCoursesOptions = {
   ],
 }
 allCoursesChart.setOption(allCoursesOptions)
+
+allCoursesChart.on('doubleclick', function (params) {
+  const { url } = params.data
+  // console.log('url', url)
+  if (url) {
+    window.open(url, '_self')
+  }
+})
+
 // ---------------------------------------------------------
 
 const coursesByYearChart = echarts.init(
@@ -154,11 +172,7 @@ const coursesByYearOptions = {
     itemStyle: {
       color: 'white',
     },
-    textStyle: {
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white',
-    },
+    textStyle: titleStyle,
     left: 'center',
   },
   tooltip: {
@@ -166,6 +180,7 @@ const coursesByYearOptions = {
     axisPointer: {
       type: 'shadow',
     },
+    ...tooltip,
   },
   legend: {},
   grid,
@@ -312,11 +327,7 @@ const coursesByAcademyOptions = {
     itemStyle: {
       color: 'white',
     },
-    textStyle: {
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white',
-    },
+    textStyle: titleStyle,
     left: 'center',
   },
   tooltip: {
@@ -324,6 +335,7 @@ const coursesByAcademyOptions = {
     axisPointer: {
       type: 'shadow',
     },
+    ...tooltip,
   },
   legend: {},
   grid,
@@ -396,15 +408,11 @@ const chartByType = echarts.init(document.getElementById('chartByType'))
 
 const optionsByType = {
   title: {
-    text: 'Courses By Year',
+    text: 'Courses By Type',
     itemStyle: {
       color: 'white',
     },
-    textStyle: {
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white',
-    },
+    textStyle: titleStyle,
     left: 'center',
   },
   tooltip: {
@@ -415,6 +423,7 @@ const optionsByType = {
         backgroundColor: '#c80000',
       },
     },
+    ...tooltip,
   },
   legend: {
     show: false,
@@ -434,6 +443,8 @@ const optionsByType = {
       },
       axisLabel: {
         color: 'white',
+        align: 'right',
+        ellipsis: 'truncate',
       },
       data,
     },
@@ -461,9 +472,13 @@ const optionsByType = {
         color: mainColorCharts,
       },
       emphasis: {
-        focus: 'series',
+        focus: 'self',
+        areaStyle: {
+          color: mainColorCharts,
+        },
       },
       data: randomData,
+      colorBy: 'series',
     },
     {
       name: 'Online',
@@ -476,7 +491,10 @@ const optionsByType = {
         color: mainColorCharts,
       },
       emphasis: {
-        focus: 'series',
+        focus: 'self',
+        areaStyle: {
+          color: mainColorCharts,
+        },
       },
       data: growingData,
     },
