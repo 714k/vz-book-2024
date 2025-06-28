@@ -5,6 +5,9 @@
 @include fontface('Mr Robot', 'mr-robot');
 @include fontface('Consola', 'consola');
 
+$timingIn: 0.5s;
+$timingOut: 1s;
+
 @mixin tocImages($href, $imgNumber) {
   &[href='#{$href}'] {
     background-image: url('/assets/images/info/server/server-toc-0#{$imgNumber}-bg.jpg');
@@ -14,10 +17,10 @@
   }
 }
 
-@mixin transitionAccordion($opacity, $translate) {
+@mixin transitionAccordion($opacity: 0, $translate: 0vh, $timing: 0.75) {
   opacity: $opacity;
   transform: translateY($translate);
-  transition: all 0.5s;
+  transition: all $timing ease-out;
 }
 
 .the-server {
@@ -45,10 +48,11 @@
     padding: 0;
     bottom: auto;
     top: 100vh;
+    transition: all $timingOut ease-out;
     ul {
       top: 0;
       left: 0;
-      bottom: 0;
+      bottom: auto;
       width: 100%;
       height: 100%;
       max-height: 100vh;
@@ -56,6 +60,7 @@
       padding: 0;
       opacity: 1;
       background-color: transparent;
+      transition: none;
       li {
         width: 25%;
         height: 100vh;
@@ -79,19 +84,19 @@
             font-family: 'Mr Robot', 'Segoe UI', Tahoma, Geneva, Verdana,
               sans-serif;
             font-size: 54px;
-            margin-top: 80px;
+            margin-top: 40px;
           }
           &[href='#profile'] {
-            @include transitionAccordion(0, 300vh);
+            @include transitionAccordion(0, 300vh, $timingOut);
           }
           &[href='#professional-interest'] {
-            @include transitionAccordion(0, -200vh);
+            @include transitionAccordion(0, -200vh, $timingOut);
           }
           &[href='#academic-formation'] {
-            @include transitionAccordion(0, 500vh);
+            @include transitionAccordion(0, 500vh, $timingOut);
           }
           &[href='#courses'] {
-            @include transitionAccordion(0, -400vh);
+            @include transitionAccordion(0, -400vh, $timingOut);
           }
           &:hover,
           &.active {
@@ -105,37 +110,41 @@
       display: none;
     }
     &:hover {
-      top: 0;
+      bottom: auto;
+      top: 0vh;
+      transition: all $timingIn ease-out;
       li {
         a {
           &[href='#profile'] {
-            @include transitionAccordion(1, 0vh);
+            @include transitionAccordion(1, 0vh, $timingIn);
           }
           &[href='#professional-interest'] {
-            @include transitionAccordion(1, 0vh);
+            @include transitionAccordion(1, 0vh, $timingIn);
           }
           &[href='#academic-formation'] {
-            @include transitionAccordion(1, 0vh);
+            @include transitionAccordion(1, 0vh, $timingIn);
           }
           &[href='#courses'] {
-            @include transitionAccordion(1, 0vh);
+            @include transitionAccordion(1, 0vh, $timingIn);
           }
         }
       }
       + .close-toc {
         z-index: 1000;
         bottom: 75vh;
-        background-color: black;
+        // background-color: black;
         &::before {
-          bottom: calc(75vh + 4px);
+          bottom: calc(75vh - 2px);
           z-index: 1001;
           width: 40px;
           height: 40px;
-          background-image: url('/assets/images/info/server/server-toc-close-icon.png');
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 100%;
-          mask-image: none;
+          // transform: rotate(15deg);
+          // background-image: url('/assets/images/info/server/server-toc-close-icon.png');
+          // background-repeat: no-repeat;
+          // background-position: center center;
+          // background-size: 100%;
+          mask-image: url(/assets/svg/plus-icon.svg);
+          transition: all 0.5s;
         }
       }
     }

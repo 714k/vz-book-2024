@@ -87,7 +87,7 @@ const allCoursesOptions = {
     },
     top: 0,
     textStyle: titleStyle,
-    padding: [0, 0, 40, 0],
+    padding: [0, 0, 0, 0],
     left: 'center',
   },
   tooltip: {
@@ -103,7 +103,7 @@ const allCoursesOptions = {
       name: 'Courses',
       type: 'pie',
       radius: ['30%', '90%'],
-      center: ['50%', '220px'],
+      center: ['50%', '55%'],
       avoidLabelOverlap: false,
       label: {
         show: false,
@@ -180,6 +180,10 @@ const coursesByYearOptions = {
     axisPointer: {
       type: 'shadow',
     },
+    formatter: ([params]) => {
+      const { axisValueLabel, marker, value } = params
+      return `<div class="axis-value-label">${axisValueLabel}</div><div class="value-container"><span class="marker">${marker}</span> <span><strong>${value}</strong> courses</span></div>`
+    },
     ...tooltip,
   },
   legend: {},
@@ -220,7 +224,7 @@ const coursesByYearOptions = {
     {
       //   name: 'Courses by Year',
       type: 'bar',
-      barWidth: 20,
+      barWidth: '50%',
       data: [2, 5, 3, 8, 7, 6, 12, 9, 11, 10, 15, 14, 13, 16, 18, 20, 22],
       itemStyle: {
         // color: '#9d73ff',
@@ -317,6 +321,18 @@ coursesByYearChart.setOption(coursesByYearOptions)
 // coursesByYearChart.setOption(raceBar)
 
 // ---------------------------------------------------------
+const byAcademyLabels = {
+  'LinkedIn Learning': 'LinkedIn Learning',
+  Coursera: 'Coursera',
+  Udacity: 'Udacity',
+  Codecademy: 'Codecademy',
+  Udemy: 'Udemy',
+  'Globant University': 'Globant University',
+  TutsPlus: 'TutsPlus',
+  'Microsoft Learn': 'Microsoft Learn',
+  UNSW: 'University of New South Wales',
+  CTIC: 'CTIC',
+}
 
 const coursesByAcademyChart = echarts.init(
   document.getElementById('coursesByAcademyChart')
@@ -335,6 +351,15 @@ const coursesByAcademyOptions = {
     axisPointer: {
       type: 'shadow',
     },
+    formatter: ([{ name, marker, value }]) => {
+      let courseText = 'course'
+
+      if (value > 1) {
+        courseText = 'courses'
+      }
+
+      return `<div class="axis-value-label">${byAcademyLabels[name]}</div><div class="value-container"><span class="marker">${marker}</span> <span><strong>${value}</strong> ${courseText}</span></div>`
+    },
     ...tooltip,
   },
   legend: {},
@@ -350,13 +375,13 @@ const coursesByAcademyOptions = {
       'LinkedIn Learning',
       'Coursera',
       'Udacity',
+      'CTIC',
       'Codecademy',
       'Udemy',
       'Globant University',
       'TutsPlus',
       'Microsoft Learn',
       'UNSW',
-      'CTIC',
     ],
     inverse: true,
     animationDuration: 300,
@@ -373,13 +398,13 @@ const coursesByAcademyOptions = {
   series: [
     {
       type: 'bar',
-      barWidth: 14,
+      barWidth: '50%',
       // realtimeSort: true,
       showBackground: false,
       // backgroundStyle: {
       //   color: 'rgba(180, 180, 180, 0.2)',
       // },
-      data: [8, 12, 7, 3, 5, 6, 4, 15, 9, 11],
+      data: [8, 12, 7, 1, 5, 6, 4, 15, 9, 11],
       // label: {
       //   // show: true,
       //   position: 'right',
@@ -429,9 +454,10 @@ const optionsByType = {
     show: false,
   },
   toolbox: {
-    feature: {
-      saveAsImage: {},
-    },
+    // feature: {
+    //   saveAsImage: {},
+    //   dataZoom: {},
+    // },
   },
   grid,
   xAxis: [
@@ -472,13 +498,12 @@ const optionsByType = {
         color: mainColorCharts,
       },
       emphasis: {
-        focus: 'self',
+        focus: 'series',
         areaStyle: {
           color: mainColorCharts,
         },
       },
       data: randomData,
-      colorBy: 'series',
     },
     {
       name: 'Online',
@@ -491,7 +516,7 @@ const optionsByType = {
         color: mainColorCharts,
       },
       emphasis: {
-        focus: 'self',
+        focus: 'series',
         areaStyle: {
           color: mainColorCharts,
         },

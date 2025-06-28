@@ -212,7 +212,8 @@ $border: 2px dashed #9d73ff;
 }
 
 .echarts-tooltip {
-  min-width: 70px;
+  min-width: 98px;
+  // max-width: 180px;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 20px 20px !important;
@@ -222,6 +223,15 @@ $border: 2px dashed #9d73ff;
     color: white !important;
   }
   div div span:first-child {
+    background-color: #9d73ff !important;
+  }
+  .axis-value-label {
+    color: white;
+  }
+  .value-container {
+    color: white;
+  }
+  .marker span {
     background-color: #9d73ff !important;
   }
 }
