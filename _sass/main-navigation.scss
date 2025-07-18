@@ -1,6 +1,18 @@
-#menuToggle {
-  display: none;
-  &:checked ~ .navigation-wrapper {
+.menu {
+  display: block;
+  width: 1.5rem;
+  height: 1rem;
+  position: fixed;
+  padding: 0.5rem;
+  z-index: 120;
+  top: 1.3rem;
+  right: 1rem;
+  background-color: red;
+  &:hover {
+    display: none;
+  }
+  // display: none;
+  &:hover ~ .navigation-wrapper {
     left: 0;
     background-color: rgb(0 0 0 / 0.5);
     backdrop-filter: blur(5px);
@@ -10,7 +22,8 @@
       transition: all 0.5s;
     }
   }
-  &:checked ~ .menu-icon {
+  &:hover ~ .close-menu {
+    animation: 5s infinite show-close-menu;
     &::before {
       transform: rotate(135deg) translateX(8px);
       animation: 0.5s linear bar1;
@@ -24,18 +37,33 @@
   }
 }
 
-.menu-icon {
+.close-menu {
   width: 1.5rem;
   height: 1rem;
   position: fixed;
   padding: 0.5rem;
-  z-index: 101;
+  // z-index: 110;
   top: 1.3em;
   right: 1em;
   cursor: pointer;
   mix-blend-mode: exclusion;
   transform: scale(1.25);
   transition: all 0.3s ease-in-out;
+  &:hover ~ .navigation-wrapper {
+    left: 150vw;
+    background-color: rgb(0 0 0 / 0);
+    backdrop-filter: none;
+    transition: all 0.5s;
+    .main-navigation {
+      transform: perspective(800px) rotateY(90deg);
+      transition: all 0.5s;
+    }
+  }
+  &:hover ~ .menu {
+    z-index: 100;
+    display: none;
+    opacity: 0;
+  }
   &::before,
   &::after {
     background-color: var(--color-primary);
@@ -55,6 +83,15 @@
     bottom: 0.5rem;
     width: 1.5rem;
     left: 0.5rem;
+  }
+}
+
+@keyframes show-close-menu {
+  0% {
+    z-index: 110;
+  }
+  100% {
+    z-index: 130;
   }
 }
 
