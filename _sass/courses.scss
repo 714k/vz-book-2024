@@ -1,7 +1,14 @@
 @include fontface('Consola', 'consola');
 
 $details_top_position: 45%;
-$border: 2px dashed #9d73ff;
+$accent_color: #ff9b00;
+$text_shadow_color: #ff9b00;
+$border: 2px dashed $accent_color;
+
+@mixin retro_orange {
+  color: $accent_color;
+  text-shadow: 0 0 12px $text_shadow_color;
+}
 
 .the-server #courses {
   position: relative;
@@ -10,7 +17,7 @@ $border: 2px dashed #9d73ff;
   padding: 0;
   margin: 0;
   font-family: 'Consola', 'Courier New', Courier, monospace;
-  background-image: url(/assets/images/info/server/courses/background01.jpg);
+  background-image: url(/assets/images/info/server/courses/background-courses.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -20,7 +27,7 @@ $border: 2px dashed #9d73ff;
   .course-presentation {
     font-size: 20px;
     padding: 80px 20px 0px 20px;
-    color: #95a6c7;
+    @include retro_orange;
     position: sticky;
     z-index: 2;
     top: 80px;
@@ -45,16 +52,7 @@ $border: 2px dashed #9d73ff;
       font-size: 12px;
       text-align: left;
       font-weight: 700;
-      background: rgb(255, 108, 0);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 108, 0, 1) 0%,
-        rgba(255, 108, 0, 1) 18%,
-        rgba(66, 81, 93, 1) 18%,
-        rgba(66, 81, 93, 1) 100%
-      );
-      background-clip: text;
-      color: transparent;
+      @include retro_orange;
     }
     &::after {
       position: absolute;
@@ -68,7 +66,7 @@ $border: 2px dashed #9d73ff;
       height: 30px;
       width: 100%;
       text-align: left;
-      color: #00b6ff;
+      @include retro_orange;
     }
     .course-details-container {
       position: absolute;
@@ -87,7 +85,8 @@ $border: 2px dashed #9d73ff;
       > span {
         display: flex;
         font-family: 'Consola', 'Courier New', Courier, monospace;
-        color: white;
+        @include retro_orange;
+        // color: white;
         font-size: 24px;
         margin: 0;
         padding: 0 8px;
@@ -107,7 +106,7 @@ $border: 2px dashed #9d73ff;
         justify-content: end;
         font-size: 18px;
         text-align: right;
-        color: #bababa;
+        @include retro_orange;
         line-height: 32px;
         &::before {
           position: absolute;
@@ -120,7 +119,7 @@ $border: 2px dashed #9d73ff;
           display: inline-block;
           width: 100%;
           text-align: left;
-          color: yellow;
+          @include retro_orange;
         }
         a,
         span {
@@ -131,6 +130,7 @@ $border: 2px dashed #9d73ff;
           font-size: 32px;
           line-height: 32px;
           background-color: transparent;
+          color: $accent_color;
         }
       }
       &.course-details {
@@ -151,12 +151,12 @@ $border: 2px dashed #9d73ff;
         display: flex;
         justify-content: space-between;
         text-align: left;
-        color: #9d73ff;
+        @include retro_orange;
         width: 100%;
         &::after {
           content: '301kb rw-r--r';
           margin-right: 8px;
-          color: #7c6585;
+          @include retro_orange;
           display: inline;
           font-weight: 400;
         }
@@ -171,13 +171,15 @@ $border: 2px dashed #9d73ff;
         }
       }
       em {
-        color: white;
+        @include retro_orange;
+        // color: white;
+
         font-style: normal;
         margin-bottom: 12px;
         &::after {
           content: '220ms';
           margin-right: 8px;
-          color: #7c6585;
+          @include retro_orange;
           display: flex;
           font-weight: 400;
         }
@@ -205,6 +207,7 @@ $border: 2px dashed #9d73ff;
           padding: 12px;
           font-weight: 700;
           background-color: transparent;
+          color: $accent_color;
         }
       }
     }
@@ -217,21 +220,21 @@ $border: 2px dashed #9d73ff;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 20px 20px !important;
-  background-color: #1d002f !important;
+  background-color: $accent_color !important;
   div div,
   div div span {
-    color: white !important;
+    color: #794900 !important;
   }
   div div span:first-child {
-    background-color: #9d73ff !important;
+    background-color: #5b3600 !important;
   }
   .axis-value-label {
-    color: white;
+    color: #794900;
   }
   .value-container {
-    color: white;
+    color: #794900;
   }
   .marker span {
-    background-color: #9d73ff !important;
+    background-color: #5b3600 !important;
   }
 }
