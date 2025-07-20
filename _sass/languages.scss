@@ -1,187 +1,204 @@
+@include fontface('Cascadia Mono', 'cascadia-mono');
+
+$retro_color: #ff8400;
+
 @mixin columns {
   display: inline-block;
-  margin-right: 16px;
-  padding: 8px 0;
+  margin-right: 8px;
+  padding: 4px 0;
   text-align: left;
-  text-indent: 16px;
   text-transform: uppercase;
   font-weight: normal;
 }
 
+@mixin retroColor {
+  color: $retro_color;
+  text-shadow: 0 0 20px #ff8400, 0 0 5px #ff8400, 0 0 10px #ff8400;
+}
+
 #languages {
-  background-image: url(/assets/images/info/fixer/fixer-languages-bg.jpg);
+  background-image: url(/assets/images/info/fixer/fixer-languages-mobile.jpg);
   background-position: top center;
   background-size: cover;
+  font-family: 'Cascadia Mono', monospace;
   h2::after {
     background-position: -1763px -84px;
   }
   table {
-    margin-top: 20px;
+    margin: 20px;
     width: 100%;
-    color: #72fe00;
+    @include retroColor();
     &::before {
       content: 'VMware ESX Server 3 Kernel 2.21-3.Elvmnix on an i686 Last login: Mon Sep 3 10:53 on ttypes 714k:~ tlak alias Lang="cd ~/Depurador/Lenguajes/" 714k:~ tlak try to brute-force valid credentials for Lang tlakuilo:~ tlak show --all Lang ๏[ ≖‿•ิ ] ✌';
-      color: #72fe00;
-      font-size: 10px;
+      @include retroColor();
+      font-size: 13px;
       display: inline-block;
-      width: 80%;
-      padding: 0 20px 30px 20px;
-      text-shadow: 0 0 5px #72fe00;
+      margin: 40px 50px 60px 0;
     }
     thead {
       display: block;
       tr {
         display: none;
+        background-image: none;
         &:first-child {
           display: block;
+          width: calc(100% - 40px);
+        }
+        &::before,
+        &::after {
+          content: '==============================================================================================================================';
+          text-align: center;
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          color: $retro_color;
         }
         th {
           @include columns();
-          padding-bottom: 16px;
-          background-image: partials.$sprite;
-          background-position: 16px 36px;
-          background-repeat: no-repeat;
+          @include retroColor();
+          padding: 4px 0;
           &.type,
           &.use,
           &.level {
             display: none;
           }
           &.name {
-            width: 45%;
+            width: 52%;
           }
           &.years {
-            width: 20%;
+            width: 17%;
           }
           &.percentage {
-            width: 15%;
+            width: 10%;
           }
         }
       }
     }
     tbody {
       width: 100%;
+      font-size: 18px;
       display: block;
+      &::after {
+        content: '-------------------------------------------------------------------------------------';
+        text-align: center;
+        display: block;
+        width: calc(100% - 40px);
+        white-space: nowrap;
+        overflow: hidden;
+      }
       tr {
         display: block;
-        &:nth-child(2n) {
-          &:hover {
-            background-color: #72fe00;
-          }
-        }
-        &:hover {
-          background-color: #72fe00;
-          color: black;
-          cursor: pointer;
-        }
-        &.htmls {
-          &::after {
-            content: '';
-            top: 100px;
-            background-color: black;
-            color: greenyellow;
-            height: 100vh;
-            display: none;
-            left: 0;
-            width: 100%;
-          }
-         &:hover {
-          display: block;
-          transform: translateY(-36px);
-          cursor: default;
-          background-color: black;
-          color: #72fe00;
-          &::after {
-            display: block;
-          }
-          & ~ tr {
-            display: none;
-          } 
-         } 
-        }
+        background-image: none;
+        position: relative;
         td {
           @include columns();
+          &::before {
+            content: '|';
+          }
           &.type,
           &.use,
           &.level {
             display: none;
           }
           &.name {
-            width: 45%;
+            width: 47%;
           }
           &.years {
-            width: 20%;
-          }
-          &.percentage {
             width: 15%;
           }
-          
+          &.percentage {
+            width: 19%;
+          }
         }
-      }
-    }
-    tr {
-      background-image: none;
-      position: relative;
-      &:hover {
-        position:sticky;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        background-image: url(/assets/images/info/fixer/fixer-languages-bg.jpg);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        td {
-          &.name,
-          &.type,
-          &.years,
-          &.use,
-          &.level,
-          &.percentage {
-            display: block;
-            font-size: 22px;
-            width: 90%;
-            margin: 12px 20px;
-            text-shadow: 0 0 5px white;
-            color: white;
-            abbr {
-              padding-top: 8px;
-              padding-bottom: 4px;
-              display: inline-block;
-              text-indent: 0;
-            }
-            &::before {
-              content: 'Name of the language';
-              font-size: 16px;
+        &:hover {
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: calc(100% - 70px);
+          padding: 10px 0 20px 20px;
+          border: dashed 4px $retro_color;
+          box-shadow: 0 0 70px $retro_color, 0 0 20px $retro_color;
+          background-color: transparent;
+          background-position: center;
+          background-size: cover;
+          background-attachment: fixed;
+          ~ tr {
+            display: none;
+          }
+          td {
+            &.name,
+            &.type,
+            &.years,
+            &.use,
+            &.level,
+            &.percentage {
               display: block;
-              text-indent: 0;
-              text-transform: capitalize;
-              padding-bottom: 8px;
-              border-bottom: dashed 2px white;
-              color: red;
-              text-shadow: 0 0 5px red;
+              font-size: 30px;
+              width: 90%;
+              margin: 12px 0px;
+              word-break: break-word;
+              overflow-wrap: break-word;
+              line-height: 1;
+              color: $retro_color;
+              text-shadow: none;
+              abbr {
+                padding-top: 8px;
+                padding-bottom: 4px;
+                display: inline-block;
+                text-indent: 0;
+              }
+              &::before {
+                content: '= Name of the language =';
+                font-size: 16px;
+                display: block;
+                text-indent: 0;
+                text-transform: capitalize;
+                color: $retro_color;
+                text-shadow: none;
+              }
+            }
+            &.type,
+            &.years,
+            &.use,
+            &.level,
+            &.percentage {
+              &::before {
+                // content: '\A***************';
+                white-space: pre-wrap;
+                // @include retroColor();
+              }
+            }
+            &.type {
+              &::before {
+                content: '= Type =';
+              }
+            }
+            &.years {
+              &::before {
+                content: '= Time using it =';
+              }
+              &::after {
+                content: 'years';
+                // white-space: pre-wrap;
+              }
+            }
+            &.use {
+              &::before {
+                content: '= Utilization =';
+              }
+            }
+            &.level {
+              &::before {
+                content: '= Level of mastery =';
+              }
+            }
+            &.percentage {
+              &::before {
+                content: '= Skills percentage =';
+              }
             }
           }
-          &.type,
-          &.years,
-          &.use,
-          &.level,
-          &.percentage {
-            &::after {
-              content: none;
-            }
-          }
-          &.type::before { content: 'Type'}
-          &.years {
-            &::before {
-              content: 'Time using it'
-            }
-            &::after {
-              content: ' years';
-            }
-          }
-          &.use::before { content: 'Utilization'}
-          &.level::before { content: 'Level of mastery'}
-          &.percentage::before { content: 'Skills percentage'}
         }
       }
     }
