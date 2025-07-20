@@ -34,7 +34,7 @@ const growingData = generateGrowingData(2009, 2025)
 const randomData = generateRandomData(2009, 2025)
 const data = generateYears('2009', '2025')
 
-const mainColorCharts = '#ff9b00'
+const mainColorCharts = '#9d73ff'
 
 function createPattern(color = mainColorCharts) {
   const canvas = document.createElement('canvas')
@@ -70,7 +70,7 @@ const titleStyle = {
   fontSize: 30,
   fontWeight: 400,
   fontFamily: '"Consola", "Courier New", Courier, monospace',
-  color: mainColorCharts,
+  color: 'white',
 }
 
 const tooltip = {
@@ -83,7 +83,7 @@ const allCoursesOptions = {
   title: {
     text: 'All Courses',
     itemStyle: {
-      color: mainColorCharts,
+      color: 'white',
     },
     top: 0,
     textStyle: titleStyle,
@@ -170,7 +170,7 @@ const coursesByYearOptions = {
   title: {
     text: 'Courses By Year',
     itemStyle: {
-      color: mainColorCharts,
+      color: 'white',
     },
     textStyle: titleStyle,
     left: 'center',
@@ -198,7 +198,7 @@ const coursesByYearOptions = {
   yAxis: {
     type: 'category',
     axisLabel: {
-      color: mainColorCharts,
+      color: 'white',
     },
     data: [
       '2009',
@@ -341,7 +341,7 @@ const coursesByAcademyOptions = {
   title: {
     text: 'Courses By Academy',
     itemStyle: {
-      color: mainColorCharts,
+      color: 'white',
     },
     textStyle: titleStyle,
     left: 'center',
@@ -369,7 +369,7 @@ const coursesByAcademyOptions = {
     axisLabel: {
       rotate: 90,
       fontSize: 14,
-      color: mainColorCharts,
+      color: 'white',
     },
     data: [
       'LinkedIn Learning',
@@ -435,7 +435,7 @@ const optionsByType = {
   title: {
     text: 'Courses By Type',
     itemStyle: {
-      color: mainColorCharts,
+      color: 'white',
     },
     textStyle: titleStyle,
     left: 'center',
@@ -468,7 +468,7 @@ const optionsByType = {
         show: true,
       },
       axisLabel: {
-        color: mainColorCharts,
+        color: 'white',
         align: 'right',
         ellipsis: 'truncate',
       },

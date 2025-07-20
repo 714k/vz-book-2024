@@ -1,14 +1,7 @@
 @include fontface('Consola', 'consola');
 
 $details_top_position: 45%;
-$accent_color: #ff9b00;
-$text_shadow_color: #ff9b00;
-$border: 2px dashed $accent_color;
-
-@mixin retro_orange {
-  color: $accent_color;
-  text-shadow: 0 0 12px $text_shadow_color;
-}
+$border: 2px dashed #9d73ff;
 
 .the-server #courses {
   position: relative;
@@ -17,7 +10,7 @@ $border: 2px dashed $accent_color;
   padding: 0;
   margin: 0;
   font-family: 'Consola', 'Courier New', Courier, monospace;
-  background-image: url(/assets/images/info/server/courses/background-courses.jpg);
+  background-image: url(/assets/images/info/server/courses/background01.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -27,7 +20,7 @@ $border: 2px dashed $accent_color;
   .course-presentation {
     font-size: 20px;
     padding: 80px 20px 0px 20px;
-    @include retro_orange;
+    color: #95a6c7;
     position: sticky;
     z-index: 2;
     top: 80px;
@@ -52,7 +45,16 @@ $border: 2px dashed $accent_color;
       font-size: 12px;
       text-align: left;
       font-weight: 700;
-      @include retro_orange;
+      background: rgb(255, 108, 0);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 108, 0, 1) 0%,
+        rgba(255, 108, 0, 1) 18%,
+        rgba(66, 81, 93, 1) 18%,
+        rgba(66, 81, 93, 1) 100%
+      );
+      background-clip: text;
+      color: transparent;
     }
     &::after {
       position: absolute;
@@ -66,7 +68,7 @@ $border: 2px dashed $accent_color;
       height: 30px;
       width: 100%;
       text-align: left;
-      @include retro_orange;
+      color: #00b6ff;
     }
     .course-details-container {
       position: absolute;
@@ -85,8 +87,7 @@ $border: 2px dashed $accent_color;
       > span {
         display: flex;
         font-family: 'Consola', 'Courier New', Courier, monospace;
-        @include retro_orange;
-        // color: white;
+        color: white;
         font-size: 24px;
         margin: 0;
         padding: 0 8px;
@@ -106,7 +107,7 @@ $border: 2px dashed $accent_color;
         justify-content: end;
         font-size: 18px;
         text-align: right;
-        @include retro_orange;
+        color: #bababa;
         line-height: 32px;
         &::before {
           position: absolute;
@@ -119,7 +120,7 @@ $border: 2px dashed $accent_color;
           display: inline-block;
           width: 100%;
           text-align: left;
-          @include retro_orange;
+          color: yellow;
         }
         a,
         span {
@@ -130,7 +131,6 @@ $border: 2px dashed $accent_color;
           font-size: 32px;
           line-height: 32px;
           background-color: transparent;
-          color: $accent_color;
         }
       }
       &.course-details {
@@ -151,12 +151,12 @@ $border: 2px dashed $accent_color;
         display: flex;
         justify-content: space-between;
         text-align: left;
-        @include retro_orange;
+        color: #9d73ff;
         width: 100%;
         &::after {
           content: '301kb rw-r--r';
           margin-right: 8px;
-          @include retro_orange;
+          color: #7c6585;
           display: inline;
           font-weight: 400;
         }
@@ -171,15 +171,13 @@ $border: 2px dashed $accent_color;
         }
       }
       em {
-        @include retro_orange;
-        // color: white;
-
+        color: white;
         font-style: normal;
         margin-bottom: 12px;
         &::after {
           content: '220ms';
           margin-right: 8px;
-          @include retro_orange;
+          color: #7c6585;
           display: flex;
           font-weight: 400;
         }
@@ -207,7 +205,6 @@ $border: 2px dashed $accent_color;
           padding: 12px;
           font-weight: 700;
           background-color: transparent;
-          color: $accent_color;
         }
       }
     }
@@ -220,21 +217,21 @@ $border: 2px dashed $accent_color;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 20px 20px !important;
-  background-color: $accent_color !important;
+  background-color: #1d002f !important;
   div div,
   div div span {
-    color: #794900 !important;
+    color: white !important;
   }
   div div span:first-child {
-    background-color: #5b3600 !important;
+    background-color: #9d73ff !important;
   }
   .axis-value-label {
-    color: #794900;
+    color: white;
   }
   .value-container {
-    color: #794900;
+    color: white;
   }
   .marker span {
-    background-color: #5b3600 !important;
+    background-color: #9d73ff !important;
   }
 }
