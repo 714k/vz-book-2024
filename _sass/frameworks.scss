@@ -1,4 +1,6 @@
-@include fontface('IBM Plex Mono', 'ibm-plex-mono-regular');
+@include fontface('IBM Plex Mono', 'ibm-plex-mono-medium');
+$targets: #ff003c;
+$targets_b: #ff003c;
 
 @keyframes circularWave {
   from {
@@ -11,20 +13,23 @@
   }
 }
 
-#frameworks {
+#ammos #frameworks {
   background-image: url(/assets/images/info/fixer/fixer-frameworks-bg.jpg);
   h2::after {
     background-position: -1748px -252px;
   }
   table {
+    width: 300%;
     margin-top: 60px;
+    overflow-x: auto;
     font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
     tbody {
       position: relative;
-      width: 90%;
+      width: 400%;
       height: 100vh;
       display: block;
       margin: 0 auto;
+      overflow-x: auto;
     }
     tr {
       position: absolute;
@@ -34,8 +39,7 @@
       width: 36px;
       height: 36px;
       cursor: pointer;
-      // transform: scale(.6);
-      transition: all .5s;
+      transition: all 0.5s;
       &::before {
         content: '';
         position: absolute;
@@ -54,32 +58,32 @@
         display: block;
         width: 60%;
         height: 60%;
-        opacity: .6;
+        opacity: 0.6;
         border-width: 2px;
         border-style: solid;
         border-radius: 50%;
       }
       &.library {
-        border-color: rgba(255, 255, 255, .4);
+        border-color: rgba(255, 255, 255, 0.4);
         &::before {
-          background-color: white;
+          background-color: $targets_b;
           animation: circularWaves 2.5s infinite linear;
         }
         &::after {
-          border-color: white;
-          box-shadow: 0 0 0 2px black, 0 0 0 3px white;
+          border-color: $targets_b;
+          box-shadow: 0 0 0 2px black, 0 0 0 3px $targets_b;
           animation: circularWaves 2.5s infinite linear;
         }
       }
       &.framework {
-        border-color: rgba(255, 252, 0, .4);
+        border-color: rgba(255, 252, 0, 0.4);
         &::before {
-          background-color: #fffc00;
+          background-color: $targets;
           animation: circularWaves 3s infinite linear;
         }
         &::after {
-          border-color: #fffc00;
-          box-shadow: 0 0 0 2px black, 0 0 0 3px #fffc00;
+          border-color: $targets;
+          box-shadow: 0 0 0 2px black, 0 0 0 3px $targets;
           animation: circularWaves 3s infinite linear;
         }
       }
@@ -222,17 +226,23 @@
       }
       &:hover {
         z-index: 3;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 45vh;
+        top: 5vh;
+        left: 20px;
+        right: 20px;
+        width: calc(100vw - 40px);
+        height: 40vh;
         cursor: default;
-        background-color: rgba(12, 12, 19, .85);
+        background-color: rgba(12, 12, 19, 0.85);
+        background-color: white;
+        color: #2f2f39;
         backdrop-filter: blur(6px);
         box-shadow: 0 0 8px 6px black;
         td,
         td.name {
           display: flex;
+        }
+        td.isFramework {
+          display: none;
         }
         &::before,
         &::after {
@@ -244,6 +254,7 @@
         width: calc(100% - 60px);
         height: 24px;
         padding: 12px 0 12px 60px;
+        text-transform: uppercase;
         &:hover:not(.name, .percentage) {
           background-color: #7b779b24;
           cursor: pointer;
@@ -261,7 +272,7 @@
             width: 32px;
             height: 32px;
             margin-right: 12px;
-            border: solid 1px white;
+            border: solid 2px #2f2f39;
           }
         }
         &.name {
@@ -271,8 +282,8 @@
           width: calc(100% - 60px);
           height: 36px;
           line-height: 1;
-          background-color: white;
-          color: #2f2f39;
+          background-color: #2f2f39;
+          color: white;
           text-transform: uppercase;
           font-weight: bold;
           padding-left: 60px;
@@ -299,12 +310,13 @@
         }
         &.percentage {
           position: relative;
-          bottom: 24px;
+          bottom: 0;
           text-align: right;
           font-size: 60px;
           font-weight: 100;
+          line-height: 0;
           justify-content: flex-end;
-          transform: translateX(-12px);
+          transform: translateX(-12px) translateY(-10px);
           span {
             display: block;
             margin-right: 12px;
@@ -314,26 +326,29 @@
             box-sizing: border-box;
             margin: 0 12px;
             width: calc(100% - 24px);
-            height: 16px;
-            border: solid 1px white;
+            height: 18px;
+            border: solid 2px #2f2f39;
             position: absolute;
-            top: 56px;
+            top: 34px;
             left: 12px;
           }
           &::after {
             content: '';
             box-sizing: border-box;
-            margin: 2px 14px;
+            margin: 3px 15px;
             width: calc(var(--percentage) - 28px);
             height: 12px;
             position: absolute;
-            top: 56px;
+            top: 34px;
             left: 12px;
-            background: rgba(255,255,255,1);
+            background: #149eca;
           }
         }
         &.isLibrary {
           display: none;
+        }
+        &.type {
+          padding-top: 18px;
         }
       }
     }
