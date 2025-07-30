@@ -14,6 +14,8 @@ $targets_b: #ff003c;
 }
 
 #ammos #frameworks {
+  position: sticky;
+
   background-image: url(/assets/images/info/fixer/fixer-frameworks-bg.jpg);
   h2::after {
     background-position: -1748px -252px;
@@ -273,7 +275,20 @@ $targets_b: #ff003c;
             height: 32px;
             margin-right: 12px;
             border: solid 2px #2f2f39;
+            background-image: url(/assets/images/info/fixer/type-frameworks-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
           }
+        }
+        &.years::before {
+          background-image: url(/assets/images/info/fixer/time-frameworks-icon.svg);
+        }
+        &.use::before {
+          background-image: url(/assets/images/info/fixer/use-frameworks-icon.svg);
+        }
+        &.level::before {
+          background-image: url(/assets/images/info/fixer/level-frameworks-icon.svg);
         }
         &.name {
           display: none;

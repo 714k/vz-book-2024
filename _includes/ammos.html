@@ -41,7 +41,10 @@
             {{styleStart}}{{cssVar}}{{cssVarValue}}{{styleEnd}}
             data-type="{{cssVarValue}}"
           >
-            {{item[1] | replace: 'name', 'language'}}
+            {% if item[0] == "years" %} {% assign current_year = site.time |
+            date: "%Y" | plus: 0 %} {% assign years_elapsed = current_year |
+            minus: item[1] %} {{ years_elapsed }} {% else %} {{item[1] |
+            replace: 'name', 'language'}} {% endif %}
           </td>
           {% endfor %}
         </tr>
