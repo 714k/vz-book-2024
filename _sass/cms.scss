@@ -1,11 +1,137 @@
+@include fontface('Roboto Mono', 'roboto-mono');
+@include fontface('Reddit Mono', 'reddit-mono-extra-light');
+
 #cms {
   background-image: url(/assets/images/info/fixer/fixer-cms-bg.jpg);
+  // height: 100vh;
   h2::after {
     background-position: -1763px -336px;
   }
   table {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    tbody {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+    }
     tr {
       background-image: none;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
+      td {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        background: #6c0303;
+        background: -webkit-linear-gradient(
+          90deg,
+          rgba(108, 3, 3, 1) 0%,
+          rgba(108, 3, 3, 0) 100%
+        );
+        background: -moz-linear-gradient(
+          90deg,
+          rgba(108, 3, 3, 1) 0%,
+          rgba(108, 3, 3, 0) 100%
+        );
+        background: linear-gradient(
+          90deg,
+          rgba(108, 3, 3, 1) 0%,
+          rgba(108, 3, 3, 0) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6C0303", endColorstr="#6C0303", GradientType=1);
+        &::before {
+          content: '';
+          display: flex;
+          align-self: center;
+          width: 32px;
+          height: 32px;
+          margin-right: 12px;
+          background-color: white;
+          mask-image: url(/assets/images/info/fixer/type-frameworks-icon.svg);
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: 100%;
+        }
+        &::after {
+          // display: block;
+          // width: 32px;
+          // height: 32px;
+          // position: absolute;
+          // left: calc(5% + 12px);
+          // border: solid 1px white;
+        }
+        &.name {
+          font-weight: 700;
+          font-size: 30px;
+          text-decoration: line-through;
+          &::afters {
+            position: absolute;
+            left: 64px;
+            content: '';
+            font-size: 10px;
+            width: calc(100% - 156px);
+            height: 1px;
+            border-bottom: solid 1px white;
+          }
+        }
+        &.years,
+        &.use,
+        &.level {
+          display: flex;
+        }
+        &.years {
+          &::before {
+            mask-image: url(/assets/images/info/fixer/time-frameworks-icon.svg);
+          }
+          &::after {
+            content: '\00a0years';
+          }
+        }
+        &.percentage {
+          position: relative;
+          padding: 0;
+          background: transparent;
+          font-size: 72px;
+          padding-top: 40px;
+          font-family: 'Reddit Mono', 'Courier New', Courier, monospace;
+          font-weight: 100;
+          &::before {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            height: 40px;
+            background: transparent;
+            border: solid 1px white;
+            mask-image: none;
+          }
+          &::after {
+            content: '';
+            display: block;
+            box-sizing: border-box;
+            width: calc(var(--percentage) - 8px);
+            height: 34px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background-image: url(/assets/svg/fixer/fixer-cms-bullet.svg);
+            background-repeat: repeat-x;
+            background-size: auto;
+          }
+        }
+        &.use::before {
+          mask-image: url(/assets/images/info/fixer/use-frameworks-icon.svg);
+        }
+        &.level::before {
+          mask-image: url(/assets/images/info/fixer/level-frameworks-icon.svg);
+        }
+      }
     }
+  }
+  .back-to-top {
+    display: none;
   }
 }
