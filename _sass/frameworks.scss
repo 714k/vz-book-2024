@@ -1,6 +1,8 @@
 @include fontface('IBM Plex Mono', 'ibm-plex-mono-medium');
+
 $targets: #ff003c;
 $targets_b: #ff003c;
+// $targets_b: #00c3ff;
 
 @keyframes circularWave {
   from {
@@ -14,24 +16,20 @@ $targets_b: #ff003c;
 }
 
 #ammos #frameworks {
-  position: sticky;
-
-  background-image: url(/assets/images/info/fixer/fixer-frameworks-bg.jpg);
   h2::after {
     background-position: -1748px -252px;
   }
   table {
-    width: 300%;
-    margin-top: 60px;
-    overflow-x: auto;
     font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+    overflow-x: auto;
     tbody {
       position: relative;
-      width: 400%;
+      min-width: 2560px;
       height: 100vh;
       display: block;
       margin: 0 auto;
-      overflow-x: auto;
+      background-image: url(/assets/images/info/fixer/map-of-paris.png);
+      background-position: center;
     }
     tr {
       position: absolute;
@@ -89,9 +87,13 @@ $targets_b: #ff003c;
           animation: circularWaves 3s infinite linear;
         }
       }
-      &.reactjs {
-        top: 0;
-        left: 0;
+      &.reactjs- {
+        top: 30px;
+        left: 20px;
+      }
+      &.react-testing-library {
+        top: 20%;
+        left: 10%;
       }
       &.redux {
         top: 15%;
@@ -131,7 +133,7 @@ $targets_b: #ff003c;
       }
       &.rush {
         top: 50%;
-        left: 0%;
+        left: 5%;
       }
       &.lerna {
         top: 55%;
@@ -170,19 +172,19 @@ $targets_b: #ff003c;
         left: 9%;
       }
       &.vue {
-        top: 1%;
+        top: 3%;
         left: 62%;
       }
       &.hugo {
         top: 19%;
-        left: 2%;
+        left: 4%;
       }
       &.jekyll {
         top: 11%;
         left: 38%;
       }
       &.nuxt {
-        top: 0%;
+        top: 5%;
         left: 25%;
       }
       &.gatsby {
@@ -227,12 +229,13 @@ $targets_b: #ff003c;
         display: none;
       }
       &:hover {
-        z-index: 3;
-        top: 5vh;
-        left: 20px;
-        right: 20px;
-        width: calc(100vw - 40px);
-        height: 40vh;
+        position: fixed;
+        z-index: 30;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100vw - 20px);
+        height: 50vh;
         cursor: default;
         background-color: rgba(12, 12, 19, 0.85);
         background-color: white;
@@ -243,9 +246,6 @@ $targets_b: #ff003c;
         td.name {
           display: flex;
         }
-        td.isFramework {
-          display: none;
-        }
         &::before,
         &::after {
           content: none;
@@ -254,7 +254,7 @@ $targets_b: #ff003c;
       td {
         display: none;
         width: calc(100% - 60px);
-        height: 24px;
+        height: 36px;
         padding: 12px 0 12px 60px;
         text-transform: uppercase;
         &:hover:not(.name, .percentage) {
@@ -267,6 +267,7 @@ $targets_b: #ff003c;
         &.level {
           padding-left: 12px;
           width: calc(100% - 12px);
+          align-items: center;
           &::before {
             content: '';
             display: flex;
@@ -294,29 +295,33 @@ $targets_b: #ff003c;
           display: none;
           flex-direction: column;
           justify-content: center;
-          width: calc(100% - 60px);
-          height: 36px;
-          line-height: 1;
+          width: calc(100% - 76px);
+          height: 50px;
+          line-height: 0.5;
           background-color: #2f2f39;
           color: white;
           text-transform: uppercase;
           font-weight: bold;
-          padding-left: 60px;
+          padding-left: 76px;
           &::before {
             content: attr(data-type);
             display: block;
+            // height: 40px;
             width: 100%;
             font-weight: normal;
-            line-height: 1;
+            line-height: 1.8;
             color: var(--type);
+            // background-image: url(/assets/images/info/fixer/toc-close-icon.png);
+            // background-position: right center;
+            // background-repeat: no-repeat;
           }
           &:after {
             content: '';
             position: absolute;
             top: 8px;
             left: 8px;
-            width: 44px;
-            height: 44px;
+            width: 56px;
+            height: 56px;
             background-color: #181822;
           }
         }
@@ -324,18 +329,14 @@ $targets_b: #ff003c;
           content: '\00a0years';
         }
         &.percentage {
-          position: relative;
+          position: absolute;
           bottom: 0;
           text-align: right;
-          font-size: 60px;
+          font-size: 72px;
           font-weight: 100;
           line-height: 0;
           justify-content: flex-end;
           transform: translateX(-12px) translateY(-10px);
-          span {
-            display: block;
-            margin-right: 12px;
-          }
           &::before {
             content: '';
             box-sizing: border-box;
@@ -359,11 +360,13 @@ $targets_b: #ff003c;
             background: #149eca;
           }
         }
-        &.isLibrary {
-          display: none;
-        }
+        &.isLibrary,
         &.type {
           padding-top: 18px;
+        }
+        &.isLibrary,
+        &.isFramework {
+          display: none;
         }
       }
     }
