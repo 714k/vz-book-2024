@@ -48,6 +48,8 @@ $programsCovers: (
       width: 100%;
       font-size: 21px;
       tr {
+        position: relative;
+        z-index: 1;
         width: 140px;
         height: 140px;
         float: left;
@@ -73,8 +75,9 @@ $programsCovers: (
         &:hover {
           cursor: default;
           background-position: -996px -197px;
-          transform: scale(1.5);
+          transform: scale(1.75);
           transition: transform 0.5s;
+          z-index: 2;
           .decorative {
             display: none;
           }

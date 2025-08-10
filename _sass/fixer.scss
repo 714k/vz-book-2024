@@ -10,7 +10,7 @@
 @include fontface('Arsenal', 'arsenal-regular');
 
 @mixin tocIcon($iconName) {
-  &[href*=$iconName] {
+  &[href*='$iconName'] {
     &:hover {
       &::before {
         background-image: url('/assets/svg/' + $iconName + '-icon.svg');
@@ -22,13 +22,13 @@
 @mixin borderGradientHorizontal {
   border-width: 1px;
   border-style: solid;
-  border-image: 
-    linear-gradient(
-      to right, 
+  border-image: linear-gradient(
+      to right,
       rgba(0, 0, 0, 0),
-      white, 
+      white,
       rgba(0, 0, 0, 0)
-    ) 1 1 100%;
+    )
+    1 1 100%;
 }
 
 .the-fixer {
@@ -40,7 +40,7 @@
   background-size: cover;
   background-attachment: fixed;
   #main {
-    overflow: hidden; 
+    overflow: hidden;
   }
   .cover {
     @include cover;
@@ -54,7 +54,7 @@
   #tableOfContent {
     &::before,
     &::after {
-      transition: all .5s;
+      transition: all 0.5s;
     }
     &::before {
       background-color: transparent;
@@ -78,27 +78,28 @@
       border-style: solid;
       border-width: 1px;
       border-image: linear-gradient(
-        to bottom, 
-        rgba($color: #fff, $alpha: 0),
-        white, 
-        rgba($color: #fff, $alpha: 0)
-      ) 1 100%;
+          to bottom,
+          rgba($color: #fff, $alpha: 0),
+          white,
+          rgba($color: #fff, $alpha: 0)
+        )
+        1 100%;
       &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        // height: 40px;
-        top: 0;
-        left: 0;
         @include borderGradientHorizontal();
-        content: "Resume";
+        content: 'Resume';
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
         border-width: 1px;
         border-style: solid;
-        border-image: linear-gradient(to right, rgba(0, 0, 0, 0), white, rgba(0, 0, 0, 0)) 1 1 100%;
+        border-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            white,
+            rgba(0, 0, 0, 0)
+          )
+          1 1 100%;
         height: 40px;
         background-color: white;
         color: black;
@@ -108,7 +109,7 @@
         text-indent: 12px;
         background-image: url(/assets/images/info/fixer/toc-close-icon.png);
         background-position: right center;
-        background-repeat: no-repeat;      
+        background-repeat: no-repeat;
       }
       &::after {
         content: '';
@@ -123,7 +124,7 @@
         a {
           font-family: 'Arsenal', Arial, Helvetica, sans-serif;
           font-size: 24px;
-          line-height: 32px ;
+          line-height: 32px;
           font-weight: 400;
           height: 32px;
           text-transform: uppercase;
@@ -149,35 +150,35 @@
               background-position: center;
             }
           }
-          &[href*=knowledge] {
+          &[href*='knowledge'] {
             &:hover {
               &::before {
                 background-image: url('/assets/svg/knowledge-icon.svg');
               }
             }
           }
-          &[href*=language] {
+          &[href*='language'] {
             &:hover {
               &::before {
                 background-image: url('/assets/svg/language-icon.svg');
               }
             }
           }
-          &[href*=programs] {
+          &[href*='programs'] {
             &:hover {
               &::before {
                 background-image: url('/assets/svg/programs-icon.svg');
               }
             }
           }
-          &[href*=frameworks] {
+          &[href*='frameworks'] {
             &:hover {
               &::before {
                 background-image: url('/assets/svg/frameworks-icon.svg');
               }
             }
           }
-          &[href*=cms] {
+          &[href*='cms'] {
             &:hover {
               &::before {
                 background-image: url('/assets/svg/cms-icon.svg');
@@ -220,7 +221,7 @@
       width: 95%;
       height: 48px;
       z-index: 3;
-      background-color: rgba(162, 0, 0, .5);
+      background-color: rgba(162, 0, 0, 0.5);
       background-repeat: no-repeat;
       background-position: 8px center;
       background-size: 30px;
